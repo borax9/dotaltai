@@ -687,6 +687,46 @@
             display: block;
         }
 
+
+        /* EU Projects Curriculum (About Us) */
+        .cv-card { margin-top: 2rem; }
+        .cv-contact { color: var(--text-dark); font-size: 1rem; margin-bottom: 4px; }
+        .cv-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 1.1rem; }
+        .cv-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 0.5rem; }
+        .cv-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #e6f4ea; color: var(--primary);
+            border: 1px solid #c6e6d3; border-radius: 999px;
+            padding: 8px 16px; font-weight: 600; font-size: 0.875rem;
+            text-decoration: none; transition: var(--transition-smooth);
+        }
+        .cv-pill:hover { background: var(--primary-accent); color: #fff; border-color: var(--primary-accent); }
+        .cv-heading {
+            font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700;
+            color: var(--primary); margin: 2.25rem 0 0.9rem;
+            padding-left: 12px; border-left: 4px solid var(--primary-accent);
+            display: flex; align-items: center; gap: 8px; letter-spacing: -0.01em;
+        }
+        .cv-heading i { color: var(--primary-accent); font-size: 1rem; }
+        .cv-desc { color: var(--text-muted); font-style: italic; font-size: 0.9rem; margin: -0.4rem 0 0.9rem; }
+        .cv-table-wrap {
+            overflow-x: auto; -webkit-overflow-scrolling: touch;
+            border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            margin-bottom: 0.5rem;
+        }
+        .cv-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.875rem; line-height: 1.5; }
+        .cv-table th, .cv-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; }
+        .cv-table th {
+            background: #f1f5f9; color: var(--primary); font-size: 0.72rem;
+            text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;
+        }
+        .cv-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .cv-table tbody tr:last-child td { border-bottom: none; }
+        .cv-table .amount { white-space: nowrap; font-weight: 600; color: var(--primary); }
+        .cv-link { color: var(--primary-accent); font-weight: 600; text-decoration: none; word-break: break-word; }
+        .cv-link:hover { text-decoration: underline; }
+        .cv-card ul { list-style: none; padding-left: 0; font-size: 0.9rem; line-height: 1.6; }
+
         /* Mobile Optimization Fixes */
         @media (max-width: 991px) {
             .navbar {
@@ -1072,6 +1112,289 @@
                     </div>
                 </div>
             </div>
+
+            <!-- EU PROJECTS CURRICULUM -->
+            <div class="campusa-card cv-card">
+                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span data-i18n="cv_title">Mgr. Bora Agbulut EU Projects Curriculum</span>
+                    </h3>
+                    <p class="cv-contact"><strong data-i18n="cv_contact">Contact:</strong> +905074968616 &nbsp;|&nbsp; +421940194980</p>
+                    <p class="cv-subtitle" data-i18n="cv_subtitle">Grant Writing &amp; Project Management Portfolio</p>
+                    <div class="cv-links">
+                        <a class="cv-pill" href="https://dotader.com/esc" target="_blank" rel="noopener"><i class="fa-solid fa-images"></i> <span data-i18n="cv_link_esc">ESC Projects Posters</span></a>
+                        <a class="cv-pill" href="images/qla.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-award"></i> <span data-i18n="cv_link_qla">EU Quality Label Bora Agbulut</span></a>
+                    </div>
+
+        <h4 class="cv-heading"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="cv_h_ka2">Erasmus+ Key Action 2 (KA2) Funded Projects</span></h4>
+            <div class="cv-table-wrap"><table class="cv-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Project Reference Code</th>
+                        <th style="width: 30%">Role</th>
+                        <th style="width: 25%">Context</th>
+                        <th style="width: 15%">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.instagram.com/p/C_vrcz6sam8/" target="_blank" class="cv-link">2024-1-TR01-KA210-SCH-000247635</a></td>
+                        <td>Proposal Writer</td>
+                        <td>School Education (SCH)</td>
+                        <td class="amount">&euro;60,000</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.instagram.com/p/C4GV3oDoig7/" target="_blank" class="cv-link">2023-2-PL01-KA210-SCH-000177404</a></td>
+                        <td>Project Manager &amp; Proposal Writer</td>
+                        <td>School Education (SCH)</td>
+                        <td class="amount">&euro;60,000</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.instagram.com/p/C5BL0nkISAW/?img_index=1" target="_blank" class="cv-link">2023-1-TR01-KA210-YOU-000167260</a></td>
+                        <td>Project Coordinator</td>
+                        <td>Youth (YOU)</td>
+                        <td class="amount">&euro;60,000</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h4 class="cv-heading"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="cv_h_ka1">Erasmus+ Key Action 1 (KA1) Funded Projects</span></h4>
+            <div class="cv-table-wrap"><table class="cv-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Project Reference Code</th>
+                        <th style="width: 30%">Role</th>
+                        <th style="width: 25%">Context</th>
+                        <th style="width: 15%">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>2020-3-IT03-KA105-020227</strong></td>
+                        <td>Project Partner</td>
+                        <td>Youth (YOU)</td>
+                        <td class="amount">&euro;36,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2021-2-TR01-KA153-YOU-000038911</strong></td>
+                        <td>Project Partner</td>
+                        <td>Youth (YOU)</td>
+                        <td class="amount">&euro;32,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2022-3-TR01-KA153-YOU-000094167</strong></td>
+                        <td>Project Partner</td>
+                        <td>Youth (YOU)</td>
+                        <td class="amount">&euro;32,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2023-3-TR01-KA152-YOU-000178242</strong></td>
+                        <td>Project Partner</td>
+                        <td>Youth (YOU)</td>
+                        <td class="amount">&euro;36,000</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h4 class="cv-heading"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="cv_h_grants">Individual Grants &amp; Fellowships</span></h4>
+            <div class="cv-table-wrap"><table class="cv-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%">Program / Grant Name</th>
+                        <th style="width: 30%">Reference Code</th>
+                        <th style="width: 15%">Role</th>
+                        <th style="width: 15%">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Erasmus for Young Entrepreneurs (EYE)</strong></td>
+                        <td>SMP-COSME-2024-EYE</td>
+                        <td>Grant Holder</td>
+                        <td class="amount">&euro;6,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OeAD-GmbH Austria´s Agency for Education and Internationalisation PhD Research Grant</strong></td>
+                        <td>CEEPUS RS-0038 &amp; MPC-2024-04091</td>
+                        <td>Grant Holder</td>
+                        <td class="amount">&euro;16,650</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h4 class="cv-heading"><i class="fa-solid fa-certificate"></i> <span data-i18n="cv_h_esc_acc">European Solidarity Corps (ESC) Accreditations &amp; Quality Labels</span></h4>
+            <div class="cv-table-wrap"><table class="cv-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%">Reference Code</th>
+                        <th style="width: 35%">Title / Designation &amp; Role</th>
+                        <th style="width: 25%">Organization / Scope</th>
+                        <th style="width: 15%">Validity Dates</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" class="cv-link">2025-1-PT02-ESC50-QLA-000366893</a></td>
+                        <td>Quality Label Holder, Project Manager &amp; Proposal Writer<br><span style="font-size: 8pt; color: #4b5563;">Lead, Hosting, Supporting</span></td>
+                        <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" style="color: inherit; text-decoration: none;">Sociedade de História Natural</a><br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>06/01/2026 &ndash; 31/12/2027</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" class="cv-link">2021-1-PT02-ESC50-QLA-000007818</a></td>
+                        <td>Quality Label Holder, Project Manager &amp; Proposal Writer<br><span style="font-size: 8pt; color: #6b7280;">Hosting, Supporting</span></td>
+                        <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" style="color: inherit; text-decoration: none;">Sociedade de História Natural</a><br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>02/03/2022 &ndash; 31/12/2027</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h4 class="cv-heading"><i class="fa-solid fa-hands-holding-circle"></i> <span data-i18n="cv_h_esc_proj">European Solidarity Corps (ESC) Funded Volunteering Projects</span></h4>
+            <div class="cv-table-wrap"><table class="cv-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%">Project Reference Code</th>
+                        <th style="width: 25%">Role</th>
+                        <th style="width: 20%">Dates</th>
+                        <th style="width: 15%">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>2026-1-PT02-ESC51-VTJ-000400718</strong></td>
+                        <td>Project Manager<br><span style="font-size: 8pt; color: #6b7280;">Sociedade de História Natural (OID: E10082201)</span></td>
+                        <td>Call 2026</td>
+                        <td class="amount">&euro;64,885</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2025-1-IT03-ESC51-VTJ-000348869</strong></td>
+                        <td>Project Manager</td>
+                        <td>Feb 2025 &ndash; Apr 2025</td>
+                        <td class="amount">&euro;5,250</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2025-DE04-ESC51-VTJ-000346590</strong></td>
+                        <td>Project Manager</td>
+                        <td>Mar 2025 &ndash; Mar 2026</td>
+                        <td class="amount">&euro;31,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2024-1-DE04-ESC51-VTJ-000198524</strong></td>
+                        <td>Project Manager</td>
+                        <td>May 2025 &ndash; May 2026</td>
+                        <td class="amount">&euro;31,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2024-1-EE01-ESC51-VTJ-000-209801</strong></td>
+                        <td>Project Manager</td>
+                        <td>Jun 2025 &ndash; Aug 2025</td>
+                        <td class="amount">&euro;5,250</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2023-1-TR01-ESC51-VTJ-000145751</strong></td>
+                        <td>Project Manager</td>
+                        <td>Mar 2024 &ndash; Mar 2025</td>
+                        <td class="amount">&euro;17,500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2022-1-TR01-ESC51-VTJ-000080642</strong></td>
+                        <td>Project Manager</td>
+                        <td>Oct 2023 &ndash; Mar 2024</td>
+                        <td class="amount">&euro;17,500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2021-1-TR01-ESC51-VTJ-000037599</strong></td>
+                        <td>Project Manager</td>
+                        <td>May 2023 &ndash; Dec 2023</td>
+                        <td class="amount">&euro;15,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>617228-ESC-1-2019-1-BE-KAA-VOL-HPAREA</strong></td>
+                        <td>Co-Investigator<br><span style="font-size: 8pt; color: #6b7280;">(with Centre for European Volunteering)</span></td>
+                        <td>Jun 2022 &ndash; Nov 2022</td>
+                        <td class="amount">&euro;31,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2020-3-TR01-ESC11-096674</strong></td>
+                        <td>Project Manager</td>
+                        <td>Nov 2021 &ndash; Jan 2023</td>
+                        <td class="amount">&euro;30,000</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h4 class="cv-heading"><i class="fa-solid fa-star"></i> <span data-i18n="cv_h_proposals">Highly Evaluated Erasmus+ Proposals (Score: 75+ Points)</span></h4>
+            <div class="cv-desc" data-i18n="cv_proposals_desc">Projects professionally developed and submitted, achieving high evaluation scores from National Agencies</div>
+            <div class="cv-table-wrap"><table class="cv-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Project Reference Code</th>
+                        <th style="width: 15%">Role</th>
+                        <th style="width: 20%">Applicant Organization</th>
+                        <th style="width: 20%">Call / Action Type</th>
+                        <th style="width: 15%">Budget</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="images/24.pdf" target="_blank" class="cv-link">2024-1-PT01-KA210-SCH-000250612</a></td>
+                        <td>Proposal Writer</td>
+                        <td>Sociedade de História Natural (PT)<br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>Call 2024, Round 1 (KA210-SCH)</td>
+                        <td class="amount">&euro;60,000</td>
+                    </tr>
+                    <tr>
+                        <td><a href="images/23.pdf" target="_blank" class="cv-link">2023-1-PT01-KA210-SCH-000155061</a></td>
+                        <td>Proposal Writer</td>
+                        <td>Sociedade de História Natural (PT)<br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>Call 2023, Round 1 (KA210-SCH)</td>
+                        <td class="amount">&euro;60,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2026-1-PT02-KA220-YOU-000458663</strong><br><span style="font-size: 8pt; color: #6b7280;">2026-2-PT02-KA220-YOU-BB9F0C3D</span></td>
+                        <td>Proposal Writer</td>
+                        <td>Sociedade de História Natural (PT)<br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>Call 2026, Round 1 (KA220-YOU)</td>
+                        <td class="amount">&euro;400,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2024-2-PT02-KA220-YOU-000265580</strong><br><span style="font-size: 8pt; color: #6b7280;">2024-2-PT02-KA220-YOU-06C8A8EE</span></td>
+                        <td>Proposal Writer</td>
+                        <td>Sociedade de História Natural (PT)<br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>Call 2024, Round 2 (KA220-YOU)</td>
+                        <td class="amount">&euro;400,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2023-2-PT02-KA220-YOU-59743022</strong></td>
+                        <td>Proposal Writer</td>
+                        <td>Sociedade de História Natural (PT)<br><span style="font-size: 8pt; color: #6b7280;">OID: E10082201</span></td>
+                        <td>Call 2023, Round 2 (KA220-YOU)</td>
+                        <td class="amount">&euro;400,000</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h4 class="cv-heading"><i class="fa-solid fa-book-open"></i> <span data-i18n="cv_h_pub">Publications</span></h4>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 12px; padding-left: 15px; text-indent: -15px;">
+                    Özsoy, A., Yıldız, N. O., Çar, B., Salamone, E. A., Mazzara, F., Gürer, M., Agbulut, B., Erkadam, E. K., Karakus, Z., Ahraz, A. O., &amp; Kaçay, Z. (2025). Digital Technologies Developed for Enhancing Physical Activity Among Youth: A 20-Year Umbrella Review and Systematic Review. <em>Journal of Sport Sciences Research</em>, 10(3), 429-455. <a href="https://doi.org/10.25307/jssr.1591617" target="_blank" class="cv-link">https://doi.org/10.25307/jssr.1591617</a>
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 15px; text-indent: -15px;">
+                    B. Ağbulut, Š. Józsa, Instance segmentation model applied to automated palynofacies area-ratio quantification analysis for black shales of T-OAE, <em>Review of Palaeobotany and Palynology</em>, Volume 356, 2027, 105731, ISSN 0034-6667, <a href="https://doi.org/10.1016/j.revpalbo.2026.105731" target="_blank" class="cv-link">https://doi.org/10.1016/j.revpalbo.2026.105731</a>
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 15px; text-indent: -15px;">
+                    A. Sanches, B. Ağbulut, L. Castro, M. Vieira, Machine learning applied to recognition of dinoflagellate cysts: Type study with the species Batioladinium longicornutum, <em>Artificial Intelligence in Geosciences</em>, Volume 6, Issue 2, 2025, 100150, ISSN 2666-5441, <a href="https://doi.org/10.1016/j.aiig.2025.100150" target="_blank" class="cv-link">https://doi.org/10.1016/j.aiig.2025.100150</a>.
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 15px; text-indent: -15px;">
+                    Agbulut, B., 2023, Palynostratigraphy of the Early Cretaceous (Hauterivian-Barremian) Munk Marl Bed of North Sea, Norway. <a href="http://hdl.handle.net/10362/172441" target="_blank" class="cv-link">http://hdl.handle.net/10362/172441</a>
+                </li>
+                <li style="margin-bottom: 12px; padding-left: 15px; text-indent: -15px;">
+                    Silva, B., Mano, A., Agbulut, B., Schouten, R., 2020, Paleontological heritage management: GIS applied to paleontology, <em>Boletim do Centro Português de Geo-História e Pré-História</em>, Volume: 2, Number: 1, ISSN: 1645-9806.
+                </li>
+            </ul>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1226,6 +1549,19 @@
                 about_hero_badge: "Our Legacy & Credentials",
                 about_hero_title: "About ADOT Education Events Consulting",
                 about_hero_desc: "Discover our background, rich consulting history, and dedicated expertise in international J-1 cultural exchange and volunteering programs.",
+                cv_title: "Mgr. Bora Agbulut EU Projects Curriculum",
+                cv_contact: "Contact:",
+                cv_subtitle: "Grant Writing &amp; Project Management Portfolio",
+                cv_link_esc: "ESC Projects Posters",
+                cv_link_qla: "EU Quality Label Bora Agbulut",
+                cv_h_ka2: "Erasmus+ Key Action 2 (KA2) Funded Projects",
+                cv_h_ka1: "Erasmus+ Key Action 1 (KA1) Funded Projects",
+                cv_h_grants: "Individual Grants &amp; Fellowships",
+                cv_h_esc_acc: "European Solidarity Corps (ESC) Accreditations &amp; Quality Labels",
+                cv_h_esc_proj: "European Solidarity Corps (ESC) Funded Volunteering Projects",
+                cv_h_proposals: "Highly Evaluated Erasmus+ Proposals (Score: 75+ Points)",
+                cv_proposals_desc: "Projects professionally developed and submitted, achieving high evaluation scores from National Agencies",
+                cv_h_pub: "Publications",
                 exp_title: "Our Background & Expertise",
                 exp_desc: "Our J-1 program and mobility consultancy journey began in 2018. Over the years, we have built trusted relationships with camp directors across leading U.S. camps including Camp Watitoh, Point O'Pines, Camp Mah-Kee-Nac, and Camp Greylock as well as leading volunteering projects in Portugal. With our regional hubs in Lisbon and Bratislava, we ensure quick administrative responses and hands-on guidance for all candidates.",
                 footer_contact: "Contact & Social",
@@ -1314,6 +1650,19 @@
                 about_hero_badge: "O Nosso Legado e Credenciais",
                 about_hero_title: "Sobre a ADOT Education Events Consulting",
                 about_hero_desc: "Conheça o nosso background, histórico de consultoria e especialização em programas J-1 e de voluntariado.",
+                cv_title: "Mgr. Bora Agbulut – Currículo de Projetos da UE",
+                cv_contact: "Contacto:",
+                cv_subtitle: "Portefólio de Redação de Candidaturas e Gestão de Projetos",
+                cv_link_esc: "Cartazes dos Projetos ESC",
+                cv_link_qla: "Selo de Qualidade da UE Bora Agbulut",
+                cv_h_ka2: "Projetos Financiados Erasmus+ Ação-Chave 2 (KA2)",
+                cv_h_ka1: "Projetos Financiados Erasmus+ Ação-Chave 1 (KA1)",
+                cv_h_grants: "Bolsas e Apoios Individuais",
+                cv_h_esc_acc: "Acreditações e Selos de Qualidade do Corpo Europeu de Solidariedade (ESC)",
+                cv_h_esc_proj: "Projetos de Voluntariado Financiados pelo Corpo Europeu de Solidariedade (ESC)",
+                cv_h_proposals: "Candidaturas Erasmus+ com Avaliação Elevada (Pontuação: 75+)",
+                cv_proposals_desc: "Projetos desenvolvidos e submetidos profissionalmente, com pontuações elevadas atribuídas pelas Agências Nacionais",
+                cv_h_pub: "Publicações",
                 exp_title: "A Nossa Experiência e Especialidade",
                 exp_desc: "A nossa jornada começou em 2018. Ao longo dos anos, construímos relações de confiança com diretores de acampamentos nos EUA e projetos de voluntariado em Portugal.",
                 footer_contact: "Contacto e Redes Sociais",
@@ -1402,6 +1751,19 @@
                 about_hero_badge: "Naše zázemie a hodnoty",
                 about_hero_title: "O spoločnosti ADOT Education Events Consulting",
                 about_hero_desc: "Zistite viac o našom pôsobení, bohatej poradenskej histórii a špecializácii v medzinárodných programoch J-1 a dobrovoľníckych programoch.",
+                cv_title: "Mgr. Bora Agbulut – Zoznam projektov EÚ",
+                cv_contact: "Kontakt:",
+                cv_subtitle: "Portfólio písania grantov a riadenia projektov",
+                cv_link_esc: "Plagáty projektov ESC",
+                cv_link_qla: "Značka kvality EÚ Bora Agbulut",
+                cv_h_ka2: "Projekty financované z Erasmus+ Kľúčová akcia 2 (KA2)",
+                cv_h_ka1: "Projekty financované z Erasmus+ Kľúčová akcia 1 (KA1)",
+                cv_h_grants: "Individuálne granty a štipendiá",
+                cv_h_esc_acc: "Akreditácie a značky kvality Európskeho zboru solidarity (ESC)",
+                cv_h_esc_proj: "Dobrovoľnícke projekty financované z Európskeho zboru solidarity (ESC)",
+                cv_h_proposals: "Vysoko hodnotené návrhy Erasmus+ (skóre: 75+ bodov)",
+                cv_proposals_desc: "Profesionálne vypracované a podané projekty s vysokým hodnotením národných agentúr",
+                cv_h_pub: "Publikácie",
                 exp_title: "Naše skúsenosti a odbornosť",
                 exp_desc: "Naša cesta sa začala v roku 2018. Vybudovali sme si dôveryhodné vzťahy s riaditeľmi táborov v USA a hostíme dobrovoľníkov prostredníctvom projektov.",
                 footer_contact: "Kontakt a sociálne siete",
@@ -1490,6 +1852,19 @@
                 about_hero_badge: "Unsere Historie & Kompetenzen",
                 about_hero_title: "Über ADOT Education Events Consulting",
                 about_hero_desc: "Erfahren Sie mehr über unseren Hintergrund und unsere Fachkompetenz bei J-1- und Freiwilligenprogrammen.",
+                cv_title: "Mgr. Bora Agbulut – EU-Projekte Lebenslauf",
+                cv_contact: "Kontakt:",
+                cv_subtitle: "Portfolio für Antragsstellung und Projektmanagement",
+                cv_link_esc: "ESC-Projektposter",
+                cv_link_qla: "EU-Qualitätssiegel Bora Agbulut",
+                cv_h_ka2: "Durch Erasmus+ Leitaktion 2 (KA2) geförderte Projekte",
+                cv_h_ka1: "Durch Erasmus+ Leitaktion 1 (KA1) geförderte Projekte",
+                cv_h_grants: "Einzelstipendien &amp; Fellowships",
+                cv_h_esc_acc: "Akkreditierungen &amp; Qualitätssiegel des Europäischen Solidaritätskorps (ESC)",
+                cv_h_esc_proj: "Durch das Europäische Solidaritätskorps (ESC) geförderte Freiwilligenprojekte",
+                cv_h_proposals: "Hoch bewertete Erasmus+ Anträge (Punktzahl: 75+)",
+                cv_proposals_desc: "Professionell entwickelte und eingereichte Projekte mit hohen Bewertungen der Nationalagenturen",
+                cv_h_pub: "Publikationen",
                 exp_title: "Unsere Erfahrung & Expertise",
                 exp_desc: "Unsere Beratungstätigkeit begann 2018. Über die Jahre haben wir vertrauensvolle Beziehungen zu Sommercamps in den USA aufgebaut und betreuen Freiwillige.",
                 footer_contact: "Kontakt & Social Media",
