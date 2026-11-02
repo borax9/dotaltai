@@ -534,6 +534,91 @@
             transform: scale(1.02);
         }
 
+        /* Table Styling for Portfolio / CV Data */
+        .cv-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .cv-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            background: #ffffff;
+            text-align: left;
+        }
+
+        .cv-table th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--border-color);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .cv-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+            color: #334155;
+        }
+
+        .cv-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cv-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .table-link {
+            color: var(--primary-accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .table-link:hover {
+            text-decoration: underline;
+            color: var(--primary);
+        }
+
+        .portfolio-btn-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 1.5rem 0 2rem 0;
+        }
+
+        .portfolio-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f0fdf4;
+            color: var(--primary-accent);
+            padding: 10px 18px;
+            border: 1px solid #bbf7d0;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-btn:hover {
+            background: #dcfce7;
+            transform: translateY(-2px);
+        }
+
         /* Footer */
         .site-footer {
             background-color: var(--primary);
@@ -1053,7 +1138,7 @@
 
         <div class="content-container">
             <div class="campusa-card">
-                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                <div class="campusa-section">
                     <h3 class="section-heading">
                         <i class="fa-solid fa-award"></i>
                         <span data-i18n="exp_title">Our Background & Expertise</span>
@@ -1070,6 +1155,382 @@
                             <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/camp2.png" decoding="async" width="600" height="400" onerror="this.onerror=null; this.src='images/camp2.png';" alt="ADOT Education Events Consulting - USA Summer Camp Experience 2">
                         </div>
                     </div>
+                </div>
+
+                <!-- INTEGRATED EU PROJECTS CURRICULUM PORTFOLIO -->
+                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">Mgr. Bora Agbulut EU Projects Curriculum</h2>
+                    <p style="color: var(--text-muted); font-size: 1rem;">Grant Writing & Project Management Portfolio</p>
+                    <p style="margin-top: 8px; font-size: 0.95rem;"><strong>Contact:</strong> +905074968616 &nbsp;|&nbsp; +421940194980</p>
+                    
+                    <div class="portfolio-btn-group">
+                        <a href="https://dotader.com/esc" target="_blank" class="portfolio-btn">
+                            <i class="fa-solid fa-file-image"></i> ESC Projects Posters
+                        </a>
+                        <a href="images/qla.pdf" target="_blank" class="portfolio-btn">
+                            <i class="fa-solid fa-certificate"></i> EU Quality Label Bora Agbulut
+                        </a>
+                    </div>
+
+                    <h3 class="sub-heading">Erasmus+ Key Action 2 (KA2) Funded Projects</h3>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Reference Code</th>
+                                    <th>Role</th>
+                                    <th>Context</th>
+                                    <th>Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://www.instagram.com/p/C_vrcz6sam8/" target="_blank" class="table-link">2024-1-TR01-KA210-SCH-000247635</a></td>
+                                    <td>Proposal Writer</td>
+                                    <td>School Education (SCH)</td>
+                                    <td>€60,000</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.instagram.com/p/C4GV3oDoig7/" target="_blank" class="table-link">2023-2-PL01-KA210-SCH-000177404</a></td>
+                                    <td>Project Manager & Proposal Writer</td>
+                                    <td>School Education (SCH)</td>
+                                    <td>€60,000</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.instagram.com/p/C5BL0nkISAW/?img_index=1" target="_blank" class="table-link">2023-1-TR01-KA210-YOU-000167260</a></td>
+                                    <td>Project Coordinator</td>
+                                    <td>Youth (YOU)</td>
+                                    <td>€60,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">Erasmus+ Key Action 1 (KA1) Funded Projects</h3>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Reference Code</th>
+                                    <th>Role</th>
+                                    <th>Context</th>
+                                    <th>Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>2020-3-IT03-KA105-020227</strong></td>
+                                    <td>Project Partner</td>
+                                    <td>Youth (YOU)</td>
+                                    <td>€36,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2021-2-TR01-KA153-YOU-000038911</strong></td>
+                                    <td>Project Partner</td>
+                                    <td>Youth (YOU)</td>
+                                    <td>€32,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2022-3-TR01-KA153-YOU-000094167</strong></td>
+                                    <td>Project Partner</td>
+                                    <td>Youth (YOU)</td>
+                                    <td>€32,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2023-3-TR01-KA152-YOU-000178242</strong></td>
+                                    <td>Project Partner</td>
+                                    <td>Youth (YOU)</td>
+                                    <td>€36,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">Individual Grants & Fellowships</h3>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Program / Grant Name</th>
+                                    <th>Reference Code</th>
+                                    <th>Role</th>
+                                    <th>Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Erasmus for Young Entrepreneurs (EYE)</strong></td>
+                                    <td>SMP-COSME-2024-EYE</td>
+                                    <td>Grant Holder</td>
+                                    <td>€6,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OeAD-GmbH Austria´s Agency for Education and Internationalisation PhD Research Grant</strong></td>
+                                    <td>CEEPUS RS-0038 & MPC-2024-04091</td>
+                                    <td>Grant Holder</td>
+                                    <td>€16,650</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">European Solidarity Corps (ESC) Accreditations & Quality Labels</h3>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Reference Code</th>
+                                    <th>Title / Designation & Role</th>
+                                    <th>Organization / Scope</th>
+                                    <th>Validity Dates</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" class="table-link">2025-1-PT02-ESC50-QLA-000366893</a></td>
+                                    <td>Quality Label Holder, Project Manager & Proposal Writer<br><span style="font-size: 0.8rem; color: var(--text-muted);">Lead, Hosting, Supporting</span></td>
+                                    <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" class="table-link">Sociedade de História Natural</a><br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>06/01/2026 – 31/12/2027</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" class="table-link">2021-1-PT02-ESC50-QLA-000007818</a></td>
+                                    <td>Quality Label Holder, Project Manager & Proposal Writer<br><span style="font-size: 0.8rem; color: var(--text-muted);">Hosting, Supporting</span></td>
+                                    <td><a href="https://youth.europa.eu/volunteering/organisation/49513" target="_blank" class="table-link">Sociedade de História Natural</a><br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>02/03/2022 – 31/12/2027</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">European Solidarity Corps (ESC) Funded Volunteering Projects</h3>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Reference Code</th>
+                                    <th>Role</th>
+                                    <th>Dates</th>
+                                    <th>Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>2026-1-PT02-ESC51-VTJ-000400718</strong></td>
+                                    <td>Project Manager<br><span style="font-size: 0.8rem; color: var(--text-muted);">Sociedade de História Natural (OID: E10082201)</span></td>
+                                    <td>Call 2026</td>
+                                    <td>€64,885</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2025-1-IT03-ESC51-VTJ-000348869</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>Feb 2025 – Apr 2025</td>
+                                    <td>€5,250</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2025-DE04-ESC51-VTJ-000346590</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>Mar 2025 – Mar 2026</td>
+                                    <td>€31,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2024-1-DE04-ESC51-VTJ-000198524</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>May 2025 – May 2026</td>
+                                    <td>€31,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2024-1-EE01-ESC51-VTJ-000-209801</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>Jun 2025 – Aug 2025</td>
+                                    <td>€5,250</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2023-1-TR01-ESC51-VTJ-000145751</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>Mar 2024 – Mar 2025</td>
+                                    <td>€17,500</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2022-1-TR01-ESC51-VTJ-000080642</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>Oct 2023 – Mar 2024</td>
+                                    <td>€17,500</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2021-1-TR01-ESC51-VTJ-000037599</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>May 2023 – Dec 2023</td>
+                                    <td>€15,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>617228-ESC-1-2019-1-BE-KAA-VOL-HPAREA</strong></td>
+                                    <td>Co-Investigator<br><span style="font-size: 0.8rem; color: var(--text-muted);">(with Centre for European Volunteering)</span></td>
+                                    <td>Jun 2022 – Nov 2022</td>
+                                    <td>€31,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2020-3-TR01-ESC11-096674</strong></td>
+                                    <td>Project Manager</td>
+                                    <td>Nov 2021 – Jan 2023</td>
+                                    <td>€30,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">Highly Evaluated Erasmus+ Proposals (Score: 75+ Points)</h3>
+                    <p style="font-style: italic; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Projects professionally developed and submitted, achieving high evaluation scores from National Agencies</p>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Reference Code</th>
+                                    <th>Role</th>
+                                    <th>Applicant Organization</th>
+                                    <th>Call / Action Type</th>
+                                    <th>Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="images/24.pdf" target="_blank" class="table-link">2024-1-PT01-KA210-SCH-000250612</a></td>
+                                    <td>Proposal Writer</td>
+                                    <td>Sociedade de História Natural (PT)<br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>Call 2024, Round 1 (KA210-SCH)</td>
+                                    <td>€60,000</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="images/23.pdf" target="_blank" class="table-link">2023-1-PT01-KA210-SCH-000155061</a></td>
+                                    <td>Proposal Writer</td>
+                                    <td>Sociedade de História Natural (PT)<br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>Call 2023, Round 1 (KA210-SCH)</td>
+                                    <td>€60,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2026-1-PT02-KA220-YOU-000458663</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">2026-2-PT02-KA220-YOU-BB9F0C3D</span></td>
+                                    <td>Proposal Writer</td>
+                                    <td>Sociedade de História Natural (PT)<br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>Call 2026, Round 1 (KA220-YOU)</td>
+                                    <td>€400,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2024-2-PT02-KA220-YOU-000265580</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">2024-2-PT02-KA220-YOU-06C8A8EE</span></td>
+                                    <td>Proposal Writer</td>
+                                    <td>Sociedade de História Natural (PT)<br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>Call 2024, Round 2 (KA220-YOU)</td>
+                                    <td>€400,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2023-2-PT02-KA220-YOU-59743022</strong></td>
+                                    <td>Proposal Writer</td>
+                                    <td>Sociedade de História Natural (PT)<br><span style="font-size: 0.8rem; color: var(--text-muted);">OID: E10082201</span></td>
+                                    <td>Call 2023, Round 2 (KA220-YOU)</td>
+                                    <td>€400,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">Professional Experience</h3>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Role & Organization</th>
+                                    <th>Dates & Location</th>
+                                    <th>Details & Links</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Visiting Research Fellow</strong> (OeAD Research Fellowship)<br><span style="font-size: 0.8rem; color: var(--text-muted);">University of Vienna</span></td>
+                                    <td>Mar 2025 – Aug 2025<br><span style="font-size: 0.8rem; color: var(--text-muted);">Vienna, Austria</span></td>
+                                    <td>Paläobotanik und Terrestrische Paläontologie Dept. for Instance Segmentation of Palynofacies. TESCAN Vega 4 with EDX, SEM sample prep.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Table Official</strong> (Part-time)<br><span style="font-size: 0.8rem; color: var(--text-muted);">Slovak Basketball Association</span></td>
+                                    <td>Apr 2024 – Present<br><span style="font-size: 0.8rem; color: var(--text-muted);">Bratislava, Slovakia (On-site)</span></td>
+                                    <td><a href="https://sport.iedu.sk/Contact/PersonActivity/1665678?PageReference=CompanyDetail" target="_blank" class="table-link">FIBA Table Official</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>New Entrepreneur</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">ADEL Slovakia</span></td>
+                                    <td>Mar 2024 – Sep 2024<br><span style="font-size: 0.8rem; color: var(--text-muted);">Bratislava, Slovakia</span></td>
+                                    <td>SMP-COSME-2024-EYE Program grant holder. Funded by European Innovation Council and SMEs Executive Agency (EISMEA).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Freelancer</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Borax Consulting</span></td>
+                                    <td>Aug 2023 – Present<br><span style="font-size: 0.8rem; color: var(--text-muted);">Hainburg an der Donau – Bratislava / Lisbon – Ankara / Remote</span></td>
+                                    <td>Construction site investigation, geological subcontracting, restoration project advisory, EU project frameworks. Data annotation, image recognition & object detection CV projects.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Erasmus+ and ESC Projects Manager</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Sociedade de História Natural</span></td>
+                                    <td>Jun 2021 – Present<br><span style="font-size: 0.8rem; color: var(--text-muted);">Lisbon, Portugal / Remote</span></td>
+                                    <td>Managed international paleontological & geoheritage mobility projects. Secured ESC Quality Label (2021–2027). National Agencies liaison, legal agreements, grant allocation, recruitment & ESC portals.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Table Official</strong> (Part-time)<br><span style="font-size: 0.8rem; color: var(--text-muted);">Federação Portuguesa de Basquetebol</span></td>
+                                    <td>Jan 2022 – Jan 2024<br><span style="font-size: 0.8rem; color: var(--text-muted);">Lisbon Metropolitan Area</span></td>
+                                    <td><a href="https://www.fpb.pt/juizes/17269/" target="_blank" class="table-link">Curriculum (Certified by FIBA)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Table Official & Referee</strong> (Part-time)<br><span style="font-size: 0.8rem; color: var(--text-muted);">Turkish Basketball Federation</span></td>
+                                    <td>Sep 2015 – Jan 2022<br><span style="font-size: 0.8rem; color: var(--text-muted);">Ankara, Türkiye</span></td>
+                                    <td>Table Official (Jan 2018 - Jan 2022)<br>Referee (Sep 2015 - Jan 2018)<br><a href="images/fiba.pdf" target="_blank" class="table-link">FIBA Basketball Table Official Certificate</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>STEM Counselor – Campower</strong> (Full-time)<br><span style="font-size: 0.8rem; color: var(--text-muted);">Camp Watitoh</span></td>
+                                    <td>Jun 2018 – Sep 2018<br><span style="font-size: 0.8rem; color: var(--text-muted);">Becket, Massachusetts, USA</span></td>
+                                    <td>US Gov. designated exchange program (CCUSA).<br><a href="images/campusa.pdf" target="_blank" class="table-link">CCUSA Certificate</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="sub-heading">Publications</h3>
+                    <ul class="custom-list" style="margin-bottom: 2.5rem;">
+                        <li>Özsoy, A., Yıldız, N. O., Çar, B., Salamone, E. A., Mazzara, F., Gürer, M., Agbulut, B., Erkadam, E. K., Karakus, Z., Ahraz, A. O., & Kaçay, Z. (2025). Digital Technologies Developed for Enhancing Physical Activity Among Youth: A 20-Year Umbrella Review and Systematic Review. <em>Journal of Sport Sciences Research</em>, 10(3), 429-455. <a href="https://doi.org/10.25307/jssr.1591617" target="_blank" class="table-link">https://doi.org/10.25307/jssr.1591617</a></li>
+                        <li>B. Ağbulut, Š. Józsa, Instance segmentation model applied to automated palynofacies area-ratio quantification analysis for black shales of T-OAE, <em>Review of Palaeobotany and Palynology</em>, Volume 356, 2027, 105731, ISSN 0034-6667, <a href="https://doi.org/10.1016/j.revpalbo.2026.105731" target="_blank" class="table-link">https://doi.org/10.1016/j.revpalbo.2026.105731</a></li>
+                        <li>A. Sanches, B. Ağbulut, L. Castro, M. Vieira, Machine learning applied to recognition of dinoflagellate cysts: Type study with the species Batioladinium longicornutum, <em>Artificial Intelligence in Geosciences</em>, Volume 6, Issue 2, 2025, 100150, ISSN 2666-5441, <a href="https://doi.org/10.1016/j.aiig.2025.100150" target="_blank" class="table-link">https://doi.org/10.1016/j.aiig.2025.100150</a>.</li>
+                        <li>Agbulut, B., 2023, Palynostratigraphy of the Early Cretaceous (Hauterivian-Barremian) Munk Marl Bed of North Sea, Norway. <a href="http://hdl.handle.net/10362/172441" target="_blank" class="table-link">http://hdl.handle.net/10362/172441</a></li>
+                        <li>Silva, B., Mano, A., Agbulut, B., Schouten, R., 2020, Paleontological heritage management: GIS applied to paleontology, <em>Boletim do Centro Português de Geo-História e Pré-História</em>, Volume: 2, Number: 1, ISSN: 1645-9806.</li>
+                    </ul>
+
+                    <h3 class="sub-heading">References and Partners</h3>
+                    <p style="font-style: italic; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">Other EU Project Coordinators and partners</p>
+                    <div class="cv-table-wrapper">
+                        <table class="cv-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Role & Organization</th>
+                                    <th>Contact Information</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong><a href="https://www.linkedin.com/in/liesl-eigenberger-160a393b/" target="_blank" class="table-link">Liesl Eigenberger</a></strong></td>
+                                    <td>International Relations Manager<br><span style="font-size: 0.8rem; color: var(--text-muted);">Camp USA, New York, USA</span></td>
+                                    <td><a href="mailto:leigenberger@interexchange.org" class="table-link">leigenberger@interexchange.org</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><a href="https://www.jugendkulturarbeit.eu/team.html" target="_blank" class="table-link">Stephanie May</a></strong></td>
+                                    <td>Project Manager<br><span style="font-size: 0.8rem; color: var(--text-muted);">Jugendkulturarbeit e.V., Oldenburg, Germany</span></td>
+                                    <td><a href="mailto:s.may@jugendkulturarbeit.eu" class="table-link">s.may@jugendkulturarbeit.eu</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><a href="https://www.linkedin.com/in/bilal-demir-935084198/" target="_blank" class="table-link">Bilal Demir</a></strong></td>
+                                    <td>EU and Foreign Relations Coordinator<br><span style="font-size: 0.8rem; color: var(--text-muted);">Gürsu Municipality</span></td>
+                                    <td><a href="mailto:bilaldemir@gursu.bel.tr" class="table-link">bilaldemir@gursu.bel.tr</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><a href="https://abaum.ksu.edu.tr/Default?SId=8037" target="_blank" class="table-link">Dr. Serife Durna</a></strong></td>
+                                    <td>Project Manager<br><span style="font-size: 0.8rem; color: var(--text-muted);">European Union Research and Application Center (KSÜ-ABAUM)</span></td>
+                                    <td><a href="mailto:serifedurna@ksu.edu.tr" class="table-link">serifedurna@ksu.edu.tr</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1358,225 +1819,4 @@
                 benefits_title: "Odmena a výhody programu",
                 benefit_1: "<strong>Štipendium:</strong> Minimálne <strong>2 300 USD až 3 500 USD</strong> za 9 týždňov.",
                 benefit_2: "<strong>Ubytovanie a strava:</strong> Bezplatné ubytovanie a celodenná strava počas tábora.",
-                benefit_3: "<strong>Poistenie:</strong> Úplné úrazové a zdravotné poistenie počas celého programu.",
-                benefit_4: "<strong>Víza a cestovanie:</strong> Oficiálne J-1 víza (DS-2019) + 30 dní na cestovanie po USA.",
-                elig_title: "Podmienky a profil uchádzača",
-                who_recruit_title: "Koho hľadáme",
-                recruit_1: "<strong>Výborná znalosť angličtiny:</strong> Jasná komunikácia s deťmi a tímom.",
-                recruit_2: "<strong>Pozitívny prístup a flexibilita:</strong> Skvelí vedúci zvládajú výzvy s pokojom.",
-                recruit_3: "<strong>Zrelosť a tímová prácu:</strong> Zodpovedné správanie k deťom a dobrá spolupráca.",
-                recruit_4: "<strong>Skutočný záujem o prácu s deťmi:</strong> Program je najmä o osobnom raste.",
-                req_title: "Požiadavky na vedúcich",
-                req_sub: "Pred vyplnením prihlášky skontrolujte splnenie týchto podmienok:",
-                req_1: "<strong>Dostupnosť:</strong> Nástup najneskôr 12. júna a zotrvanie minimálne do 15. augusta.",
-                req_2: "<strong>Vek:</strong> Preferovaný vek 19–25 rokov, akceptujeme uchádzačov od 18 do 28 rokov.",
-                req_3: "<strong>Zručnosti:</strong> Špecializované certifikáty alebo tréningy sú výhodou.",
-                req_4: "<strong>Elegibilita:</strong> Študent, učiteľ, práce s mládežou alebo špeciálne zručnosti.",
-                steps_section_title: "Kroky programu",
-                steps_title: "Cesta v 4 krokoch:",
-                step_1: "Výber profilu a pohovor",
-                step_2: "Vízová dokumentácia a DS-2019",
-                step_3: "Orientácia pred odletom",
-                step_4: "24/7 podpora priamo v USA",
-                fees_title: "Transparentné poplatky (€500 celkovo)",
-                fee_1_title: "Registrácia a pohovor",
-                fee_1_desc: "Platí sa pri prvej fáze registrácie.",
-                fee_2_title: "Spracovanie programu",
-                fee_2_desc: "Platí sa po schválení profilu.",
-                fee_3_title: "Umiestnenie a podpora",
-                fee_3_desc: "Platí sa po oficiálne potvrdenej ponuke.",
-
-                esc_hero_badge: "European Volunteering Program",
-                esc_hero_title: "European Volunteering Program",
-                esc_hero_desc: "Zapojte sa do dobrovoľníckych iniciatív financovaných EÚ, paleontologických vykopávok a ochrany prírodného dedičstva v Portugalsku.",
-                esc_partner_title: "Partnerstvo s Sociedade de História Natural (SHN)",
-                esc_intro_1: "Náš hlavný portugalský partner <strong>Sociedade de História Natural</strong> je držiteľom Kalite Etikety pre obdobie 2021-2027.",
-                esc_intro_2: "Doteraz sme privítali dobrovoľníkov z <strong>Turecka, Nemecka, Talianska, Estónska, Slovenska, Holandska, Španielska, Francúzska, Azerbajdžanu a Belgicka</strong>.",
-                esc_act_heading: "Aktivity v Portugalsku",
-                esc_act_intro: "Naším cieľom je vytvárať globálne povedomie o klimatických otázkach a ochrane prírodného dedičstva:",
-                esc_act_li1: "Tématické terénne exkurzie GeoHeritage a GeoPark",
-                esc_act_li2: "Aplikácie geografických informačných systémov (GIS)",
-                esc_act_li3: "Laboratórne práce s fosíliami na pochopenie paleo-ekosystémov",
-                esc_gallery_heading: "Galéria projektových aktivít",
-
-                about_hero_badge: "Naše zázemie a hodnoty",
-                about_hero_title: "O spoločnosti ADOT Education Events Consulting",
-                about_hero_desc: "Zistite viac o našom pôsobení, bohatej poradenskej histórii a špecializácii v medzinárodných programoch J-1 a dobrovoľníckych programoch.",
-                exp_title: "Naše skúsenosti a odbornosť",
-                exp_desc: "Naša cesta sa začala v roku 2018. Vybudovali sme si dôveryhodné vzťahy s riaditeľmi táborov v USA a hostíme dobrovoľníkov prostredníctvom projektov.",
-                footer_contact: "Kontakt a sociálne siete",
-                live_views: "Živé zobrazenia stránky:",
-                modal_title: "Predbežná prihláška",
-                modal_notice: "<i class='fa-solid fa-circle-info' style='margin-right: 5px;'></i> Uchádzači obdržia oficiálne inštrukcie priamo na e-mail.",
-                lbl_name: "Celé meno *",
-                lbl_email: "E-mailová adresa *",
-                lbl_phone: "Telefónne číslo *",
-                lbl_areas: "Oblasti záujmu *",
-                btn_submit: "Odoslať predbežnú prihlášku",
-                contractor_disclaimer: "ADOT Education Events Consulting je nezávislý dodávateľ poskytujúci poradenské a podporné služby v spolupráci s partnermi."
-            },
-            de: {
-                nav_home: "Startseite",
-                nav_usa: "USA Sommercamp",
-                nav_esc: "ESC Projekte",
-                nav_about: "Über Uns",
-                nav_apply: "Jetzt Bewerben",
-                hero_badge_home: "Globale Bildungs- und Mobilitätsprogramme",
-                hero_title_home: "Starten Sie Ihr Abenteuer Heute!",
-                hero_desc_home: "Entdecken Sie unsere Möglichkeiten: Arbeiten Sie als Camp-Betreuer in den USA oder nehmen Sie an European Volunteering Program Projekten teil.",
-                select_prog_title: "Unsere Programme entdecken",
-                select_prog_sub: "Klicken Sie unten, um alle Details jedes einzelnen Programms anzuzeigen",
-                card_usa_title: "USA Sommercamp Programm",
-                card_usa_desc: "Arbeiten Sie 9-15 Wochen in einem US-Camp. Verdienen Sie bis zu $3.500 USD Taschengeld und sammeln Sie Kulturaustausch-Erfahrung.",
-                btn_explore_usa: "USA Programm ansehen \u2192",
-                card_esc_title: "European Volunteering Program",
-                card_esc_desc: "Nehmen Sie an geförderten European Volunteering Program Projekten in Portugal in den Bereichen Geohistorie und Paläontologie teil.",
-                btn_explore_esc: "ESC Projekte ansehen \u2192",
-
-                hero_badge: "Kulturaustauschprogramm in den USA",
-                hero_title: "USA Sommercamp Programm",
-                hero_desc: "Verbringe 9–15 Wochen in einem amerikanischen Sommercamp. Arbeite als Betreuer, erhalte ein Taschengeld, schließe Freundschaften fürs Leben und erlebe echten Kulturaustausch in den USA.",
-                start_app: "Bewerbung Starten",
-                role_title: "Deine Rolle als Camp-Betreuer",
-                role_desc: "Camp-Betreuer sind das Herzstück amerikanischer Sommercamps. Du leitest, unterstützt und inspirierst Kinder, während du einen unvergesslichen Kulturaustausch erlebst.",
-                role_spec_title: "🎨 Aktivitäts-Spezialisten",
-                role_spec_desc: "Leite Sport, Kunst, Outdoor-Abenteuer, MINT oder Wassersport mit deinen individuellen Talenten.",
-                role_gen_title: "🎒 Allgemeiner Betreuer",
-                role_gen_desc: "Betreue eine Hüttengruppe, unterstütze Tagesabläufe und nimm an Camp-Events teil.",
-                benefits_title: "Verdienst & Programm-Vorteile",
-                benefit_1: "<strong>Taschengeld:</strong> Mindestens <strong>2.300 USD bis 3.500 USD</strong> für 9 Wochen.",
-                benefit_2: "<strong>Unterkunft & Verpflegung:</strong> Kostenloses Zimmer und Verpflegung während der Campzeit.",
-                benefit_3: "<strong>Versicherung:</strong> Vollständige Kranken- und Unfallversicherung während des Programms.",
-                benefit_4: "<strong>Visum & Reisen:</strong> J-1 Visum-Sponsoring (DS-2019) + 30 Tage Reisezeit in den USA.",
-                elig_title: "Voraussetzungen & Rekrutierung",
-                who_recruit_title: "Wen wir suchen",
-                recruit_1: "<strong>Exzellente Englischkenntnisse:</strong> Klare Kommunikation ist essenziell.",
-                recruit_2: "<strong>Positive Einstellung & Flexibilität:</strong> Betreuer bleiben anpassungsfähig.",
-                recruit_3: "<strong>Reife & Teamwork:</strong> Verantwortungsbewusster Umgang mit Kindern und gutes Teamwork.",
-                recruit_4: "<strong>Echtes Interesse an Kindern:</strong> Fokus auf persönliche Entwicklung und Verständnis.",
-                req_title: "Anforderungen für Betreuer",
-                req_sub: "Vor der Bewerbung bitte folgende Grundvoraussetzungen prüfen:",
-                req_1: "<strong>Verfügbarkeit:</strong> Start spätestens am 12. Juni und Mindestaufenthalt bis 15. August.",
-                req_2: "<strong>Alter:</strong> Bevorzugt 19–25 Jahre, Bewerbungen von 18–28 Jahren ebenfalls berücksichtigt.",
-                req_3: "<strong>Fähigkeiten:</strong> Zertifikate, Ausbildungen oder Lehrerfahrung erforderlich.",
-                req_4: "<strong>Berechtigung:</strong> Student, Lehrer, Jugendarbeiter oder spezialisierte Fähigkeiten.",
-                steps_section_title: "Programm-Schritte",
-                steps_title: "4-Schritte-Ablauf:",
-                step_1: "Profilauswahl & Interview",
-                step_2: "Visum & DS-2019 Unterlagen",
-                step_3: "Vorbereitungstreffen",
-                step_4: "24/7 Unterstützung vor Ort in den USA",
-                fees_title: "Transparente Programmgebühren (€500 Gesamt)",
-                fee_1_title: "Bewerbung & Interview",
-                fee_1_desc: "Zahlbar bei der Erstanmeldung.",
-                fee_2_title: "Bearbeitungsgebühr",
-                fee_2_desc: "Zahlbar nach Profilbestätigung.",
-                fee_3_title: "Vermittlung & Betreuung",
-                fee_3_desc: "Zahlbar nach offizieller Stellenbestätigung.",
-
-                esc_hero_badge: "European Volunteering Program",
-                esc_hero_title: "European Volunteering Program",
-                esc_hero_desc: "Nehmen Sie an geförderten Freiwilligeninitiativen, paläontologischen Ausgrabungen und dem Erhalt des Naturerbes in Portugal teil.",
-                esc_partner_title: "Partnerschaft mit Sociedade de História Natural (SHN)",
-                esc_intro_1: "Unser portugiesischer Hauptpartner <strong>Sociedade de História Natural</strong> besitzt ein Qualitäts-Label für 2021–2027 unter unserer Beratung.",
-                esc_intro_2: "Bisher haben wir Freiwillige aus der <strong>Türkei, Deutschland, Italien, Estland, der Slowakei, den Niederlanden, Spanien, Frankreich, Aserbaidschan und Belgien</strong> aufgenommen.",
-                esc_act_heading: "Aktivitäten in Portugal",
-                esc_act_intro: "Unser Ziel ist es, ein globales Bewusstsein für Klimafragen und den Erhalt des Naturerbes zu schaffen:",
-                esc_act_li1: "Feldexkursionen zum Thema Geopark und Geohistorie",
-                esc_act_li2: "Geographische Informationssystem-Anwendungen (GIS)",
-                esc_act_li3: "Laborarbeiten mit Fossilien zum Verständnis von Paleo-Ökosystemen",
-                esc_gallery_heading: "Galerie der Projektaktivitäten",
-
-                about_hero_badge: "Unsere Historie & Kompetenzen",
-                about_hero_title: "Über ADOT Education Events Consulting",
-                about_hero_desc: "Erfahren Sie mehr über unseren Hintergrund und unsere Fachkompetenz bei J-1- und Freiwilligenprogrammen.",
-                exp_title: "Unsere Erfahrung & Expertise",
-                exp_desc: "Unsere Beratungstätigkeit begann 2018. Über die Jahre haben wir vertrauensvolle Beziehungen zu Sommercamps in den USA aufgebaut und betreuen Freiwillige.",
-                footer_contact: "Kontakt & Social Media",
-                live_views: "Live-Seitenaufrufe:",
-                modal_title: "Vorbewerbung",
-                modal_notice: "<i class='fa-solid fa-circle-info' style='margin-right: 5px;'></i> Bewerber erhalten offizielle Anweisungen per E-Mail.",
-                lbl_name: "Vollständiger Name *",
-                lbl_email: "E-Mail-Adresse *",
-                lbl_phone: "Telefonnummer *",
-                lbl_areas: "Interessenbereiche *",
-                btn_submit: "Vorbewerbung Absenden",
-                contractor_disclaimer: "ADOT Education Events Consulting ist ein unabhängiger Auftragnehmer in Zusammenarbeit mit Partnern."
-            }
-        };
-
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(elem => {
-                const key = elem.getAttribute('data-i18n');
-                if (i18n[lang] && i18n[lang][key]) {
-                    elem.innerHTML = i18n[lang][key];
-                }
-            });
-
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
-            document.getElementById('btn-sk').classList.toggle('active', lang === 'sk');
-            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
-        }
-
-        // SPA Page Switching
-        function switchPage(pageId) {
-            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-link-item').forEach(link => link.classList.remove('active-link'));
-            
-            if (pageId === 'home') {
-                document.getElementById('page-home').classList.add('active');
-                document.getElementById('nav-home').classList.add('active-link');
-            } else if (pageId === 'usa') {
-                document.getElementById('page-usa').classList.add('active');
-                document.getElementById('nav-usa').classList.add('active-link');
-            } else if (pageId === 'esc') {
-                document.getElementById('page-esc').classList.add('active');
-                document.getElementById('nav-esc').classList.add('active-link');
-            } else if (pageId === 'about') {
-                document.getElementById('page-about').classList.add('active');
-                document.getElementById('nav-about').classList.add('active-link');
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Modal Controls
-        const modal = document.getElementById("applicationModal");
-        const closeBtn = document.getElementById("closeModalBtn");
-
-        function openModal() {
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-
-        function closeModal() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-
-        if (closeBtn) closeBtn.onclick = closeModal;
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-
-        // Page View Counter
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://abacus.jasoncameron.dev/hit/campusa-eu-portugal/visits')
-                .then(response => response.json())
-                .then(data => {
-                    const counterElem = document.getElementById('visitor-count');
-                    if (counterElem && data.value) {
-                        counterElem.innerText = data.value;
-                    }
-                })
-                .catch(error => {
-                    const counterElem = document.getElementById('visitor-count');
-                    if (counterElem) counterElem.innerText = '1,840';
-                });
-        });
-    </script>
-</body>
-</html>
+                benefit_3: "<strong>Poisten
