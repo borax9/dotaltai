@@ -727,6 +727,29 @@
         .cv-link:hover { text-decoration: underline; }
         .cv-card ul { list-style: none; padding-left: 0; font-size: 0.9rem; line-height: 1.6; }
 
+
+        /* News & Media (About Us) */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+        .news-item {
+            display: flex; flex-direction: column; text-decoration: none; color: inherit;
+            background: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            overflow: hidden; transition: var(--transition-smooth);
+        }
+        .news-item:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12); border-color: var(--primary-accent); }
+        .news-thumb {
+            position: relative; aspect-ratio: 16 / 9; overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-accent) 100%);
+            display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.85); font-size: 2.5rem;
+        }
+        .news-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+        .news-play { position: absolute; z-index: 2; width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,0.6); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; padding-left: 4px; transition: var(--transition-smooth); }
+        .news-item:hover .news-play { background: var(--primary-accent); }
+        .news-body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+        .news-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+        .news-tag { background: #e6f4ea; color: var(--primary); border-radius: 999px; padding: 2px 10px; }
+        .news-title { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.35; color: var(--primary); margin: 0; }
+        .news-more { margin-top: auto; padding-top: 6px; font-size: 0.85rem; font-weight: 600; color: var(--primary-accent); display: inline-flex; align-items: center; gap: 6px; }
+
         /* Mobile Optimization Fixes */
         @media (max-width: 991px) {
             .navbar {
@@ -1109,6 +1132,68 @@
                         <div class="img-container">
                             <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/camp2.png" decoding="async" width="600" height="400" onerror="this.onerror=null; this.src='images/camp2.png';" alt="ADOT Education Events Consulting - USA Summer Camp Experience 2">
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEWS & MEDIA -->
+            <div class="campusa-card" id="about-news">
+                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span data-i18n="news_title">News &amp; Media</span>
+                    </h3>
+                    <p data-i18n="news_desc" style="margin-bottom: 0;">Our Erasmus+ projects and partners in the press.</p>
+
+                    <div class="news-grid">
+                        <a class="news-item" href="https://sektorgazetesi.com.tr/salihli-egitim-projesine-ev-sahipligi-yapacak" target="_blank" rel="noopener">
+                            <div class="news-thumb">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <img src="https://cdn.sektorgazetesi.com.tr/resize/width=1200,quality=75,format=jpeg/onay-ozan-2025-web-252.png" alt="Salihli eğitim projesine ev sahipliği yapacak" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta"><span class="news-tag">Sektör Gazetesi</span><span>16.06.2025</span></div>
+                                <h4 class="news-title">Salihli eğitim projesine ev sahipliği yapacak</h4>
+                                <span class="news-more"><span data-i18n="news_read">Read article</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </a>
+
+                        <a class="news-item" href="https://myszkow365.pl/pl/19_wiadomosci-z-regionu/633_kozieglowy/30907_program-erasmus-miedzynarodowa-delegacja-w-szkole-w-siedlcu-duzym.html" target="_blank" rel="noopener">
+                            <div class="news-thumb">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <img src="images/news-myszkow365-erasmus.jpg" alt="Program Erasmus+ – międzynarodowa delegacja w szkole w Siedlcu Dużym" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta"><span class="news-tag">Myszków365</span></div>
+                                <h4 class="news-title">Program Erasmus+ – międzynarodowa delegacja w szkole w Siedlcu Dużym</h4>
+                                <span class="news-more"><span data-i18n="news_read">Read article</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </a>
+
+                        <a class="news-item" href="https://myszkow365.pl/pl/15_fotorelacje/97_szkolne/305_fotorelacja-program-erasmus-w-szkole-w-siedlcu-duzym.html?fbclid=IwY2xjawVY19xleHRuA2FlbQIxMABwZG9mAWJyaWQRMVBLU2lVd2pTWjNKSzYzQVdzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfTgZyhD5WGCheTaF3GTZNhH1cIGrOWSraCpd2bNhxjxcr6ebffADuMF2oWqo_aem_5XllKOV1B6H2_7sZ0KmJ8w" target="_blank" rel="noopener">
+                            <div class="news-thumb">
+                                <i class="fa-solid fa-images"></i>
+                                <img src="images/news-myszkow365-erasmus.jpg" alt="Fotorelacja: Program Erasmus+ w szkole w Siedlcu Dużym" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta"><span class="news-tag">Myszków365</span></div>
+                                <h4 class="news-title">Fotorelacja: Program Erasmus+ w szkole w Siedlcu Dużym</h4>
+                                <span class="news-more"><span data-i18n="news_read">Read article</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </a>
+
+                        <a class="news-item" href="https://myszkow365.pl/pl/659_wideo/183_kozieglowy-slaska-kurator-oswiaty-aleksandra-dyla-i-delegacja-programu-erazmus-w-osikowej-dolinie.html" target="_blank" rel="noopener">
+                            <div class="news-thumb">
+                                <i class="fa-solid fa-film"></i>
+                                <img src="https://img.youtube.com/vi/J19IzTVXdcg/hqdefault.jpg" alt="Koziegłowy: Śląska Kurator Oświaty Aleksandra Dyla i delegacja programu Erazmus w Osikowej Dolinie" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();">
+                                <span class="news-play"><i class="fa-solid fa-play"></i></span>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta"><span class="news-tag">Myszków365</span><span>Video</span></div>
+                                <h4 class="news-title">Koziegłowy: Śląska Kurator Oświaty Aleksandra Dyla i delegacja programu Erazmus w Osikowej Dolinie</h4>
+                                <span class="news-more"><span data-i18n="news_watch">Watch video</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1549,6 +1634,10 @@
                 about_hero_badge: "Our Legacy & Credentials",
                 about_hero_title: "About ADOT Education Events Consulting",
                 about_hero_desc: "Discover our background, rich consulting history, and dedicated expertise in international J-1 cultural exchange and volunteering programs.",
+                news_title: "News &amp; Media",
+                news_desc: "Our Erasmus+ projects and partners in the press.",
+                news_read: "Read article",
+                news_watch: "Watch video",
                 cv_title: "Mgr. Bora Agbulut EU Projects Curriculum",
                 cv_contact: "Contact:",
                 cv_subtitle: "Grant Writing &amp; Project Management Portfolio",
@@ -1650,6 +1739,10 @@
                 about_hero_badge: "O Nosso Legado e Credenciais",
                 about_hero_title: "Sobre a ADOT Education Events Consulting",
                 about_hero_desc: "Conheça o nosso background, histórico de consultoria e especialização em programas J-1 e de voluntariado.",
+                news_title: "Notícias e Media",
+                news_desc: "Os nossos projetos Erasmus+ e parceiros na imprensa.",
+                news_read: "Ler artigo",
+                news_watch: "Ver vídeo",
                 cv_title: "Mgr. Bora Agbulut – Currículo de Projetos da UE",
                 cv_contact: "Contacto:",
                 cv_subtitle: "Portefólio de Redação de Candidaturas e Gestão de Projetos",
@@ -1751,6 +1844,10 @@
                 about_hero_badge: "Naše zázemie a hodnoty",
                 about_hero_title: "O spoločnosti ADOT Education Events Consulting",
                 about_hero_desc: "Zistite viac o našom pôsobení, bohatej poradenskej histórii a špecializácii v medzinárodných programoch J-1 a dobrovoľníckych programoch.",
+                news_title: "Správy a médiá",
+                news_desc: "Naše projekty Erasmus+ a partneri v médiách.",
+                news_read: "Čítať článok",
+                news_watch: "Pozrieť video",
                 cv_title: "Mgr. Bora Agbulut – Zoznam projektov EÚ",
                 cv_contact: "Kontakt:",
                 cv_subtitle: "Portfólio písania grantov a riadenia projektov",
@@ -1852,6 +1949,10 @@
                 about_hero_badge: "Unsere Historie & Kompetenzen",
                 about_hero_title: "Über ADOT Education Events Consulting",
                 about_hero_desc: "Erfahren Sie mehr über unseren Hintergrund und unsere Fachkompetenz bei J-1- und Freiwilligenprogrammen.",
+                news_title: "Neuigkeiten &amp; Presse",
+                news_desc: "Unsere Erasmus+-Projekte und Partner in der Presse.",
+                news_read: "Artikel lesen",
+                news_watch: "Video ansehen",
                 cv_title: "Mgr. Bora Agbulut – EU-Projekte Lebenslauf",
                 cv_contact: "Kontakt:",
                 cv_subtitle: "Portfolio für Antragsstellung und Projektmanagement",
