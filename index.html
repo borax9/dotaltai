@@ -802,6 +802,7 @@
                 <a href="#" class="nav-link-item active-link" id="nav-home" onclick="switchPage('home'); return false;" data-i18n="nav_home">Home</a>
                 <a href="#" class="nav-link-item" id="nav-usa" onclick="switchPage('usa'); return false;" data-i18n="nav_usa">USA Summer Camp</a>
                 <a href="#" class="nav-link-item" id="nav-esc" onclick="switchPage('esc'); return false;" data-i18n="nav_esc">ESC Projects</a>
+                <a href="#" class="nav-link-item" id="nav-intern" onclick="switchPage('intern'); return false;" data-i18n="nav_intern">Internships</a>
                 <a href="#" class="nav-link-item" id="nav-about" onclick="switchPage('about'); return false;" data-i18n="nav_about">About Us</a>
             </div>
 
@@ -865,6 +866,18 @@
                             Participate in fully-funded short-term and long-term European Volunteering Program projects in Portugal focused on GeoHeritage, Paleontology, and Climate Action.
                         </p>
                         <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%); display: inline-block;" data-i18n="btn_explore_esc">View ESC Projects &rarr;</button>
+                    </div>
+
+                    <!-- INTERN PROFESSIONAL TRAINING CARD -->
+                    <div class="feature-box" onclick="switchPage('intern');" style="border-top-color: #2563eb; padding: 24px; text-align: center;">
+                        <div class="home-card-poster" style="display: flex; align-items: center; justify-content: center; background: #eff6ff;">
+                            <i class="fa-solid fa-briefcase" style="font-size: 4rem; color: #2563eb; padding: 40px 0;"></i>
+                        </div>
+                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary);" data-i18n="card_intern_title">Intern Professional Training</h3>
+                        <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);" data-i18n="card_intern_desc">
+                            Gain hands-on experience in your field of study in the United States through a J-1 Intern Professional Training program, for current students and recent graduates.
+                        </p>
+                        <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); display: inline-block;" data-i18n="btn_explore_intern">View Internship Program &rarr;</button>
                     </div>
 
                 </div>
@@ -1095,6 +1108,65 @@
                         <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter5.png" onerror="this.onerror=null; this.src='images/escposter5.png';" alt="ESC Poster 5">
                         <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter6.png" onerror="this.onerror=null; this.src='images/escposter6.png';" alt="ESC Poster 6">
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: INTERN PROFESSIONAL TRAINING -->
+    <div id="page-intern" class="page-view">
+        <!-- HERO SECTION -->
+        <section class="campusa-hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-briefcase"></i>
+                <span data-i18n="intern_hero_badge">J-1 Intern Professional Training</span>
+            </div>
+            <h1 data-i18n="intern_hero_title">Intern Professional Training Program</h1>
+            <p data-i18n="intern_hero_desc">
+                Gain practical experience in U.S. business practices in your chosen occupational field, while experiencing American culture.
+            </p>
+        </section>
+
+        <!-- MAIN CONTENT CARD -->
+        <div class="content-container">
+            <div class="campusa-card">
+
+                <div class="campusa-section">
+                    <p style="line-height: 1.6; font-size: 1.05rem; color: #334155;" data-i18n="intern_intro">
+                        The Intern Professional Training program is designed for foreign college and university students and recent graduates who want to gain exposure to U.S. culture and hands-on experience in U.S. workplaces in their chosen field. Placements are arranged through a designated J-1 program sponsor, and ADOT supports candidates throughout the process.
+                    </p>
+                </div>
+
+                <!-- ELIGIBILITY -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span data-i18n="intern_elig_heading">Who Can Apply</span>
+                    </h3>
+                    <ul class="custom-list">
+                        <li data-i18n="intern_elig_li1">Currently enrolled and pursuing studies at a foreign degree- or certificate-granting post-secondary institution.</li>
+                        <li data-i18n="intern_elig_li2">Or graduated from such an institution no more than 12 months before the program start date.</li>
+                    </ul>
+                </div>
+
+                <!-- OCCUPATIONAL FIELDS -->
+                <div class="campusa-section" style="border-bottom: none;">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span data-i18n="intern_cat_heading">Occupational Fields</span>
+                    </h3>
+                    <p style="line-height: 1.6;" data-i18n="intern_cat_desc">
+                        Internships are available in areas such as Management, Business &amp; Finance, Hospitality &amp; Tourism, Arts &amp; Culture, Information Media &amp; Communications, Education &amp; Social Services, and the Sciences &amp; Engineering.
+                    </p>
+                </div>
+
+                <!-- APPLY BUTTON -->
+                <div class="apply-btn-container">
+                    <button class="apply-btn" onclick="openModal();">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span data-i18n="start_app">Start Your Pre-Application</span>
+                    </button>
                 </div>
 
             </div>
@@ -1546,6 +1618,7 @@
                         <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Lifeguard"> Lifeguard</label>
                         <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Sports"> Team Sports</label>
                         <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Arts"> Arts & Crafts</label>
+                        <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Internship"> Internship (Intern Professional Training)</label>
                     </div>
                 </div>
                 <button type="submit" class="apply-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: center; margin-top: 15px; padding: 14px 20px;" data-i18n="btn_submit">
@@ -1562,6 +1635,19 @@
                 nav_home: "Home",
                 nav_usa: "USA Summer Camp",
                 nav_esc: "ESC Projects",
+                nav_intern: "Internships",
+                card_intern_title: "Intern Professional Training",
+                card_intern_desc: "Gain hands-on experience in your field of study in the United States through a J-1 Intern Professional Training program, for current students and recent graduates.",
+                btn_explore_intern: "View Internship Program \u2192",
+                intern_hero_badge: "J-1 Intern Professional Training",
+                intern_hero_title: "Intern Professional Training Program",
+                intern_hero_desc: "Gain practical experience in U.S. business practices in your chosen occupational field, while experiencing American culture.",
+                intern_intro: "The Intern Professional Training program is designed for foreign college and university students and recent graduates who want to gain exposure to U.S. culture and hands-on experience in U.S. workplaces in their chosen field. Placements are arranged through a designated J-1 program sponsor, and ADOT supports candidates throughout the process.",
+                intern_elig_heading: "Who Can Apply",
+                intern_elig_li1: "Currently enrolled and pursuing studies at a foreign degree- or certificate-granting post-secondary institution.",
+                intern_elig_li2: "Or graduated from such an institution no more than 12 months before the program start date.",
+                intern_cat_heading: "Occupational Fields",
+                intern_cat_desc: "Internships are available in areas such as Management, Business &amp; Finance, Hospitality &amp; Tourism, Arts &amp; Culture, Information Media &amp; Communications, Education &amp; Social Services, and the Sciences &amp; Engineering.",
                 nav_about: "About Us",
                 nav_apply: "Apply Now",
                 
@@ -1668,6 +1754,19 @@
                 nav_home: "Início",
                 nav_usa: "USA Summer Camp",
                 nav_esc: "Projetos ESC",
+                nav_intern: "Estágios",
+                card_intern_title: "Formação Profissional de Estágio",
+                card_intern_desc: "Adquira experiência prática na sua área de estudo nos Estados Unidos através do programa de Estágio Profissional J-1, para estudantes atuais e recém-licenciados.",
+                btn_explore_intern: "Ver Programa de Estágio \u2192",
+                intern_hero_badge: "Estágio Profissional J-1",
+                intern_hero_title: "Programa de Formação Profissional de Estágio",
+                intern_hero_desc: "Ganhe experiência prática nas práticas empresariais dos EUA na sua área profissional, enquanto vive a cultura americana.",
+                intern_intro: "O programa de Formação Profissional de Estágio destina-se a estudantes universitários estrangeiros e recém-licenciados que pretendam conhecer a cultura dos EUA e adquirir experiência prática em locais de trabalho americanos na sua área. Os estágios são organizados através de um patrocinador J-1 designado, e a ADOT apoia os candidatos em todo o processo.",
+                intern_elig_heading: "Quem Pode Candidatar-se",
+                intern_elig_li1: "Estar matriculado a tempo inteiro num estabelecimento de ensino pós-secundário estrangeiro que conceda diploma ou certificado.",
+                intern_elig_li2: "Ou ter concluído esse curso há não mais de 12 meses antes da data de início do programa.",
+                intern_cat_heading: "Áreas Profissionais",
+                intern_cat_desc: "Os estágios estão disponíveis em áreas como Gestão, Negócios e Finanças, Hotelaria e Turismo, Artes e Cultura, Comunicação e Media, Educação e Serviços Sociais, e Ciências e Engenharia.",
                 nav_about: "Sobre Nós",
                 nav_apply: "Candidatar Agora",
                 hero_badge_home: "Programas Globais de Educação e Mobilidade",
@@ -1773,6 +1872,19 @@
                 nav_home: "Domov",
                 nav_usa: "USA Summer Camp",
                 nav_esc: "Projekty ESC",
+                nav_intern: "Stáže",
+                card_intern_title: "Odborná stáž (Intern Professional Training)",
+                card_intern_desc: "Získajte praktické skúsenosti vo svojom odbore v USA prostredníctvom programu J-1 Intern Professional Training pre študentov a čerstvých absolventov.",
+                btn_explore_intern: "Zobraziť program stáží \u2192",
+                intern_hero_badge: "J-1 Odborná stáž",
+                intern_hero_title: "Program odbornej stáže Intern Professional Training",
+                intern_hero_desc: "Získajte praktické skúsenosti s obchodnými postupmi v USA vo vybranom odbore a spoznajte americkú kultúru.",
+                intern_intro: "Program Intern Professional Training je určený pre zahraničných vysokoškolských študentov a čerstvých absolventov, ktorí chcú spoznať americkú kultúru a získať praktické skúsenosti na pracoviskách v USA vo svojom odbore. Umiestnenie zabezpečuje určený sponzor programu J-1 a ADOT podporuje uchádzačov v celom procese.",
+                intern_elig_heading: "Kto sa môže prihlásiť",
+                intern_elig_li1: "Byť zapísaný na štúdium na zahraničnej vysokej škole alebo inštitúcii poskytujúcej diplom či certifikát.",
+                intern_elig_li2: "Alebo ukončiť takéto štúdium najviac 12 mesiacov pred začiatkom programu.",
+                intern_cat_heading: "Odborné oblasti",
+                intern_cat_desc: "Stáže sú dostupné v oblastiach ako manažment, obchod a financie, pohostinstvo a cestovný ruch, umenie a kultúra, komunikácia a médiá, vzdelávanie a sociálne služby, a vedy a inžinierstvo.",
                 nav_about: "O nás",
                 nav_apply: "Prihlásiť sa",
                 hero_badge_home: "Globálne vzdelávacie a mobilitné programy",
@@ -1878,6 +1990,19 @@
                 nav_home: "Startseite",
                 nav_usa: "USA Sommercamp",
                 nav_esc: "ESC Projekte",
+                nav_intern: "Praktika",
+                card_intern_title: "Intern Professional Training",
+                card_intern_desc: "Sammeln Sie praktische Erfahrung in Ihrem Fachbereich in den USA im Rahmen des J-1 Intern Professional Training Programms für Studierende und Hochschulabsolventen.",
+                btn_explore_intern: "Praktikumsprogramm ansehen \u2192",
+                intern_hero_badge: "J-1 Intern Professional Training",
+                intern_hero_title: "Intern Professional Training Programm",
+                intern_hero_desc: "Sammeln Sie praktische Erfahrung in US-Geschäftspraktiken in Ihrem Berufsfeld und erleben Sie die amerikanische Kultur.",
+                intern_intro: "Das Programm richtet sich an ausländische Studierende und kürzlich graduierte Hochschulabsolventen, die die US-Kultur kennenlernen und praktische Erfahrung in US-Arbeitsumgebungen in ihrem Fachgebiet sammeln möchten. Die Platzierungen erfolgen über einen offiziellen J-1-Programmsponsor, und ADOT begleitet die Kandidaten durch den gesamten Prozess.",
+                intern_elig_heading: "Wer sich bewerben kann",
+                intern_elig_li1: "Aktuell in Vollzeit an einer ausländischen Hochschule oder Bildungseinrichtung mit Abschluss- oder Zertifikatsprogramm eingeschrieben.",
+                intern_elig_li2: "Oder dort maximal 12 Monate vor Programmbeginn abgeschlossen.",
+                intern_cat_heading: "Fachbereiche",
+                intern_cat_desc: "Praktika sind u. a. in den Bereichen Management, Wirtschaft &amp; Finanzen, Gastgewerbe &amp; Tourismus, Kunst &amp; Kultur, Medien &amp; Kommunikation, Bildung &amp; Soziales sowie Naturwissenschaften &amp; Technik verfügbar.",
                 nav_about: "Über Uns",
                 nav_apply: "Jetzt Bewerben",
                 hero_badge_home: "Globale Bildungs- und Mobilitätsprogramme",
@@ -2009,6 +2134,9 @@
             } else if (pageId === 'esc') {
                 document.getElementById('page-esc').classList.add('active');
                 document.getElementById('nav-esc').classList.add('active-link');
+            } else if (pageId === 'intern') {
+                document.getElementById('page-intern').classList.add('active');
+                document.getElementById('nav-intern').classList.add('active-link');
             } else if (pageId === 'about') {
                 document.getElementById('page-about').classList.add('active');
                 document.getElementById('nav-about').classList.add('active-link');
