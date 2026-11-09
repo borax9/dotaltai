@@ -818,7 +818,6 @@
             
             <div class="nav-links-group">
                 <a href="#" class="nav-link-item active-link" id="nav-home" onclick="switchPage('home'); return false;" data-i18n="nav_home">Home</a>
-                <a href="#" class="nav-link-item" id="nav-esc" onclick="switchPage('esc'); return false;" data-i18n="nav_esc">EU Volunteering Programs</a>
                 <a href="#" class="nav-link-item" id="nav-usa" onclick="switchPage('usa'); return false;" data-i18n="nav_usa">USA Summer Camp</a>
                 <a href="#" class="nav-link-item" id="nav-intern" onclick="switchPage('intern'); return false;" data-i18n="nav_intern">Internships</a>
                 <a href="#" class="nav-link-item" id="nav-dino" onclick="switchPage('dino'); return false;" data-i18n="nav_dino">DinoCamp</a>
@@ -863,18 +862,6 @@
 
                 <div class="campusa-features" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
                     
-                    <!-- ESC PROJECTS CARD -->
-                    <div class="feature-box" onclick="switchPage('esc');" style="border-top-color: #10b981; padding: 24px; text-align: center;">
-                        <div class="home-card-poster">
-                            <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/shnposter.jpg" onerror="this.onerror=null; this.src='images/shnposter.jpg';" alt="EU Volunteering Programs Poster">
-                        </div>
-                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary);" data-i18n="card_esc_title">European Volunteering Program</h3>
-                        <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);" data-i18n="card_esc_desc">
-                            Participate in fully-funded short-term and long-term European Volunteering Program projects in Portugal focused on GeoHeritage, Paleontology, and Climate Action.
-                        </p>
-                        <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%); display: inline-block;" data-i18n="btn_explore_esc">View EU Volunteering Programs &rarr;</button>
-                    </div>
-
                     <!-- USA SUMMER CAMP CARD -->
                     <div class="feature-box" onclick="switchPage('usa');" style="border-top-color: #117a56; padding: 24px; text-align: center;">
                         <div class="home-card-poster">
@@ -1066,78 +1053,6 @@
                             <strong style="font-size: 0.95rem;" data-i18n="fee_3_title">Placement & Support</strong>
                             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:6px;" data-i18n="fee_3_desc">Paid upon formal job offer confirmation.</p>
                         </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- PAGE 3: ESC PROGRAM -->
-    <div id="page-esc" class="page-view">
-        <!-- HERO SECTION -->
-        <section class="campusa-hero">
-            <div class="hero-badge">
-                <i class="fa-solid fa-earth-europe"></i>
-                <span data-i18n="esc_hero_badge">European Volunteering Program</span>
-            </div>
-            <h1 data-i18n="esc_hero_title">European Volunteering Program</h1>
-            <p data-i18n="esc_hero_desc">
-                Engage in meaningful EU-funded volunteering initiatives, paleontological excavations, geoheritage management, and climate action projects in Portugal.
-            </p>
-        </section>
-
-        <!-- MAIN CONTENT CARD -->
-        <div class="content-container">
-            <div class="campusa-card">
-                
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--primary);" data-i18n="esc_partner_title">Sociedade de História Natural (SHN) Partnership</h2>
-                </div>
-
-                <div class="campusa-section">
-                    <p style="line-height: 1.6; font-size: 1.05rem; color: #334155;" data-i18n="esc_intro_1">
-                        Our Portuguese main partner <strong>Sociedade de História Natural</strong> holds a Quality Label for the 2021-2027 period under our consultancy as a hosting and leading organization in European Volunteering Program and Erasmus+ projects.
-                    </p>
-                    <p style="line-height: 1.6; font-size: 1.05rem; margin-top: 1rem; color: #334155;" data-i18n="esc_intro_2">
-                        So far, we have hosted volunteers from <strong>Turkey, Germany, Italy, Estonia, Slovakia, the Netherlands, Spain, France, Azerbaijan, and Belgium</strong>. We are expanding our scope and keeping our doors wide open to all volunteers from Europe and neighboring countries!
-                    </p>
-                    
-                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 2rem; justify-content: center;">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/esclabel.jpg" onerror="this.onerror=null; this.src='images/esclabel.jpg';" alt="Quality Label Document" style="max-width: 400px; width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/shnposter.jpg" onerror="this.onerror=null; this.src='images/shnposter.jpg';" alt="SHN Volunteer Activities" style="max-width: 400px; width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                    </div>
-                </div>
-
-                <!-- ACTIVITIES IN PORTUGAL -->
-                <div class="campusa-section">
-                    <h3 class="section-heading">
-                        <i class="fa-solid fa-compass"></i>
-                        <span data-i18n="esc_act_heading">Activities in Portugal</span>
-                    </h3>
-                    <p style="line-height: 1.6; margin-bottom: 1rem;" data-i18n="esc_act_intro">
-                        We aim to create a global awareness of climate issues to care for other ecosystems threatened by human activity and the conservation actions for natural heritages. According to this aim, we have some basic learning elements:
-                    </p>
-                    <ul class="custom-list">
-                        <li data-i18n="esc_act_li1">GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences</li>
-                        <li data-i18n="esc_act_li2">Geographic Information System applications for understanding land degradation and climate change threatened by environmental and human impact</li>
-                        <li data-i18n="esc_act_li3">Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on recent issues on climate and ecosystems</li>
-                    </ul>
-                </div>
-
-                <!-- ESC POSTER COLLAGE -->
-                <div class="campusa-section" style="border-bottom: none;">
-                    <h3 class="section-heading">
-                        <i class="fa-solid fa-images"></i>
-                        <span data-i18n="esc_gallery_heading">Project Activities Gallery</span>
-                    </h3>
-                    <div class="esc-collage">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter1.png" onerror="this.onerror=null; this.src='images/escposter1.png';" alt="ESC Poster 1">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter2.png" onerror="this.onerror=null; this.src='images/escposter2.png';" alt="ESC Poster 2">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter3.png" onerror="this.onerror=null; this.src='images/escposter3.png';" alt="ESC Poster 3">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter4.png" onerror="this.onerror=null; this.src='images/escposter4.png';" alt="ESC Poster 4">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter5.png" onerror="this.onerror=null; this.src='images/escposter5.png';" alt="ESC Poster 5">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter6.png" onerror="this.onerror=null; this.src='images/escposter6.png';" alt="ESC Poster 6">
                     </div>
                 </div>
 
@@ -1732,6 +1647,63 @@
             </ul>
 
                 </div>
+            <!-- EU VOLUNTEERING PROGRAMS (moved from its own page) -->
+            <div id="eu-volunteering" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e2e8f0;">
+                <h3 class="section-heading">
+                    <i class="fa-solid fa-earth-europe"></i>
+                    <span data-i18n="nav_esc">EU Volunteering Programs</span>
+                </h3>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--primary);" data-i18n="esc_partner_title">Sociedade de História Natural (SHN) Partnership</h2>
+                </div>
+
+                <div class="campusa-section">
+                    <p style="line-height: 1.6; font-size: 1.05rem; color: #334155;" data-i18n="esc_intro_1">
+                        Our Portuguese main partner <strong>Sociedade de História Natural</strong> holds a Quality Label for the 2021-2027 period under our consultancy as a hosting and leading organization in European Volunteering Program and Erasmus+ projects.
+                    </p>
+                    <p style="line-height: 1.6; font-size: 1.05rem; margin-top: 1rem; color: #334155;" data-i18n="esc_intro_2">
+                        So far, we have hosted volunteers from <strong>Turkey, Germany, Italy, Estonia, Slovakia, the Netherlands, Spain, France, Azerbaijan, and Belgium</strong>. We are expanding our scope and keeping our doors wide open to all volunteers from Europe and neighboring countries!
+                    </p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 2rem; justify-content: center;">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/esclabel.jpg" onerror="this.onerror=null; this.src='images/esclabel.jpg';" alt="Quality Label Document" style="max-width: 400px; width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/shnposter.jpg" onerror="this.onerror=null; this.src='images/shnposter.jpg';" alt="SHN Volunteer Activities" style="max-width: 400px; width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    </div>
+                </div>
+
+                <!-- ACTIVITIES IN PORTUGAL -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-compass"></i>
+                        <span data-i18n="esc_act_heading">Activities in Portugal</span>
+                    </h3>
+                    <p style="line-height: 1.6; margin-bottom: 1rem;" data-i18n="esc_act_intro">
+                        We aim to create a global awareness of climate issues to care for other ecosystems threatened by human activity and the conservation actions for natural heritages. According to this aim, we have some basic learning elements:
+                    </p>
+                    <ul class="custom-list">
+                        <li data-i18n="esc_act_li1">GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences</li>
+                        <li data-i18n="esc_act_li2">Geographic Information System applications for understanding land degradation and climate change threatened by environmental and human impact</li>
+                        <li data-i18n="esc_act_li3">Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on recent issues on climate and ecosystems</li>
+                    </ul>
+                </div>
+
+                <!-- ESC POSTER COLLAGE -->
+                <div class="campusa-section" style="border-bottom: none;">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-images"></i>
+                        <span data-i18n="esc_gallery_heading">Project Activities Gallery</span>
+                    </h3>
+                    <div class="esc-collage">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter1.png" onerror="this.onerror=null; this.src='images/escposter1.png';" alt="ESC Poster 1">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter2.png" onerror="this.onerror=null; this.src='images/escposter2.png';" alt="ESC Poster 2">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter3.png" onerror="this.onerror=null; this.src='images/escposter3.png';" alt="ESC Poster 3">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter4.png" onerror="this.onerror=null; this.src='images/escposter4.png';" alt="ESC Poster 4">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter5.png" onerror="this.onerror=null; this.src='images/escposter5.png';" alt="ESC Poster 5">
+                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter6.png" onerror="this.onerror=null; this.src='images/escposter6.png';" alt="ESC Poster 6">
+                    </div>
+                </div>
+
+            </div>
             </div>
         </div>
     </div>
@@ -2517,9 +2489,6 @@
             } else if (pageId === 'usa') {
                 document.getElementById('page-usa').classList.add('active');
                 document.getElementById('nav-usa').classList.add('active-link');
-            } else if (pageId === 'esc') {
-                document.getElementById('page-esc').classList.add('active');
-                document.getElementById('nav-esc').classList.add('active-link');
             } else if (pageId === 'intern') {
                 document.getElementById('page-intern').classList.add('active');
                 document.getElementById('nav-intern').classList.add('active-link');
