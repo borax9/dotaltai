@@ -7,7 +7,7 @@
     <!-- SEO Optimization & Search Engine Directives for Fresh Content -->
     <title>USA Summer Camp & European Volunteering Programs | ADOT Education Events Consulting</title>
     <meta name="description" content="Join the USA Summer Camp Counselor Program and European Volunteering Program by ADOT Education Events Consulting.">
-    <meta name="keywords" content="ADOT, ADOT Education Events Consulting, USA Summer Camp, J-1 Visa, Camp Counselor USA, ESC Program, European Volunteering Program, Cultural Exchange, Youth Mobility">
+    <meta name="keywords" content="ADOT, ADOT Education Events Consulting, USA Summer Camp, J-1 Visa, Camp Counselor USA, ESC Program, European Volunteering Program, Cultural Exchange, Youth Mobility, DinoCamp, Paleontology, Dinosaur Fossils">
     
     <!-- Prevent Old / Cached Content from Showing in Google Search -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -750,6 +750,20 @@
         .news-title { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.35; color: var(--primary); margin: 0; }
         .news-more { margin-top: auto; padding-top: 6px; font-size: 0.85rem; font-weight: 600; color: var(--primary-accent); display: inline-flex; align-items: center; gap: 6px; }
 
+
+        /* DinoCamp */
+        .dino-hero { background: linear-gradient(135deg, #2a1708 0%, #5a3411 50%, #2a1708 100%); }
+        .dino-hero .hero-badge { color: #fbbf24; }
+        .dino-accent { color: #b45309 !important; }
+        .dino-card-poster { display: flex; align-items: center; justify-content: center; background: #fef3c7; }
+        .dino-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 1.5rem; }
+        .dino-grid .feature-box { cursor: default; border-top-color: #b45309; }
+        .dino-grid .feature-box:hover { transform: none; box-shadow: none; }
+        .dino-list li::before { color: #b45309; background: #fef3c7; }
+        .dino-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem; }
+        .dino-pill { display: inline-flex; align-items: center; gap: 8px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: var(--transition-smooth); }
+        .dino-pill:hover { background: #b45309; color: #fff; border-color: #b45309; }
+
         /* Mobile Optimization Fixes */
         @media (max-width: 991px) {
             .navbar {
@@ -803,6 +817,7 @@
                 <a href="#" class="nav-link-item" id="nav-usa" onclick="switchPage('usa'); return false;" data-i18n="nav_usa">USA Summer Camp</a>
                 <a href="#" class="nav-link-item" id="nav-esc" onclick="switchPage('esc'); return false;" data-i18n="nav_esc">ESC Projects</a>
                 <a href="#" class="nav-link-item" id="nav-intern" onclick="switchPage('intern'); return false;" data-i18n="nav_intern">Internships</a>
+                <a href="#" class="nav-link-item" id="nav-dino" onclick="switchPage('dino'); return false;" data-i18n="nav_dino">DinoCamp</a>
                 <a href="#" class="nav-link-item" id="nav-about" onclick="switchPage('about'); return false;" data-i18n="nav_about">About Us</a>
             </div>
 
@@ -878,6 +893,18 @@
                             Gain hands-on experience in your field of study in the United States through a J-1 Intern Professional Training program, for current students and recent graduates.
                         </p>
                         <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); display: inline-block;" data-i18n="btn_explore_intern">View Internship Program &rarr;</button>
+                    </div>
+
+                    <!-- DINOCAMP CARD -->
+                    <div class="feature-box" onclick="switchPage('dino');" style="border-top-color: #b45309; padding: 24px; text-align: center;">
+                        <div class="home-card-poster dino-card-poster">
+                            <i class="fa-solid fa-bone" style="font-size: 4rem; color: #b45309; padding: 40px 0;"></i>
+                        </div>
+                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary);" data-i18n="card_dino_title">DinoCamp - Dinosaur Fossil Camp</h3>
+                        <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);" data-i18n="card_dino_desc">
+                            A 1-2 week educational paleontology experience in Portugal for students aged 7-18: fossil excavation, laboratory work and geoheritage field trips with the Sociedade de História Natural.
+                        </p>
+                        <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #d97706 0%, #92400e 100%); display: inline-block;" data-i18n="btn_explore_dino">View DinoCamp →</button>
                     </div>
 
                 </div>
@@ -1166,6 +1193,146 @@
                     <button class="apply-btn" onclick="openModal();">
                         <i class="fa-solid fa-paper-plane"></i>
                         <span data-i18n="start_app">Start Your Pre-Application</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: DINOCAMP -->
+    <div id="page-dino" class="page-view">
+        <section class="campusa-hero dino-hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-bone"></i>
+                <span data-i18n="dino_hero_badge">Paleontology Education Program in Portugal</span>
+            </div>
+            <h1 data-i18n="dino_hero_title">DinoCamp</h1>
+            <p data-i18n="dino_hero_desc">A 1-2 week educational trip for students across Europe aged 7-18: discover real dinosaur fossils, join guided excavation days and work in a paleontology laboratory.</p>
+        </section>
+
+        <div class="content-container">
+            <div class="campusa-card">
+
+                <div class="campusa-section">
+                    <p style="line-height: 1.7; font-size: 1.05rem; color: #334155;" data-i18n="dino_intro">DinoCamp is an educational study trip that lets young people experience how paleontologists work. Participants explore Late Jurassic fossil country on the Portuguese west coast, learn how fossils are found, recorded and prepared, and understand what they tell us about ancient ecosystems and climate. The program is open to all students aged 7 to 18 and is organised with our host organisation, the Sociedade de História Natural.</p>
+                </div>
+
+                <!-- HOST -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-building-columns dino-accent"></i>
+                        <span data-i18n="dino_host_title">Host Organisation: Sociedade de História Natural (SHN)</span>
+                    </h3>
+                    <p style="line-height: 1.7; color: #334155;" data-i18n="dino_host_1">The <strong>Sociedade de História Natural de Torres Vedras</strong> was founded on 18 March 1998. It is a non-profit scientific organisation dedicated to promoting paleontological and geological heritage, with a focus on vertebrate fossils and educational activities in GeoPaleontology. It manages one of the largest paleontological collections in Portugal and is working towards a Paleontological Museum for public science communication.</p>
+                    <p style="line-height: 1.7; margin-top: 1rem; color: #334155;" data-i18n="dino_host_2">SHN researchers have contributed to the description of new dinosaur species from the Torres Vedras and Lourinhã region, and the organisation has reported finds such as a Jurassic dinosaur nest with eggs at Santa Cruz beach and an armoured (ankylosaur-group) dinosaur about 146 million years old.</p>
+                    <div class="fee-grid">
+                        <div class="fee-card"><h4 class="dino-accent">1998</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_1">Founded</strong></div>
+                        <div class="fee-card"><h4 class="dino-accent">&gt;30</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_2">Recognised species</strong></div>
+                        <div class="fee-card"><h4 class="dino-accent">&gt;328</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_3">Identified fossil sites</strong></div>
+                        <div class="fee-card"><h4 class="dino-accent">&gt;1500</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_4">Fossils collected</strong></div>
+                    </div>
+                </div>
+
+                <!-- AGE GROUPS -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-children dino-accent"></i>
+                        <span data-i18n="dino_who_title">Designed for Every Age Group (7-18)</span>
+                    </h3>
+                    <div class="dino-grid">
+                        <div class="feature-box">
+                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_1_title">Junior Explorers (7-11)</strong>
+                            <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_1_desc">Playful, hands-on learning: meet the dinosaurs of Portugal, practise gentle fossil cleaning, build a field notebook and go on guided discovery walks.</p>
+                        </div>
+                        <div class="feature-box">
+                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_2_title">Young Paleontologists (12-14)</strong>
+                            <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_2_desc">Learn how to document a fossil site, identify bones and footprints, and work with lab tools under the guidance of SHN specialists.</p>
+                        </div>
+                        <div class="feature-box">
+                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_3_title">Research Assistants (15-18)</strong>
+                            <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_3_desc">A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITIES -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-hammer dino-accent"></i>
+                        <span data-i18n="dino_act_heading">What Students Will Do</span>
+                    </h3>
+                    <ul class="custom-list dino-list">
+                        <li data-i18n="dino_act_1"><strong>Guided fossil excavation:</strong> supervised dig days in Late Jurassic rocks (about 150 million years old), learning to find, record and protect fossils.</li>
+                        <li data-i18n="dino_act_2"><strong>Laboratory experience:</strong> work in a paleontology and paleoecology laboratory, discovering how fossils are cleaned, prepared and catalogued.</li>
+                        <li data-i18n="dino_act_3"><strong>Geoheritage field trips:</strong> GeoHeritage and GeoPark-themed tours of the Oeste region to understand landscapes, rocks and the fossils they hold.</li>
+                        <li data-i18n="dino_act_4"><strong>GIS and mapping workshop:</strong> use maps and geographic information tools to see where fossil sites are and why protecting them matters.</li>
+                        <li data-i18n="dino_act_5"><strong>Climate and ecosystems:</strong> use fossils to understand ancient environments and what they can teach us about climate change today.</li>
+                    </ul>
+                </div>
+
+                <!-- PROGRAM FORMAT -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-calendar-days dino-accent"></i>
+                        <span data-i18n="dino_prog_heading">Program Format (1-2 Weeks)</span>
+                    </h3>
+                    <p style="color: var(--text-muted);" data-i18n="dino_prog_desc">Families and schools can choose a 1-week or a 2-week stay. The 1-week option covers Week 1; the 2-week option adds Week 2.</p>
+                    <div class="dino-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                        <div class="feature-box">
+                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_w1_title">Week 1 - Discover</strong>
+                            <ul class="custom-list dino-list">
+                        <li data-i18n="dino_w1_1">Welcome, safety briefing and introduction to the Jurassic world of Portugal</li>
+                        <li data-i18n="dino_w1_2">Fossil identification workshop and visit to the collection</li>
+                        <li data-i18n="dino_w1_3">First guided field trip and site observation</li>
+                        <li data-i18n="dino_w1_4">Laboratory introduction: cleaning and preparing fossils</li>
+                    </ul>
+                        </div>
+                        <div class="feature-box">
+                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_w2_title">Week 2 - Investigate</strong>
+                            <ul class="custom-list dino-list">
+                        <li data-i18n="dino_w2_1">Excavation days with recording and documentation</li>
+                        <li data-i18n="dino_w2_2">GIS and GPS mapping of fossil sites</li>
+                        <li data-i18n="dino_w2_3">Mini research project by age group</li>
+                        <li data-i18n="dino_w2_4">Final presentation and certificate of participation</li>
+                    </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DETAILS -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-circle-info dino-accent"></i>
+                        <span data-i18n="dino_info_heading">Program Details</span>
+                    </h3>
+                    <ul class="custom-list dino-list">
+                        <li data-i18n="dino_info_1"><strong>Duration:</strong> 1 or 2 weeks.</li>
+                        <li data-i18n="dino_info_2"><strong>Participants:</strong> all students aged 7-18 from Europe and neighbouring countries.</li>
+                        <li data-i18n="dino_info_3"><strong>Type:</strong> educational study trip - paid program, open to all students. Fee and dates are confirmed on request.</li>
+                        <li data-i18n="dino_info_4"><strong>Location:</strong> Torres Vedras region, Portugal (SHN research centre Ci2Paleo, Santa Cruz).</li>
+                        <li data-i18n="dino_info_5"><strong>Supervision:</strong> activities are led by SHN specialists and educators. Participants under 18 need written consent from a parent or guardian.</li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT HOST -->
+                <div class="campusa-section" style="border-bottom: none;">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-envelope dino-accent"></i>
+                        <span data-i18n="dino_contact_title">Contact the Host (SHN)</span>
+                    </h3>
+                    <p style="color: #334155;"><strong>Ci2Paleo</strong> - Estrada Nacional 247, 2560-042 Santa Cruz, Portugal</p>
+                    <div class="dino-links">
+                        <a class="dino-pill" href="https://www.shn.pt/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> <span data-i18n="dino_btn_site">SHN Website</span></a>
+                        <a class="dino-pill" href="mailto:educacao@alt-shn.org"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="dino_contact_edu">Education department:</span> educacao@alt-shn.org</a>
+                        <a class="dino-pill" href="mailto:geral@alt-shn.org"><i class="fa-solid fa-envelope"></i> <span data-i18n="dino_contact_gen">General:</span> geral@alt-shn.org</a>
+                    </div>
+                </div>
+
+                <div class="apply-btn-container">
+                    <button class="apply-btn" style="background: linear-gradient(135deg, #d97706 0%, #92400e 100%); box-shadow: 0 12px 28px -6px rgba(180, 83, 9, 0.45);" onclick="openModal();">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span data-i18n="start_app">Start Your Application</span>
                     </button>
                 </div>
 
@@ -1619,6 +1786,7 @@
                         <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Sports"> Team Sports</label>
                         <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Arts"> Arts & Crafts</label>
                         <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="Internship"> Internship (Intern Professional Training)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="Interested_Areas" value="DinoCamp"> DinoCamp (Students 7-18)</label>
                     </div>
                 </div>
                 <button type="submit" class="apply-btn" style="width: 100%; border-radius: var(--radius-md); justify-content: center; margin-top: 15px; padding: 14px 20px;" data-i18n="btn_submit">
@@ -1632,6 +1800,56 @@
     <script>
         const i18n = {
             en: {
+                nav_dino: "DinoCamp",
+                card_dino_title: "DinoCamp - Dinosaur Fossil Camp",
+                card_dino_desc: "A 1-2 week educational paleontology experience in Portugal for students aged 7-18: fossil excavation, laboratory work and geoheritage field trips with the Sociedade de História Natural.",
+                btn_explore_dino: "View DinoCamp →",
+                dino_hero_badge: "Paleontology Education Program in Portugal",
+                dino_hero_title: "DinoCamp",
+                dino_hero_desc: "A 1-2 week educational trip for students across Europe aged 7-18: discover real dinosaur fossils, join guided excavation days and work in a paleontology laboratory.",
+                dino_intro: "DinoCamp is an educational study trip that lets young people experience how paleontologists work. Participants explore Late Jurassic fossil country on the Portuguese west coast, learn how fossils are found, recorded and prepared, and understand what they tell us about ancient ecosystems and climate. The program is open to all students aged 7 to 18 and is organised with our host organisation, the Sociedade de História Natural.",
+                dino_host_title: "Host Organisation: Sociedade de História Natural (SHN)",
+                dino_host_1: "The <strong>Sociedade de História Natural de Torres Vedras</strong> was founded on 18 March 1998. It is a non-profit scientific organisation dedicated to promoting paleontological and geological heritage, with a focus on vertebrate fossils and educational activities in GeoPaleontology. It manages one of the largest paleontological collections in Portugal and is working towards a Paleontological Museum for public science communication.",
+                dino_host_2: "SHN researchers have contributed to the description of new dinosaur species from the Torres Vedras and Lourinhã region, and the organisation has reported finds such as a Jurassic dinosaur nest with eggs at Santa Cruz beach and an armoured (ankylosaur-group) dinosaur about 146 million years old.",
+                dino_stat_1: "Founded",
+                dino_stat_2: "Recognised species",
+                dino_stat_3: "Identified fossil sites",
+                dino_stat_4: "Fossils collected",
+                dino_who_title: "Designed for Every Age Group (7-18)",
+                dino_age_1_title: "Junior Explorers (7-11)",
+                dino_age_1_desc: "Playful, hands-on learning: meet the dinosaurs of Portugal, practise gentle fossil cleaning, build a field notebook and go on guided discovery walks.",
+                dino_age_2_title: "Young Paleontologists (12-14)",
+                dino_age_2_desc: "Learn how to document a fossil site, identify bones and footprints, and work with lab tools under the guidance of SHN specialists.",
+                dino_age_3_title: "Research Assistants (15-18)",
+                dino_age_3_desc: "A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.",
+                dino_act_heading: "What Students Will Do",
+                dino_act_1: "<strong>Guided fossil excavation:</strong> supervised dig days in Late Jurassic rocks (about 150 million years old), learning to find, record and protect fossils.",
+                dino_act_2: "<strong>Laboratory experience:</strong> work in a paleontology and paleoecology laboratory, discovering how fossils are cleaned, prepared and catalogued.",
+                dino_act_3: "<strong>Geoheritage field trips:</strong> GeoHeritage and GeoPark-themed tours of the Oeste region to understand landscapes, rocks and the fossils they hold.",
+                dino_act_4: "<strong>GIS and mapping workshop:</strong> use maps and geographic information tools to see where fossil sites are and why protecting them matters.",
+                dino_act_5: "<strong>Climate and ecosystems:</strong> use fossils to understand ancient environments and what they can teach us about climate change today.",
+                dino_prog_heading: "Program Format (1-2 Weeks)",
+                dino_prog_desc: "Families and schools can choose a 1-week or a 2-week stay. The 1-week option covers Week 1; the 2-week option adds Week 2.",
+                dino_w1_title: "Week 1 - Discover",
+                dino_w1_1: "Welcome, safety briefing and introduction to the Jurassic world of Portugal",
+                dino_w1_2: "Fossil identification workshop and visit to the collection",
+                dino_w1_3: "First guided field trip and site observation",
+                dino_w1_4: "Laboratory introduction: cleaning and preparing fossils",
+                dino_w2_title: "Week 2 - Investigate",
+                dino_w2_1: "Excavation days with recording and documentation",
+                dino_w2_2: "GIS and GPS mapping of fossil sites",
+                dino_w2_3: "Mini research project by age group",
+                dino_w2_4: "Final presentation and certificate of participation",
+                dino_info_heading: "Program Details",
+                dino_info_1: "<strong>Duration:</strong> 1 or 2 weeks.",
+                dino_info_2: "<strong>Participants:</strong> all students aged 7-18 from Europe and neighbouring countries.",
+                dino_info_3: "<strong>Type:</strong> educational study trip - paid program, open to all students. Fee and dates are confirmed on request.",
+                dino_info_4: "<strong>Location:</strong> Torres Vedras region, Portugal (SHN research centre Ci2Paleo, Santa Cruz).",
+                dino_info_5: "<strong>Supervision:</strong> activities are led by SHN specialists and educators. Participants under 18 need written consent from a parent or guardian.",
+                dino_contact_title: "Contact the Host (SHN)",
+                dino_contact_edu: "Education department:",
+                dino_contact_gen: "General:",
+                dino_btn_site: "SHN Website",
                 nav_home: "Home",
                 nav_usa: "USA Summer Camp",
                 nav_esc: "ESC Projects",
@@ -1751,6 +1969,56 @@
                 contractor_disclaimer: "ADOT Education Events Consulting is an independent contractor providing consultancy, recruitment, and placement support services in cooperation with InterExchange CampUSA and volunteering project partners."
             },
             pt: {
+                nav_dino: "DinoCamp",
+                card_dino_title: "DinoCamp - Campo de Fósseis de Dinossauros",
+                card_dino_desc: "Uma experiência educativa de paleontologia de 1-2 semanas em Portugal para estudantes dos 7 aos 18 anos: escavação de fósseis, trabalho de laboratório e visitas de campo com a Sociedade de História Natural.",
+                btn_explore_dino: "Ver DinoCamp →",
+                dino_hero_badge: "Programa Educativo de Paleontologia em Portugal",
+                dino_hero_title: "DinoCamp",
+                dino_hero_desc: "Uma viagem educativa de 1-2 semanas para estudantes europeus dos 7 aos 18 anos: descubra fósseis reais de dinossauros, participe em dias de escavação orientada e trabalhe num laboratório de paleontologia.",
+                dino_intro: "O DinoCamp é uma viagem de estudo educativa que permite aos jovens experimentar o trabalho dos paleontólogos. Os participantes exploram o território fossilífero do Jurássico Superior na costa oeste portuguesa, aprendem como os fósseis são encontrados, registados e preparados e o que nos dizem sobre ecossistemas e clima do passado. O programa está aberto a todos os estudantes dos 7 aos 18 anos e é organizado com a nossa entidade de acolhimento, a Sociedade de História Natural.",
+                dino_host_title: "Entidade de Acolhimento: Sociedade de História Natural (SHN)",
+                dino_host_1: "A <strong>Sociedade de História Natural de Torres Vedras</strong> foi fundada a 18 de março de 1998. É uma organização científica sem fins lucrativos dedicada à promoção do património paleontológico e geológico, com foco em fósseis de vertebrados e em atividades pedagógicas de GeoPaleontologia. Gere uma das maiores coleções paleontológicas do país e trabalha na criação de um Museu Paleontológico.",
+                dino_host_2: "Investigadores da SHN contribuíram para a descrição de novas espécies de dinossauros da região de Torres Vedras e Lourinhã, e a organização divulgou achados como um ninho de dinossauro do Jurássico com ovos na Praia de Santa Cruz e um dinossauro do grupo dos anquilossauros com cerca de 146 milhões de anos.",
+                dino_stat_1: "Fundação",
+                dino_stat_2: "Espécies reconhecidas",
+                dino_stat_3: "Jazidas identificadas",
+                dino_stat_4: "Fósseis recolhidos",
+                dino_who_title: "Pensado para Todas as Idades (7-18)",
+                dino_age_1_title: "Pequenos Exploradores (7-11)",
+                dino_age_1_desc: "Aprendizagem lúdica e prática: conhecer os dinossauros de Portugal, limpar fósseis com cuidado, criar um caderno de campo e fazer passeios de descoberta orientados.",
+                dino_age_2_title: "Jovens Paleontólogos (12-14)",
+                dino_age_2_desc: "Aprender a documentar uma jazida, identificar ossos e pegadas e trabalhar com ferramentas de laboratório sob orientação de especialistas da SHN.",
+                dino_age_3_title: "Assistentes de Investigação (15-18)",
+                dino_age_3_desc: "Uma visão mais aprofundada da ciência: cartografia de jazidas com SIG e GPS, preparação de fósseis, gestão de coleções e introdução a carreiras científicas.",
+                dino_act_heading: "O Que os Estudantes Vão Fazer",
+                dino_act_1: "<strong>Escavação orientada de fósseis:</strong> dias de escavação supervisionada em rochas do Jurássico Superior (cerca de 150 milhões de anos), aprendendo a encontrar, registar e proteger fósseis.",
+                dino_act_2: "<strong>Experiência de laboratório:</strong> trabalho num laboratório de paleontologia e paleoecologia, descobrindo como os fósseis são limpos, preparados e catalogados.",
+                dino_act_3: "<strong>Visitas de campo de geopatrimónio:</strong> passeios temáticos de GeoPatrimónio e GeoParque na região Oeste para compreender paisagens, rochas e fósseis.",
+                dino_act_4: "<strong>Workshop de SIG e cartografia:</strong> usar mapas e ferramentas de informação geográfica para ver onde estão as jazidas e porque é importante protegê-las.",
+                dino_act_5: "<strong>Clima e ecossistemas:</strong> usar os fósseis para compreender ambientes antigos e o que nos ensinam sobre as alterações climáticas atuais.",
+                dino_prog_heading: "Formato do Programa (1-2 Semanas)",
+                dino_prog_desc: "Famílias e escolas podem escolher uma estadia de 1 ou 2 semanas. A opção de 1 semana inclui a Semana 1; a de 2 semanas acrescenta a Semana 2.",
+                dino_w1_title: "Semana 1 - Descobrir",
+                dino_w1_1: "Boas-vindas, briefing de segurança e introdução ao mundo Jurássico de Portugal",
+                dino_w1_2: "Workshop de identificação de fósseis e visita à coleção",
+                dino_w1_3: "Primeira visita de campo orientada e observação de jazidas",
+                dino_w1_4: "Introdução ao laboratório: limpeza e preparação de fósseis",
+                dino_w2_title: "Semana 2 - Investigar",
+                dino_w2_1: "Dias de escavação com registo e documentação",
+                dino_w2_2: "Cartografia de jazidas com SIG e GPS",
+                dino_w2_3: "Mini projeto de investigação por faixa etária",
+                dino_w2_4: "Apresentação final e certificado de participação",
+                dino_info_heading: "Detalhes do Programa",
+                dino_info_1: "<strong>Duração:</strong> 1 ou 2 semanas.",
+                dino_info_2: "<strong>Participantes:</strong> todos os estudantes dos 7 aos 18 anos da Europa e países vizinhos.",
+                dino_info_3: "<strong>Tipo:</strong> viagem de estudo educativa - programa pago, aberto a todos os estudantes. Preço e datas confirmados mediante pedido.",
+                dino_info_4: "<strong>Local:</strong> região de Torres Vedras, Portugal (centro de investigação Ci2Paleo da SHN, Santa Cruz).",
+                dino_info_5: "<strong>Supervisão:</strong> atividades orientadas por especialistas e educadores da SHN. Participantes menores de 18 anos precisam de autorização escrita dos pais ou tutores.",
+                dino_contact_title: "Contactar a Entidade de Acolhimento (SHN)",
+                dino_contact_edu: "Departamento de Educação:",
+                dino_contact_gen: "Geral:",
+                dino_btn_site: "Website da SHN",
                 nav_home: "Início",
                 nav_usa: "USA Summer Camp",
                 nav_esc: "Projetos ESC",
@@ -1869,6 +2137,56 @@
                 contractor_disclaimer: "A ADOT Education Events Consulting é um contratante independente que fornece serviços de consultoria em cooperação com parceiros do InterExchange CampUSA e de projetos."
             },
             sk: {
+                nav_dino: "DinoCamp",
+                card_dino_title: "DinoCamp - tábor za fosíliami dinosaurov",
+                card_dino_desc: "1-2 týždňový vzdelávací paleontologický program v Portugalsku pre študentov vo veku 7-18 rokov: vykopávky fosílií, práca v laboratóriu a exkurzie s organizáciou Sociedade de História Natural.",
+                btn_explore_dino: "Zobraziť DinoCamp →",
+                dino_hero_badge: "Vzdelávací paleontologický program v Portugalsku",
+                dino_hero_title: "DinoCamp",
+                dino_hero_desc: "1-2 týždňový vzdelávací pobyt pre európskych študentov vo veku 7-18 rokov: objavte skutočné fosílie dinosaurov, zúčastnite sa vedených vykopávok a pracujte v paleontologickom laboratóriu.",
+                dino_intro: "DinoCamp je vzdelávací študijný pobyt, ktorý mladým ľuďom umožňuje zažiť prácu paleontológov. Účastníci spoznávajú fosílne náleziská z obdobia vrchnej jury na portugalskom západnom pobreží, učia sa, ako sa fosílie nachádzajú, zaznamenávajú a pripravujú, a čo nám hovoria o dávnych ekosystémoch a klíme. Program je otvorený všetkým študentom vo veku 7 až 18 rokov a organizujeme ho s hostiteľskou organizáciou Sociedade de História Natural.",
+                dino_host_title: "Hostiteľská organizácia: Sociedade de História Natural (SHN)",
+                dino_host_1: "<strong>Sociedade de História Natural de Torres Vedras</strong> bola založená 18. marca 1998. Je to nezisková vedecká organizácia zameraná na ochranu paleontologického a geologického dedičstva, najmä fosílií stavovcov, a na vzdelávacie aktivity v oblasti geopaleontológie. Spravuje jednu z najväčších paleontologických zbierok v Portugalsku a pracuje na vzniku paleontologického múzea.",
+                dino_host_2: "Výskumníci SHN sa podieľali na opise nových druhov dinosaurov z oblasti Torres Vedras a Lourinhã a organizácia oznámila nálezy ako hniezdo jurských dinosaurov s vajciami na pláži Santa Cruz alebo obrneného dinosaura zo skupiny ankylosaurov starého asi 146 miliónov rokov.",
+                dino_stat_1: "Založenie",
+                dino_stat_2: "Uznané druhy",
+                dino_stat_3: "Identifikované náleziská",
+                dino_stat_4: "Zozbierané fosílie",
+                dino_who_title: "Navrhnuté pre všetky vekové skupiny (7-18)",
+                dino_age_1_title: "Malí objavitelia (7-11)",
+                dino_age_1_desc: "Hravé učenie v praxi: spoznajte dinosaurov Portugalska, nacvičte jemné čistenie fosílií, vytvorte si terénny zápisník a vyrazte na vedené objaviteľské prechádzky.",
+                dino_age_2_title: "Mladí paleontológovia (12-14)",
+                dino_age_2_desc: "Naučte sa dokumentovať nálezisko, určovať kosti a stopy a pracovať s laboratórnymi nástrojmi pod vedením odborníkov SHN.",
+                dino_age_3_title: "Výskumní asistenti (15-18)",
+                dino_age_3_desc: "Hlbší pohľad na vedu: mapovanie nálezísk pomocou GIS a GPS, príprava fosílií, správa zbierok a úvod do vedeckých kariér.",
+                dino_act_heading: "Čo budú študenti robiť",
+                dino_act_1: "<strong>Vedené vykopávky fosílií:</strong> dni vykopávok pod dohľadom v horninách vrchnej jury (asi 150 miliónov rokov), kde sa naučíte fosílie nájsť, zaznamenať a chrániť.",
+                dino_act_2: "<strong>Skúsenosť v laboratóriu:</strong> práca v laboratóriu paleontológie a paleoekológie a objavovanie, ako sa fosílie čistia, pripravujú a katalogizujú.",
+                dino_act_3: "<strong>Exkurzie za geodedičstvom:</strong> tematické túry GeoHeritage a GeoPark v regióne Oeste na pochopenie krajiny, hornín a fosílií v nich.",
+                dino_act_4: "<strong>Workshop GIS a mapovania:</strong> práca s mapami a geografickými nástrojmi, aby ste videli, kde sú náleziská a prečo je dôležité ich chrániť.",
+                dino_act_5: "<strong>Klíma a ekosystémy:</strong> využitie fosílií na pochopenie dávnych prostredí a toho, čo nás učia o dnešnej klimatickej zmene.",
+                dino_prog_heading: "Formát programu (1-2 týždne)",
+                dino_prog_desc: "Rodiny a školy si môžu vybrať 1-týždňový alebo 2-týždňový pobyt. Možnosť na 1 týždeň zahŕňa 1. týždeň; možnosť na 2 týždne pridáva 2. týždeň.",
+                dino_w1_title: "1. týždeň - Objavovanie",
+                dino_w1_1: "Uvítanie, bezpečnostné poučenie a úvod do jurského sveta Portugalska",
+                dino_w1_2: "Workshop určovania fosílií a návšteva zbierky",
+                dino_w1_3: "Prvá vedená terénna exkurzia a pozorovanie nálezísk",
+                dino_w1_4: "Úvod do laboratória: čistenie a príprava fosílií",
+                dino_w2_title: "2. týždeň - Skúmanie",
+                dino_w2_1: "Dni vykopávok so záznamom a dokumentáciou",
+                dino_w2_2: "Mapovanie nálezísk pomocou GIS a GPS",
+                dino_w2_3: "Mini výskumný projekt podľa vekovej skupiny",
+                dino_w2_4: "Záverečná prezentácia a certifikát o účasti",
+                dino_info_heading: "Podrobnosti programu",
+                dino_info_1: "<strong>Trvanie:</strong> 1 alebo 2 týždne.",
+                dino_info_2: "<strong>Účastníci:</strong> všetci študenti vo veku 7-18 rokov z Európy a susedných krajín.",
+                dino_info_3: "<strong>Typ:</strong> vzdelávací študijný pobyt - platený program otvorený všetkým študentom. Cena a termíny sa potvrdzujú na požiadanie.",
+                dino_info_4: "<strong>Miesto:</strong> región Torres Vedras, Portugalsko (výskumné centrum SHN Ci2Paleo, Santa Cruz).",
+                dino_info_5: "<strong>Dohľad:</strong> aktivity vedú odborníci a pedagógovia SHN. Účastníci mladší ako 18 rokov potrebujú písomný súhlas rodiča alebo zákonného zástupcu.",
+                dino_contact_title: "Kontakt na hostiteľa (SHN)",
+                dino_contact_edu: "Vzdelávacie oddelenie:",
+                dino_contact_gen: "Všeobecný:",
+                dino_btn_site: "Web SHN",
                 nav_home: "Domov",
                 nav_usa: "USA Summer Camp",
                 nav_esc: "Projekty ESC",
@@ -1987,6 +2305,56 @@
                 contractor_disclaimer: "ADOT Education Events Consulting je nezávislý dodávateľ poskytujúci poradenské a podporné služby v spolupráci s partnermi."
             },
             de: {
+                nav_dino: "DinoCamp",
+                card_dino_title: "DinoCamp - Dinosaurier-Fossilien-Camp",
+                card_dino_desc: "Ein 1-2-wöchiges Paläontologie-Bildungsprogramm in Portugal für Schüler von 7-18 Jahren: Fossiliengrabung, Laborarbeit und Exkursionen mit der Sociedade de História Natural.",
+                btn_explore_dino: "DinoCamp ansehen →",
+                dino_hero_badge: "Paläontologie-Bildungsprogramm in Portugal",
+                dino_hero_title: "DinoCamp",
+                dino_hero_desc: "Eine 1-2-wöchige Bildungsreise für Schüler aus ganz Europa im Alter von 7-18 Jahren: Entdecke echte Dinosaurier-Fossilien, nimm an begleiteten Grabungstagen teil und arbeite in einem Paläontologie-Labor.",
+                dino_intro: "DinoCamp ist eine Bildungs- und Studienreise, auf der junge Menschen erleben, wie Paläontologen arbeiten. Die Teilnehmer erkunden Fossilienfundgebiete aus dem Oberjura an der portugiesischen Westküste, lernen, wie Fossilien gefunden, dokumentiert und präpariert werden, und was sie uns über frühere Ökosysteme und das Klima verraten. Das Programm steht allen Schülern von 7 bis 18 Jahren offen und wird mit unserer Gastorganisation, der Sociedade de História Natural, durchgeführt.",
+                dino_host_title: "Gastorganisation: Sociedade de História Natural (SHN)",
+                dino_host_1: "Die <strong>Sociedade de História Natural de Torres Vedras</strong> wurde am 18. März 1998 gegründet. Sie ist eine gemeinnützige wissenschaftliche Organisation, die sich der Förderung des paläontologischen und geologischen Erbes widmet, mit Schwerpunkt auf Wirbeltierfossilien und Bildungsangeboten in Geo-Paläontologie. Sie verwaltet eine der größten paläontologischen Sammlungen Portugals und arbeitet an einem Paläontologischen Museum.",
+                dino_host_2: "Forscher der SHN waren an der Beschreibung neuer Dinosaurierarten aus der Region Torres Vedras und Lourinhã beteiligt. Die Organisation hat Funde wie ein Dinosauriernest mit Eiern aus dem Jura am Strand von Santa Cruz und einen gepanzerten Dinosaurier aus der Ankylosaurier-Gruppe (etwa 146 Millionen Jahre alt) bekannt gemacht.",
+                dino_stat_1: "Gegründet",
+                dino_stat_2: "Anerkannte Arten",
+                dino_stat_3: "Identifizierte Fundstellen",
+                dino_stat_4: "Gesammelte Fossilien",
+                dino_who_title: "Für alle Altersgruppen konzipiert (7-18)",
+                dino_age_1_title: "Junior-Entdecker (7-11)",
+                dino_age_1_desc: "Spielerisches, praktisches Lernen: Die Dinosaurier Portugals kennenlernen, Fossilien vorsichtig reinigen, ein Feldbuch anlegen und begleitete Entdeckungstouren unternehmen.",
+                dino_age_2_title: "Junge Paläontologen (12-14)",
+                dino_age_2_desc: "Lerne, eine Fundstelle zu dokumentieren, Knochen und Fußspuren zu bestimmen und unter Anleitung von SHN-Fachleuten mit Laborwerkzeugen zu arbeiten.",
+                dino_age_3_title: "Forschungsassistenten (15-18)",
+                dino_age_3_desc: "Ein tieferer Einblick in die Wissenschaft: Fundstellenkartierung mit GIS und GPS, Fossilienpräparation, Sammlungsmanagement und Einführung in wissenschaftliche Berufe.",
+                dino_act_heading: "Was die Teilnehmer tun",
+                dino_act_1: "<strong>Begleitete Fossiliengrabung:</strong> beaufsichtigte Grabungstage in Gesteinen des Oberjura (ca. 150 Millionen Jahre alt) mit Anleitung zum Finden, Dokumentieren und Schützen von Fossilien.",
+                dino_act_2: "<strong>Laborerfahrung:</strong> Arbeit in einem Labor für Paläontologie und Paläoökologie und Einblick, wie Fossilien gereinigt, präpariert und katalogisiert werden.",
+                dino_act_3: "<strong>Geoerbe-Exkursionen:</strong> GeoHeritage- und GeoPark-Touren in der Region Oeste, um Landschaften, Gesteine und ihre Fossilien zu verstehen.",
+                dino_act_4: "<strong>GIS- und Kartierungs-Workshop:</strong> Karten und geografische Informationssysteme nutzen, um zu sehen, wo Fundstellen liegen und warum ihr Schutz wichtig ist.",
+                dino_act_5: "<strong>Klima und Ökosysteme:</strong> Mit Fossilien frühere Lebensräume verstehen und lernen, was sie über den heutigen Klimawandel verraten.",
+                dino_prog_heading: "Programmformat (1-2 Wochen)",
+                dino_prog_desc: "Familien und Schulen können einen Aufenthalt von 1 oder 2 Wochen wählen. Die 1-Wochen-Option umfasst Woche 1; die 2-Wochen-Option ergänzt Woche 2.",
+                dino_w1_title: "Woche 1 - Entdecken",
+                dino_w1_1: "Begrüßung, Sicherheitseinweisung und Einführung in die Jura-Welt Portugals",
+                dino_w1_2: "Workshop zur Fossilienbestimmung und Besuch der Sammlung",
+                dino_w1_3: "Erste begleitete Exkursion und Beobachtung von Fundstellen",
+                dino_w1_4: "Laboreinführung: Fossilien reinigen und präparieren",
+                dino_w2_title: "Woche 2 - Erforschen",
+                dino_w2_1: "Grabungstage mit Erfassung und Dokumentation",
+                dino_w2_2: "GIS- und GPS-Kartierung von Fundstellen",
+                dino_w2_3: "Mini-Forschungsprojekt je Altersgruppe",
+                dino_w2_4: "Abschlusspräsentation und Teilnahmezertifikat",
+                dino_info_heading: "Programmdetails",
+                dino_info_1: "<strong>Dauer:</strong> 1 oder 2 Wochen.",
+                dino_info_2: "<strong>Teilnehmer:</strong> alle Schüler von 7-18 Jahren aus Europa und Nachbarländern.",
+                dino_info_3: "<strong>Art:</strong> Bildungs- und Studienreise - kostenpflichtiges Programm, offen für alle Schüler. Preis und Termine auf Anfrage.",
+                dino_info_4: "<strong>Ort:</strong> Region Torres Vedras, Portugal (SHN-Forschungszentrum Ci2Paleo, Santa Cruz).",
+                dino_info_5: "<strong>Betreuung:</strong> Die Aktivitäten werden von SHN-Fachleuten und Pädagogen geleitet. Teilnehmer unter 18 Jahren benötigen die schriftliche Einwilligung der Eltern oder Erziehungsberechtigten.",
+                dino_contact_title: "Kontakt zur Gastorganisation (SHN)",
+                dino_contact_edu: "Bildungsabteilung:",
+                dino_contact_gen: "Allgemein:",
+                dino_btn_site: "SHN-Website",
                 nav_home: "Startseite",
                 nav_usa: "USA Sommercamp",
                 nav_esc: "ESC Projekte",
@@ -2137,6 +2505,9 @@
             } else if (pageId === 'intern') {
                 document.getElementById('page-intern').classList.add('active');
                 document.getElementById('nav-intern').classList.add('active-link');
+            } else if (pageId === 'dino') {
+                document.getElementById('page-dino').classList.add('active');
+                document.getElementById('nav-dino').classList.add('active-link');
             } else if (pageId === 'about') {
                 document.getElementById('page-about').classList.add('active');
                 document.getElementById('nav-about').classList.add('active-link');
