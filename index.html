@@ -756,6 +756,10 @@
         .dino-hero .hero-badge { color: #fbbf24; }
         .dino-accent { color: #b45309 !important; }
         .dino-card-poster { display: flex; align-items: center; justify-content: center; background: #fef3c7; }
+        .dino-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 1.2rem; }
+        .dino-fig { margin: 0; border-radius: 12px; overflow: hidden; background: #f1f5f9; border: 1px solid #e2e8f0; }
+        .dino-fig img { width: 100%; height: 190px; object-fit: cover; display: block; }
+        .dino-fig figcaption { padding: 8px 12px; font-size: 0.82rem; color: #475569; }
         .dino-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 1.5rem; }
         .dino-grid .feature-box { cursor: default; border-top-color: #b45309; }
         .dino-grid .feature-box:hover { transform: none; box-shadow: none; }
@@ -814,8 +818,8 @@
             
             <div class="nav-links-group">
                 <a href="#" class="nav-link-item active-link" id="nav-home" onclick="switchPage('home'); return false;" data-i18n="nav_home">Home</a>
+                <a href="#" class="nav-link-item" id="nav-esc" onclick="switchPage('esc'); return false;" data-i18n="nav_esc">EU Volunteering Programs</a>
                 <a href="#" class="nav-link-item" id="nav-usa" onclick="switchPage('usa'); return false;" data-i18n="nav_usa">USA Summer Camp</a>
-                <a href="#" class="nav-link-item" id="nav-esc" onclick="switchPage('esc'); return false;" data-i18n="nav_esc">ESC Projects</a>
                 <a href="#" class="nav-link-item" id="nav-intern" onclick="switchPage('intern'); return false;" data-i18n="nav_intern">Internships</a>
                 <a href="#" class="nav-link-item" id="nav-dino" onclick="switchPage('dino'); return false;" data-i18n="nav_dino">DinoCamp</a>
                 <a href="#" class="nav-link-item" id="nav-about" onclick="switchPage('about'); return false;" data-i18n="nav_about">About Us</a>
@@ -859,6 +863,18 @@
 
                 <div class="campusa-features" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
                     
+                    <!-- ESC PROJECTS CARD -->
+                    <div class="feature-box" onclick="switchPage('esc');" style="border-top-color: #10b981; padding: 24px; text-align: center;">
+                        <div class="home-card-poster">
+                            <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/shnposter.jpg" onerror="this.onerror=null; this.src='images/shnposter.jpg';" alt="EU Volunteering Programs Poster">
+                        </div>
+                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary);" data-i18n="card_esc_title">European Volunteering Program</h3>
+                        <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);" data-i18n="card_esc_desc">
+                            Participate in fully-funded short-term and long-term European Volunteering Program projects in Portugal focused on GeoHeritage, Paleontology, and Climate Action.
+                        </p>
+                        <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%); display: inline-block;" data-i18n="btn_explore_esc">View EU Volunteering Programs &rarr;</button>
+                    </div>
+
                     <!-- USA SUMMER CAMP CARD -->
                     <div class="feature-box" onclick="switchPage('usa');" style="border-top-color: #117a56; padding: 24px; text-align: center;">
                         <div class="home-card-poster">
@@ -869,18 +885,6 @@
                             Spend 9-15 weeks at an American summer camp. Work as a counselor, earn up to $3,500 USD stipend, and gain a J-1 Visa cultural exchange experience.
                         </p>
                         <button class="nav-cta" style="margin-top: 1.5rem; display: inline-block;" data-i18n="btn_explore_usa">View USA Program &rarr;</button>
-                    </div>
-
-                    <!-- ESC PROJECTS CARD -->
-                    <div class="feature-box" onclick="switchPage('esc');" style="border-top-color: #10b981; padding: 24px; text-align: center;">
-                        <div class="home-card-poster">
-                            <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/shnposter.jpg" onerror="this.onerror=null; this.src='images/shnposter.jpg';" alt="ESC Projects Poster">
-                        </div>
-                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary);" data-i18n="card_esc_title">European Volunteering Program</h3>
-                        <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);" data-i18n="card_esc_desc">
-                            Participate in fully-funded short-term and long-term European Volunteering Program projects in Portugal focused on GeoHeritage, Paleontology, and Climate Action.
-                        </p>
-                        <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%); display: inline-block;" data-i18n="btn_explore_esc">View ESC Projects &rarr;</button>
                     </div>
 
                     <!-- INTERN PROFESSIONAL TRAINING CARD -->
@@ -1254,6 +1258,16 @@
                             <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_3_desc">A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- PHOTO GALLERY -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-camera dino-accent"></i>
+                        <span data-i18n="dino_gallery_heading">Photos from SHN</span>
+                    </h3>
+                    <div class="dino-gallery"><figure class="dino-fig"><img src="https://static.wixstatic.com/media/4cb8af_dab49db59e384fbb97c58bad341540fe~mv2.jpg/v1/fit/w_700,h_520,q_85/shn.jpg" alt="Ankylosaur · Torres Vedras (SHN)" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Ankylosaur · Torres Vedras (SHN)</figcaption></figure><figure class="dino-fig"><img src="https://static.wixstatic.com/media/4cb8af_9a743404b6374f3086d7bd41500ca91a~mv2.jpg/v1/fit/w_700,h_520,q_85/shn.jpg" alt="Jurassic dinosaur nest · Praia de Santa Cruz (SHN)" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Jurassic dinosaur nest · Praia de Santa Cruz (SHN)</figcaption></figure><figure class="dino-fig"><img src="https://static.wixstatic.com/media/4cb8af_8c91fe279c284d39b0c4b12ebc70e4ad~mv2.jpeg/v1/fit/w_700,h_520,q_85/shn.jpg" alt="Paleontology laboratory (SHN)" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Paleontology laboratory (SHN)</figcaption></figure><figure class="dino-fig"><img src="https://static.wixstatic.com/media/4cb8af_3188d08cd1664e5cb6910bffdf746642~mv2.jpg/v1/fit/w_700,h_520,q_85/shn.jpg" alt="Education workshop (SHN)" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>Education workshop (SHN)</figcaption></figure><figure class="dino-fig"><img src="https://static.wixstatic.com/media/4cb8af_942d4bd77aa54bddba07cf4f65353318~mv2.jpg/v1/fit/w_700,h_520,q_85/shn.jpg" alt="GeoEduca activity (SHN)" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>GeoEduca activity (SHN)</figcaption></figure><figure class="dino-fig"><img src="https://static.wixstatic.com/media/4cb8af_e6aeeeff5c0e45d7b370f70755511bbd~mv2.jpeg/v1/fit/w_700,h_520,q_85/shn.jpg" alt="GeoEduca activity (SHN)" loading="lazy" onerror="this.closest('figure').style.display='none'"><figcaption>GeoEduca activity (SHN)</figcaption></figure></div>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px;">Photos: Sociedade de História Natural (shn.pt)</p>
                 </div>
 
                 <!-- ACTIVITIES -->
@@ -1822,6 +1836,7 @@
                 dino_age_2_desc: "Learn how to document a fossil site, identify bones and footprints, and work with lab tools under the guidance of SHN specialists.",
                 dino_age_3_title: "Research Assistants (15-18)",
                 dino_age_3_desc: "A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.",
+                dino_gallery_heading: "Photos from SHN",
                 dino_act_heading: "What Students Will Do",
                 dino_act_1: "<strong>Guided fossil excavation:</strong> supervised dig days in Late Jurassic rocks (about 150 million years old), learning to find, record and protect fossils.",
                 dino_act_2: "<strong>Laboratory experience:</strong> work in a paleontology and paleoecology laboratory, discovering how fossils are cleaned, prepared and catalogued.",
@@ -1852,7 +1867,7 @@
                 dino_btn_site: "SHN Website",
                 nav_home: "Home",
                 nav_usa: "USA Summer Camp",
-                nav_esc: "ESC Projects",
+                nav_esc: "EU Volunteering Programs",
                 nav_intern: "Internships",
                 card_intern_title: "BridgeUSA Intern & Trainee",
                 card_intern_desc: "Gain hands-on experience in your field of study in the United States through a J-1 Intern Professional Training program, for current students and recent graduates.",
@@ -1879,7 +1894,7 @@
                 btn_explore_usa: "View USA Program \u2192",
                 card_esc_title: "European Volunteering Program",
                 card_esc_desc: "Participate in fully-funded short-term and long-term European Volunteering Program projects in Portugal focused on GeoHeritage, Paleontology, and Climate Action.",
-                btn_explore_esc: "View ESC Projects \u2192",
+                btn_explore_esc: "View EU Volunteering Programs \u2192",
 
                 hero_badge: "Cultural Exchange Program in the USA",
                 hero_title: "USA Summer Camp Program",
@@ -1991,6 +2006,7 @@
                 dino_age_2_desc: "Aprender a documentar uma jazida, identificar ossos e pegadas e trabalhar com ferramentas de laboratório sob orientação de especialistas da SHN.",
                 dino_age_3_title: "Assistentes de Investigação (15-18)",
                 dino_age_3_desc: "Uma visão mais aprofundada da ciência: cartografia de jazidas com SIG e GPS, preparação de fósseis, gestão de coleções e introdução a carreiras científicas.",
+                dino_gallery_heading: "Fotografias da SHN",
                 dino_act_heading: "O Que os Estudantes Vão Fazer",
                 dino_act_1: "<strong>Escavação orientada de fósseis:</strong> dias de escavação supervisionada em rochas do Jurássico Superior (cerca de 150 milhões de anos), aprendendo a encontrar, registar e proteger fósseis.",
                 dino_act_2: "<strong>Experiência de laboratório:</strong> trabalho num laboratório de paleontologia e paleoecologia, descobrindo como os fósseis são limpos, preparados e catalogados.",
@@ -2021,7 +2037,7 @@
                 dino_btn_site: "Website da SHN",
                 nav_home: "Início",
                 nav_usa: "USA Summer Camp",
-                nav_esc: "Projetos ESC",
+                nav_esc: "Programas de Voluntariado da UE",
                 nav_intern: "Estágios",
                 card_intern_title: "BridgeUSA Intern & Trainee",
                 card_intern_desc: "Adquira experiência prática na sua área de estudo nos Estados Unidos através do programa de Estágio Profissional J-1, para estudantes atuais e recém-licenciados.",
@@ -2047,7 +2063,7 @@
                 btn_explore_usa: "Ver Programa EUA \u2192",
                 card_esc_title: "European Volunteering Program",
                 card_esc_desc: "Participe em projetos de voluntariado financiados em Portugal focados em GeoPatrimónio, Paleontologia e Ação Climática.",
-                btn_explore_esc: "Ver Projetos ESC \u2192",
+                btn_explore_esc: "Ver Programas de Voluntariado da UE \u2192",
                 
                 hero_badge: "Programa de Intercâmbio Cultural nos EUA",
                 hero_title: "Programa EUA Summer Camp",
@@ -2159,6 +2175,7 @@
                 dino_age_2_desc: "Naučte sa dokumentovať nálezisko, určovať kosti a stopy a pracovať s laboratórnymi nástrojmi pod vedením odborníkov SHN.",
                 dino_age_3_title: "Výskumní asistenti (15-18)",
                 dino_age_3_desc: "Hlbší pohľad na vedu: mapovanie nálezísk pomocou GIS a GPS, príprava fosílií, správa zbierok a úvod do vedeckých kariér.",
+                dino_gallery_heading: "Fotografie zo SHN",
                 dino_act_heading: "Čo budú študenti robiť",
                 dino_act_1: "<strong>Vedené vykopávky fosílií:</strong> dni vykopávok pod dohľadom v horninách vrchnej jury (asi 150 miliónov rokov), kde sa naučíte fosílie nájsť, zaznamenať a chrániť.",
                 dino_act_2: "<strong>Skúsenosť v laboratóriu:</strong> práca v laboratóriu paleontológie a paleoekológie a objavovanie, ako sa fosílie čistia, pripravujú a katalogizujú.",
@@ -2189,7 +2206,7 @@
                 dino_btn_site: "Web SHN",
                 nav_home: "Domov",
                 nav_usa: "USA Summer Camp",
-                nav_esc: "Projekty ESC",
+                nav_esc: "Programy dobrovoľníctva EÚ",
                 nav_intern: "Stáže",
                 card_intern_title: "BridgeUSA Intern & Trainee",
                 card_intern_desc: "Získajte praktické skúsenosti vo svojom odbore v USA prostredníctvom programu J-1 Intern Professional Training pre študentov a čerstvých absolventov.",
@@ -2215,7 +2232,7 @@
                 btn_explore_usa: "Zobraziť USA Program \u2192",
                 card_esc_title: "European Volunteering Program",
                 card_esc_desc: "Zapojte sa do plne hradených projektov European Volunteering Program v Portugalsku zameraných na geodedičstvo a paleontológiu.",
-                btn_explore_esc: "Zobraziť Projekty ESC \u2192",
+                btn_explore_esc: "Zobraziť programy dobrovoľníctva EÚ \u2192",
 
                 hero_badge: "Kultúrny výmenný program v USA",
                 hero_title: "USA Summer Camp Program",
@@ -2327,6 +2344,7 @@
                 dino_age_2_desc: "Lerne, eine Fundstelle zu dokumentieren, Knochen und Fußspuren zu bestimmen und unter Anleitung von SHN-Fachleuten mit Laborwerkzeugen zu arbeiten.",
                 dino_age_3_title: "Forschungsassistenten (15-18)",
                 dino_age_3_desc: "Ein tieferer Einblick in die Wissenschaft: Fundstellenkartierung mit GIS und GPS, Fossilienpräparation, Sammlungsmanagement und Einführung in wissenschaftliche Berufe.",
+                dino_gallery_heading: "Fotos der SHN",
                 dino_act_heading: "Was die Teilnehmer tun",
                 dino_act_1: "<strong>Begleitete Fossiliengrabung:</strong> beaufsichtigte Grabungstage in Gesteinen des Oberjura (ca. 150 Millionen Jahre alt) mit Anleitung zum Finden, Dokumentieren und Schützen von Fossilien.",
                 dino_act_2: "<strong>Laborerfahrung:</strong> Arbeit in einem Labor für Paläontologie und Paläoökologie und Einblick, wie Fossilien gereinigt, präpariert und katalogisiert werden.",
@@ -2357,7 +2375,7 @@
                 dino_btn_site: "SHN-Website",
                 nav_home: "Startseite",
                 nav_usa: "USA Sommercamp",
-                nav_esc: "ESC Projekte",
+                nav_esc: "EU-Freiwilligenprogramme",
                 nav_intern: "Praktika",
                 card_intern_title: "BridgeUSA Intern & Trainee",
                 card_intern_desc: "Sammeln Sie praktische Erfahrung in Ihrem Fachbereich in den USA im Rahmen des J-1 Intern Professional Training Programms für Studierende und Hochschulabsolventen.",
@@ -2383,7 +2401,7 @@
                 btn_explore_usa: "USA Programm ansehen \u2192",
                 card_esc_title: "European Volunteering Program",
                 card_esc_desc: "Nehmen Sie an geförderten European Volunteering Program Projekten in Portugal in den Bereichen Geohistorie und Paläontologie teil.",
-                btn_explore_esc: "ESC Projekte ansehen \u2192",
+                btn_explore_esc: "EU-Freiwilligenprogramme ansehen \u2192",
 
                 hero_badge: "Kulturaustauschprogramm in den USA",
                 hero_title: "USA Sommercamp Programm",
