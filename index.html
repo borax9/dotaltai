@@ -760,6 +760,14 @@
         .dino-fig { margin: 0; border-radius: 12px; overflow: hidden; background: #f1f5f9; border: 1px solid #e2e8f0; }
         .dino-fig img { width: 100%; height: 190px; object-fit: cover; display: block; }
         .dino-fig figcaption { padding: 8px 12px; font-size: 0.82rem; color: #475569; }
+        .dino-price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 1.2rem; }
+        .dino-price-card { background: #fffbeb; border: 2px solid #f59e0b; border-radius: 14px; padding: 18px; text-align: center; }
+        .dino-price-label { display: block; font-weight: 700; color: #92400e; }
+        .dino-price-amount { display: block; font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; color: #78350f; }
+        .dino-price-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .dino-price-table th, .dino-price-table td { padding: 9px 12px; border-bottom: 1px solid #e2e8f0; text-align: right; }
+        .dino-price-table th:first-child, .dino-price-table td:first-child { text-align: left; }
+        .dino-price-table tfoot td { font-weight: 800; background: #fffbeb; border-top: 2px solid #f59e0b; }
         .dino-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 1.5rem; }
         .dino-grid .feature-box { cursor: default; border-top-color: #b45309; }
         .dino-grid .feature-box:hover { transform: none; box-shadow: none; }
@@ -1261,6 +1269,37 @@
                     </ul>
                 </div>
 
+                <!-- TRANSPARENT PRICE SUMMARY -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-euro-sign dino-accent"></i>
+                        <span data-i18n="dino_price_heading">Transparent Price Summary 2026-2027</span>
+                    </h3>
+                    <p style="color:#334155; line-height:1.6;" data-i18n="dino_price_note">Indicative per-participant prices for the 2026-2027 season. Final prices are confirmed in your written offer. Return flights are priced at an average for European departures.</p>
+                    <div class="dino-price-cards">
+                        <div class="dino-price-card"><span class="dino-price-label" data-i18n="dino_price_w1">1 week</span><span class="dino-price-amount">1,190 €</span></div>
+                        <div class="dino-price-card"><span class="dino-price-label" data-i18n="dino_price_w2">2 weeks</span><span class="dino-price-amount">1,890 €</span></div>
+                    </div>
+                    <p style="text-align:center; font-weight:600; color:#92400e; margin-top:10px;" data-i18n="dino_price_nofl">Without flights, subtract about 220 €</p>
+                    <div style="overflow-x:auto; margin-top:1rem;">
+                        <table class="dino-price-table">
+                            <thead><tr><th></th><th data-i18n="dino_price_w1">1 week</th><th data-i18n="dino_price_w2">2 weeks</th></tr></thead>
+                            <tbody>
+                            <tr><td data-i18n="dino_pr_flight">Return flight</td><td>220 €</td><td>220 €</td></tr>
+                            <tr><td data-i18n="dino_pr_stay">Accommodation & full board</td><td>315 €</td><td>630 €</td></tr>
+                            <tr><td data-i18n="dino_pr_transport">Local transport & transfers</td><td>70 €</td><td>120 €</td></tr>
+                            <tr><td data-i18n="dino_pr_tours">Guided tours, museum & Dinopark entries</td><td>60 €</td><td>100 €</td></tr>
+                            <tr><td data-i18n="dino_pr_program">SHN programme (dig, lab, materials, membership)</td><td>150 €</td><td>270 €</td></tr>
+                            <tr><td data-i18n="dino_pr_ins">Insurance & DinoCamp kit</td><td>25 €</td><td>35 €</td></tr>
+                            <tr><td data-i18n="dino_pr_staff">Group leader / chaperone share</td><td>90 €</td><td>160 €</td></tr>
+                            <tr><td data-i18n="dino_pr_org">Organisation, coordination & reserve (ADOT)</td><td>260 €</td><td>355 €</td></tr>
+                            </tbody>
+                            <tfoot><tr><td data-i18n="dino_pr_total">Total price per participant</td><td>1,190 €</td><td>1,890 €</td></tr></tfoot>
+                        </table>
+                    </div>
+                    <p style="font-size:0.85rem; color: var(--text-muted); margin-top:10px;" data-i18n="dino_price_foot">Group of at least 15 students. Early-booking and group discounts available on request.</p>
+                </div>
+
                 <!-- ACCOMMODATION -->
                 <div class="campusa-section">
                     <h3 class="section-heading">
@@ -1269,7 +1308,6 @@
                     </h3>
                     <ul class="custom-list dino-list">
                         <li data-i18n="dino_stay_1"><strong>Hotel:</strong> <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd1f3a9899bce9d3:0xc696254ccd71b61d" target="_blank" rel="noopener">Hotel Mar Azul, E.N. 247, Empreendimento Turístico "Mar Azul", Bloco 6, 2560-446 Silveira</a></li>
-                        <li data-i18n="dino_stay_2"><strong>Youth hostel:</strong> <a href="https://www.pousadasjuventude.pt/pt/pousadas/pousada-de-santa-cruz/" target="_blank" rel="noopener">Pousada de Santa Cruz</a></li>
                     </ul>
                 </div>
 
@@ -1861,6 +1899,21 @@
                 dino_info_3: "<strong>Type:</strong> educational study trip - paid program, open to all students. Fee (see what is included below) and dates are confirmed on request.",
                 dino_info_4: "<strong>Location:</strong> Torres Vedras region, Portugal (SHN research centre Ci2Paleo, Santa Cruz).",
                 dino_info_5: "<strong>Supervision:</strong> activities are led by SHN specialists and educators. Participants under 18 need written consent from a parent or guardian.",
+                dino_price_heading: "Transparent Price Summary 2026-2027",
+                dino_price_note: "Indicative per-participant prices for the 2026-2027 season. Final prices are confirmed in your written offer. Return flights are priced at an average for European departures.",
+                dino_price_w1: "1 week",
+                dino_price_w2: "2 weeks",
+                dino_price_nofl: "Without flights, subtract about 220 €",
+                dino_price_foot: "Group of at least 15 students. Early-booking and group discounts available on request.",
+                dino_pr_total: "Total price per participant",
+                dino_pr_flight: "Return flight",
+                dino_pr_stay: "Accommodation & full board",
+                dino_pr_transport: "Local transport & transfers",
+                dino_pr_tours: "Guided tours, museum & Dinopark entries",
+                dino_pr_program: "SHN programme (dig, lab, materials, membership)",
+                dino_pr_ins: "Insurance & DinoCamp kit",
+                dino_pr_staff: "Group leader / chaperone share",
+                dino_pr_org: "Organisation, coordination & reserve (ADOT)",
                 dino_inc_heading: "What's Included in the Fee",
                 dino_inc_1: "Return flight tickets",
                 dino_inc_2: "Local transport",
@@ -1871,7 +1924,6 @@
                 dino_inc_7: "Dinopark experience",
                 dino_stay_heading: "Accommodation",
                 dino_stay_1: "<strong>Hotel:</strong> <a href=\"https://www.google.com/maps/place//data=!4m2!3m1!1s0xd1f3a9899bce9d3:0xc696254ccd71b61d\" target=\"_blank\" rel=\"noopener\">Hotel Mar Azul, E.N. 247, Empreendimento Turístico \"Mar Azul\", Bloco 6, 2560-446 Silveira</a>",
-                dino_stay_2: "<strong>Youth hostel:</strong> <a href=\"https://www.pousadasjuventude.pt/pt/pousadas/pousada-de-santa-cruz/\" target=\"_blank\" rel=\"noopener\">Pousada de Santa Cruz</a>",
                 dino_contact_title: "Contact Us",
                 dino_contact_note: "All applications, questions and arrangements for DinoCamp are handled by ADOT Education Events Consulting, the organiser and intermediary for this program.",
                 nav_home: "Home",
@@ -2040,6 +2092,21 @@
                 dino_info_3: "<strong>Tipo:</strong> viagem de estudo educativa - programa pago, aberto a todos os estudantes. Preço (ver o que está incluído abaixo) e datas confirmados mediante pedido.",
                 dino_info_4: "<strong>Local:</strong> região de Torres Vedras, Portugal (centro de investigação Ci2Paleo da SHN, Santa Cruz).",
                 dino_info_5: "<strong>Supervisão:</strong> atividades orientadas por especialistas e educadores da SHN. Participantes menores de 18 anos precisam de autorização escrita dos pais ou tutores.",
+                dino_price_heading: "Resumo Transparente de Preços 2026-2027",
+                dino_price_note: "Preços indicativos por participante para a época 2026-2027. Os preços finais são confirmados na proposta escrita. Os voos de ida e volta são calculados com média para partidas europeias.",
+                dino_price_w1: "1 semana",
+                dino_price_w2: "2 semanas",
+                dino_price_nofl: "Sem voos, subtraia cerca de 220 €",
+                dino_price_foot: "Grupo mínimo de 15 estudantes. Descontos por inscrição antecipada e para grupos mediante pedido.",
+                dino_pr_total: "Preço total por participante",
+                dino_pr_flight: "Voo de ida e volta",
+                dino_pr_stay: "Alojamento e pensão completa",
+                dino_pr_transport: "Transporte local e transferes",
+                dino_pr_tours: "Visitas guiadas, entradas em museus e Dinopark",
+                dino_pr_program: "Programa SHN (escavação, laboratório, materiais, adesão)",
+                dino_pr_ins: "Seguro e kit DinoCamp",
+                dino_pr_staff: "Quota do líder / acompanhante do grupo",
+                dino_pr_org: "Organização, coordenação e reserva (ADOT)",
                 dino_inc_heading: "O Que Está Incluído no Preço",
                 dino_inc_1: "Bilhetes de avião de ida e volta",
                 dino_inc_2: "Transporte local",
@@ -2050,7 +2117,6 @@
                 dino_inc_7: "Experiência no Dinopark",
                 dino_stay_heading: "Alojamento",
                 dino_stay_1: "<strong>Hotel:</strong> <a href=\"https://www.google.com/maps/place//data=!4m2!3m1!1s0xd1f3a9899bce9d3:0xc696254ccd71b61d\" target=\"_blank\" rel=\"noopener\">Hotel Mar Azul, E.N. 247, Empreendimento Turístico \"Mar Azul\", Bloco 6, 2560-446 Silveira</a>",
-                dino_stay_2: "<strong>Pousada:</strong> <a href=\"https://www.pousadasjuventude.pt/pt/pousadas/pousada-de-santa-cruz/\" target=\"_blank\" rel=\"noopener\">Pousada de Santa Cruz</a>",
                 dino_contact_title: "Contacte-nos",
                 dino_contact_note: "Todas as candidaturas, questões e a organização do DinoCamp são tratadas pela ADOT Education Events Consulting, organizadora e intermediária deste programa.",
                 nav_home: "Início",
@@ -2218,6 +2284,21 @@
                 dino_info_3: "<strong>Typ:</strong> vzdelávací študijný pobyt - platený program otvorený všetkým študentom. Cena (pozri, čo je zahrnuté nižšie) a termíny sa potvrdzujú na požiadanie.",
                 dino_info_4: "<strong>Miesto:</strong> región Torres Vedras, Portugalsko (výskumné centrum SHN Ci2Paleo, Santa Cruz).",
                 dino_info_5: "<strong>Dohľad:</strong> aktivity vedú odborníci a pedagógovia SHN. Účastníci mladší ako 18 rokov potrebujú písomný súhlas rodiča alebo zákonného zástupcu.",
+                dino_price_heading: "Transparentný prehľad cien 2026-2027",
+                dino_price_note: "Orientačné ceny na účastníka pre sezónu 2026-2027. Konečné ceny sa potvrdzujú v písomnej ponuke. Letenky tam a späť sú vypočítané ako priemer pre európske odlety.",
+                dino_price_w1: "1 týždeň",
+                dino_price_w2: "2 týždne",
+                dino_price_nofl: "Bez letenky odpočítajte približne 220 €",
+                dino_price_foot: "Skupina minimálne 15 študentov. Zľavy za skorú registráciu a pre skupiny na požiadanie.",
+                dino_pr_total: "Celková cena na účastníka",
+                dino_pr_flight: "Letenka tam a späť",
+                dino_pr_stay: "Ubytovanie a plná penzia",
+                dino_pr_transport: "Miestna doprava a transfery",
+                dino_pr_tours: "Prehliadky, vstupy do múzeí a Dinoparku",
+                dino_pr_program: "Program SHN (vykopávky, laboratórium, materiály, členstvo)",
+                dino_pr_ins: "Poistenie a súprava DinoCamp",
+                dino_pr_staff: "Podiel vedúceho skupiny / sprievodcu",
+                dino_pr_org: "Organizácia, koordinácia a rezerva (ADOT)",
                 dino_inc_heading: "Čo je zahrnuté v cene",
                 dino_inc_1: "Letenky tam a späť",
                 dino_inc_2: "Miestna doprava",
@@ -2228,7 +2309,6 @@
                 dino_inc_7: "Zážitok v Dinoparku",
                 dino_stay_heading: "Ubytovanie",
                 dino_stay_1: "<strong>Hotel:</strong> <a href=\"https://www.google.com/maps/place//data=!4m2!3m1!1s0xd1f3a9899bce9d3:0xc696254ccd71b61d\" target=\"_blank\" rel=\"noopener\">Hotel Mar Azul, E.N. 247, Empreendimento Turístico \"Mar Azul\", Bloco 6, 2560-446 Silveira</a>",
-                dino_stay_2: "<strong>Mládežnícka ubytovňa:</strong> <a href=\"https://www.pousadasjuventude.pt/pt/pousadas/pousada-de-santa-cruz/\" target=\"_blank\" rel=\"noopener\">Pousada de Santa Cruz</a>",
                 dino_contact_title: "Kontaktujte nás",
                 dino_contact_note: "Všetky prihlášky, otázky a organizáciu DinoCampu zabezpečuje ADOT Education Events Consulting, organizátor a sprostredkovateľ tohto programu.",
                 nav_home: "Domov",
@@ -2396,6 +2476,21 @@
                 dino_info_3: "<strong>Art:</strong> Bildungs- und Studienreise - kostenpflichtiges Programm, offen für alle Schüler. Preis (siehe unten, was enthalten ist) und Termine auf Anfrage.",
                 dino_info_4: "<strong>Ort:</strong> Region Torres Vedras, Portugal (SHN-Forschungszentrum Ci2Paleo, Santa Cruz).",
                 dino_info_5: "<strong>Betreuung:</strong> Die Aktivitäten werden von SHN-Fachleuten und Pädagogen geleitet. Teilnehmer unter 18 Jahren benötigen die schriftliche Einwilligung der Eltern oder Erziehungsberechtigten.",
+                dino_price_heading: "Transparente Preisübersicht 2026-2027",
+                dino_price_note: "Richtpreise pro Teilnehmer für die Saison 2026-2027. Endpreise werden im schriftlichen Angebot bestätigt. Hin- und Rückflug als Durchschnitt für europäische Abflüge kalkuliert.",
+                dino_price_w1: "1 Woche",
+                dino_price_w2: "2 Wochen",
+                dino_price_nofl: "Ohne Flug ca. 220 € abziehen",
+                dino_price_foot: "Mindestens 15 Schüler pro Gruppe. Frühbucher- und Gruppenrabatte auf Anfrage.",
+                dino_pr_total: "Gesamtpreis pro Teilnehmer",
+                dino_pr_flight: "Hin- und Rückflug",
+                dino_pr_stay: "Unterkunft und Vollpension",
+                dino_pr_transport: "Lokaler Transport und Transfers",
+                dino_pr_tours: "Führungen, Museums- und Dinopark-Eintritte",
+                dino_pr_program: "SHN-Programm (Grabung, Labor, Material, Mitgliedschaft)",
+                dino_pr_ins: "Versicherung und DinoCamp-Kit",
+                dino_pr_staff: "Anteil Gruppenleiter / Begleitperson",
+                dino_pr_org: "Organisation, Koordination und Reserve (ADOT)",
                 dino_inc_heading: "Im Preis enthalten",
                 dino_inc_1: "Hin- und Rückflug",
                 dino_inc_2: "Lokaler Transport",
@@ -2406,7 +2501,6 @@
                 dino_inc_7: "Dinopark-Erlebnis",
                 dino_stay_heading: "Unterkunft",
                 dino_stay_1: "<strong>Hotel:</strong> <a href=\"https://www.google.com/maps/place//data=!4m2!3m1!1s0xd1f3a9899bce9d3:0xc696254ccd71b61d\" target=\"_blank\" rel=\"noopener\">Hotel Mar Azul, E.N. 247, Empreendimento Turístico \"Mar Azul\", Bloco 6, 2560-446 Silveira</a>",
-                dino_stay_2: "<strong>Jugendherberge:</strong> <a href=\"https://www.pousadasjuventude.pt/pt/pousadas/pousada-de-santa-cruz/\" target=\"_blank\" rel=\"noopener\">Pousada de Santa Cruz</a>",
                 dino_contact_title: "Kontakt",
                 dino_contact_note: "Alle Bewerbungen, Fragen und die Organisation des DinoCamps werden von ADOT Education Events Consulting abgewickelt, dem Organisator und Vermittler dieses Programms.",
                 nav_home: "Startseite",
