@@ -758,7 +758,7 @@
         .dino-card-poster { display: flex; align-items: center; justify-content: center; background: #fef3c7; }
         .dino-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 1.2rem; }
         .dino-fig { margin: 0; border-radius: 12px; overflow: hidden; background: #f1f5f9; border: 1px solid #e2e8f0; }
-        .dino-fig img { width: 100%; height: 190px; object-fit: cover; display: block; }
+        .dino-fig img { width: 100%; height: auto; object-fit: contain; display: block; }
         .dino-fig figcaption { padding: 8px 12px; font-size: 0.82rem; color: #475569; }
         .dino-price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 1.2rem; }
         .dino-price-card { background: #fffbeb; border: 2px solid #f59e0b; border-radius: 14px; padding: 18px; text-align: center; }
@@ -1189,7 +1189,7 @@
                         <i class="fa-solid fa-camera dino-accent"></i>
                         <span data-i18n="dino_gallery_heading">DinoCamp Photos</span>
                     </h3>
-                    <div class="dino-gallery"><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc1.jpg" alt="DinoCamp photo 1" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc2.jpg" alt="DinoCamp photo 2" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc3.jpg" alt="DinoCamp photo 3" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc4.jpg" alt="DinoCamp photo 4" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc5.jpg" alt="DinoCamp photo 5" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc6.jpg" alt="DinoCamp photo 6" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc7.jpg" alt="DinoCamp photo 7" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc8.jpg" alt="DinoCamp photo 8" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc9.jpg" alt="DinoCamp photo 9" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc10.jpg" alt="DinoCamp photo 10" loading="lazy" onerror="dcNext(this)"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc11.jpg" alt="DinoCamp photo 11" loading="lazy" onerror="dcNext(this)"></figure></div>
+                    <div class="dino-gallery"><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc1.JPEG" alt="DinoCamp photo 1" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc2.JPEG" alt="DinoCamp photo 2" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc3.JPEG" alt="DinoCamp photo 3" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc4.JPEG" alt="DinoCamp photo 4" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc5.JPEG" alt="DinoCamp photo 5" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc6.JPEG" alt="DinoCamp photo 6" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc7.JPEG" alt="DinoCamp photo 7" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc8.png" alt="DinoCamp photo 8" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc9.jfif" alt="DinoCamp photo 9" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc10.jfif" alt="DinoCamp photo 10" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc11.jpg" alt="DinoCamp photo 11" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure></div>
                                     </div>
 
                 <!-- ACTIVITIES -->
@@ -1740,14 +1740,7 @@
                         <i class="fa-solid fa-images"></i>
                         <span data-i18n="esc_gallery_heading">Project Activities Gallery</span>
                     </h3>
-                    <div class="esc-collage">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter1.png" onerror="this.onerror=null; this.src='images/escposter1.png';" alt="ESC Poster 1">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter2.png" onerror="this.onerror=null; this.src='images/escposter2.png';" alt="ESC Poster 2">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter3.png" onerror="this.onerror=null; this.src='images/escposter3.png';" alt="ESC Poster 3">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter4.png" onerror="this.onerror=null; this.src='images/escposter4.png';" alt="ESC Poster 4">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter5.png" onerror="this.onerror=null; this.src='images/escposter5.png';" alt="ESC Poster 5">
-                        <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/escposter6.png" onerror="this.onerror=null; this.src='images/escposter6.png';" alt="ESC Poster 6">
-                    </div>
+                    <div class="esc-collage"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter1.png" alt="ESC Poster 1" loading="lazy" onerror="this.style.display='none'"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter2.png" alt="ESC Poster 2" loading="lazy" onerror="this.style.display='none'"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter3.png" alt="ESC Poster 3" loading="lazy" onerror="this.style.display='none'"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter4.png" alt="ESC Poster 4" loading="lazy" onerror="this.style.display='none'"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter5.png" alt="ESC Poster 5" loading="lazy" onerror="this.style.display='none'"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter6.png" alt="ESC Poster 6" loading="lazy" onerror="this.style.display='none'"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter7.jpg" alt="ESC Poster 7" loading="lazy" onerror="this.style.display='none'"></div>
                 </div>
 
             </div>
@@ -1779,7 +1772,6 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024-2026 ADOT Education Events Consulting - All rights reserved. | <a href="https://www.dotaltai.org" target="_blank" style="color: #4ade80; text-decoration: none;">dotaltai.org</a></p>
-            <p class="contractor-disclaimer" data-i18n="contractor_disclaimer">ADOT Education Events Consulting is an independent contractor providing consultancy, recruitment, and placement support services in cooperation with InterExchange CampUSA and volunteering project partners.</p>
         </div>
     </footer>
 
@@ -2012,7 +2004,6 @@
                 lbl_phone: "Phone Number *",
                 lbl_areas: "Areas of Interest *",
                 btn_submit: "Submit Pre-Application",
-                contractor_disclaimer: "ADOT Education Events Consulting is an independent contractor providing consultancy, recruitment, and placement support services in cooperation with InterExchange CampUSA and volunteering project partners."
             },
             pt: {
                 nav_dino: "DinoCamp",
@@ -2193,7 +2184,6 @@
                 lbl_phone: "Número de Telefone *",
                 lbl_areas: "Áreas de Interesse *",
                 btn_submit: "Submeter Pré-Candidatura",
-                contractor_disclaimer: "A ADOT Education Events Consulting é um contratante independente que fornece serviços de consultoria em cooperação com parceiros do InterExchange CampUSA e de projetos."
             },
             sk: {
                 nav_dino: "DinoCamp",
@@ -2374,7 +2364,6 @@
                 lbl_phone: "Telefónne číslo *",
                 lbl_areas: "Oblasti záujmu *",
                 btn_submit: "Odoslať predbežnú prihlášku",
-                contractor_disclaimer: "ADOT Education Events Consulting je nezávislý dodávateľ poskytujúci poradenské a podporné služby v spolupráci s partnermi."
             },
             de: {
                 nav_dino: "DinoCamp",
@@ -2555,20 +2544,8 @@
                 lbl_phone: "Telefonnummer *",
                 lbl_areas: "Interessenbereiche *",
                 btn_submit: "Vorbewerbung Absenden",
-                contractor_disclaimer: "ADOT Education Events Consulting ist ein unabhängiger Auftragnehmer in Zusammenarbeit mit Partnern."
             }
         };
-
-        function dcNext(img) {
-            const exts = ['jpg','jpeg','png','webp','JPG','JPEG','PNG','WEBP'];
-            const m = img.src.match(/\.(\w+)$/);
-            const idx = m ? exts.indexOf(m[1]) : -1;
-            if (idx === -1 || idx + 1 >= exts.length) {
-                img.closest('figure').style.display = 'none';
-                return;
-            }
-            img.src = img.src.replace(/\.\w+$/, '.' + exts[idx + 1]);
-        }
 
         function setLanguage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(elem => {
