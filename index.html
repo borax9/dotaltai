@@ -776,6 +776,28 @@
         .dino-pill { display: inline-flex; align-items: center; gap: 8px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: var(--transition-smooth); }
         .dino-pill:hover { background: #b45309; color: #fff; border-color: #b45309; }
 
+        /* Bodrum Holiday Tour */
+        .tour-hero { background: linear-gradient(135deg, #082f49 0%, #0e4f6b 50%, #082f49 100%); }
+        .tour-hero .hero-badge { color: #67e8f9; }
+        .tour-accent { color: #0e7490 !important; }
+        .tour-price-hero {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;
+            background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+            border: 1px solid #a5f3fc; border-radius: var(--radius-lg); padding: 28px 32px;
+        }
+        .tour-price-label { display: block; font-weight: 700; color: #155e75; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+        .tour-price-amount { display: block; font-family: 'Outfit', sans-serif; font-size: 3.4rem; font-weight: 800; color: #155e75; line-height: 1.1; }
+        .tour-price-amount small { font-size: 1rem; font-weight: 600; color: #0e7490; margin-left: 8px; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tour-price-note { max-width: 420px; color: #334155; line-height: 1.6; }
+        .tour-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 1.2rem; }
+        .tour-fact { background: #ffffff; border: 1px solid #cffafe; border-radius: 14px; padding: 18px 14px; text-align: center; box-shadow: var(--shadow-subtle); }
+        .tour-fact i { color: #0e7490; font-size: 1.3rem; }
+        .tour-fact strong { display: block; font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: #164e63; margin-top: 8px; }
+        .tour-fact span { font-size: 0.82rem; color: var(--text-muted); }
+        .tour-list li::before { color: #0e7490; background: #cffafe; }
+        .tour-pill { display: inline-flex; align-items: center; gap: 8px; background: #cffafe; color: #155e75; border: 1px solid #a5f3fc; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: var(--transition-smooth); }
+        .tour-pill:hover { background: #0e7490; color: #fff; border-color: #0e7490; }
+
         /* Mobile Optimization Fixes */
         @media (max-width: 991px) {
             .navbar {
@@ -829,6 +851,7 @@
                 <a href="#" class="nav-link-item" id="nav-usa" onclick="switchPage('usa'); return false;" data-i18n="nav_usa">USA Summer Camp</a>
                 <a href="#" class="nav-link-item" id="nav-intern" onclick="switchPage('intern'); return false;" data-i18n="nav_intern">Internships</a>
                 <a href="#" class="nav-link-item" id="nav-dino" onclick="switchPage('dino'); return false;" data-i18n="nav_dino">DinoCamp</a>
+                <a href="#" class="nav-link-item" id="nav-tours" onclick="switchPage('tours'); return false;">Bodrum Tour</a>
                 <a href="#" class="nav-link-item" id="nav-about" onclick="switchPage('about'); return false;" data-i18n="nav_about">About Us</a>
             </div>
 
@@ -904,6 +927,18 @@
                             A 1-2 week educational paleontology experience in Portugal for students aged 7-18: fossil excavation, laboratory work and geoheritage field trips with our host organisation.
                         </p>
                         <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #d97706 0%, #92400e 100%); display: inline-block;" data-i18n="btn_explore_dino">View DinoCamp →</button>
+                    </div>
+
+                    <!-- BODRUM HOLIDAY TOUR CARD -->
+                    <div class="feature-box" onclick="switchPage('tours');" style="border-top-color: #0e7490; padding: 24px; text-align: center;">
+                        <div class="home-card-poster" style="display: flex; align-items: center; justify-content: center; background: #ecfeff;">
+                            <i class="fa-solid fa-umbrella-beach" style="font-size: 4rem; color: #0e7490; padding: 40px 0;"></i>
+                        </div>
+                        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--primary);">Bratislava to Bodrum Holiday Tour</h3>
+                        <p style="font-size: 0.95rem; margin-top: 10px; color: var(--text-muted);">
+                            A 7-day all-inclusive holiday on the Turkish Riviera, departing from Bratislava. From €650 per person.
+                        </p>
+                        <button class="nav-cta" style="margin-top: 1.5rem; background: linear-gradient(135deg, #0891b2 0%, #155e75 100%); display: inline-block;">View Bodrum Tour &rarr;</button>
                     </div>
 
                 </div>
@@ -1325,6 +1360,120 @@
                     <button class="apply-btn" style="background: linear-gradient(135deg, #d97706 0%, #92400e 100%); box-shadow: 0 12px 28px -6px rgba(180, 83, 9, 0.45);" onclick="openModal();">
                         <i class="fa-solid fa-paper-plane"></i>
                         <span data-i18n="start_app">Start Your Application</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: BODRUM HOLIDAY TOUR -->
+    <div id="page-tours" class="page-view">
+        <section class="campusa-hero tour-hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <span>All-Inclusive Holiday Tour</span>
+            </div>
+            <h1>Bratislava to Bodrum Holiday Tour</h1>
+            <p>Seven days of sun, sea and Aegean hospitality on the Turkish Riviera, with the journey, accommodation and meals arranged for you from start to finish.</p>
+        </section>
+
+        <div class="content-container">
+            <div class="campusa-card">
+
+                <div class="campusa-section">
+                    <p style="line-height: 1.7; font-size: 1.05rem; color: #334155;">
+                        Escape to one of the most beautiful coastlines in the Mediterranean. Our Bratislava to Bodrum holiday tour combines travel, accommodation and all-inclusive meals into one simple package, so you can relax from the moment you leave home. Bodrum offers crystal-clear water, whitewashed harbour towns and warm hospitality, making it an ideal choice for a memorable summer break.
+                    </p>
+                </div>
+
+                <!-- PRICE -->
+                <div class="campusa-section">
+                    <div class="tour-price-hero">
+                        <div>
+                            <span class="tour-price-label">Package price</span>
+                            <span class="tour-price-amount">€650<small>per person</small></span>
+                        </div>
+                        <p class="tour-price-note">
+                            A complete 7-day all-inclusive package. Final dates, hotel details and transport arrangements are confirmed in your written offer.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TRIP AT A GLANCE -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-map-location-dot tour-accent"></i>
+                        <span>Trip at a Glance</span>
+                    </h3>
+                    <div class="tour-facts">
+                        <div class="tour-fact">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <strong>7 Days</strong>
+                            <span>Full holiday duration</span>
+                        </div>
+                        <div class="tour-fact">
+                            <i class="fa-solid fa-plane-departure"></i>
+                            <strong>Bratislava</strong>
+                            <span>Departure city, Slovakia</span>
+                        </div>
+                        <div class="tour-fact">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <strong>Bodrum</strong>
+                            <span>Destination, Turkey</span>
+                        </div>
+                        <div class="tour-fact">
+                            <i class="fa-solid fa-utensils"></i>
+                            <strong>All Inclusive</strong>
+                            <span>Meals and drinks included</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INCLUDED -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-ticket tour-accent"></i>
+                        <span>What's Included</span>
+                    </h3>
+                    <ul class="custom-list tour-list">
+                        <li>Return travel between Bratislava and Bodrum</li>
+                        <li>Seven nights of accommodation at the holiday resort</li>
+                        <li>All-inclusive meals and selected drinks during your stay</li>
+                        <li>Access to resort facilities and beach area</li>
+                    </ul>
+                </div>
+
+                <!-- GOOD TO KNOW -->
+                <div class="campusa-section">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-circle-info tour-accent"></i>
+                        <span>Good to Know</span>
+                    </h3>
+                    <ul class="custom-list tour-list">
+                        <li>The price is quoted per person for the full 7-day all-inclusive package.</li>
+                        <li>Final travel times, hotel details and terms are confirmed in your written offer.</li>
+                        <li>Please check passport and entry requirements for Turkey before booking.</li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="campusa-section" style="border-bottom: none;">
+                    <h3 class="section-heading">
+                        <i class="fa-solid fa-envelope tour-accent"></i>
+                        <span>Contact Us</span>
+                    </h3>
+                    <p style="color: #334155;">All bookings, questions and arrangements for this tour are handled by ADOT Education Events Consulting.</p>
+                    <div class="dino-links">
+                        <a class="tour-pill" href="mailto:euprojects@alt-shn.org"><i class="fa-solid fa-envelope"></i> euprojects@alt-shn.org</a>
+                        <a class="tour-pill" href="tel:+421940194980"><i class="fa-solid fa-phone"></i> +421 940 194 980</a>
+                    </div>
+                </div>
+
+                <div class="apply-btn-container">
+                    <button class="apply-btn" style="background: linear-gradient(135deg, #0891b2 0%, #155e75 100%); box-shadow: 0 12px 28px -6px rgba(21, 94, 117, 0.45);" onclick="openModal();">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Book Your Holiday</span>
                     </button>
                 </div>
 
@@ -2614,6 +2763,9 @@
             } else if (pageId === 'dino') {
                 document.getElementById('page-dino').classList.add('active');
                 document.getElementById('nav-dino').classList.add('active-link');
+            } else if (pageId === 'tours') {
+                document.getElementById('page-tours').classList.add('active');
+                document.getElementById('nav-tours').classList.add('active-link');
             } else if (pageId === 'about') {
                 document.getElementById('page-about').classList.add('active');
                 document.getElementById('nav-about').classList.add('active-link');
