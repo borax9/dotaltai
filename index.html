@@ -1067,6 +1067,118 @@
             .dino-media-row { grid-template-columns: 1fr; }
         }
     </style>
+
+    <!-- Turkic motifs (star of Türkmen aynası, elibelinde, koç boynuzu, tamga) -->
+    <style>
+        :root {
+            --motif-band: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='24' viewBox='0 0 64 24'><g fill='none' stroke='%23b8862b' stroke-width='2' stroke-linecap='round'><path d='M14 4 L22 12 L14 20 L6 12 Z'/><path d='M14 1 v3 M14 20 v3'/><path d='M34 12 C28 12 28 4 35 4 C41 4 41 10 36 10 C34 10 34 8 35 8'/><path d='M38 12 C44 12 44 20 37 20 C31 20 31 14 36 14 C38 14 38 16 37 16'/></g><circle cx='54' cy='12' r='2.2' fill='%235a3e2b'/></svg>");
+            --motif-corner-tl: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23b8862b' stroke-width='2.2' stroke-linecap='round'><path d='M2 58 V2 H58'/><path d='M9 50 V9 H50'/></g><polygon points='14.0,3.0 15.7,9.8 21.8,6.2 18.2,12.3 25.0,14.0 18.2,15.7 21.8,21.8 15.7,18.2 14.0,25.0 12.3,18.2 6.2,21.8 9.8,15.7 3.0,14.0 9.8,12.3 6.2,6.2 12.3,9.8' fill='%23b8862b' stroke='%235a3e2b' stroke-width='1'/><circle cx='14' cy='14' r='2' fill='%235a3e2b'/><path d='M30 30 l6 -6 l6 6 l-6 6 z' fill='none' stroke='%23b8862b' stroke-width='1.8'/><circle cx='2' cy='58' r='2.5' fill='%23b8862b'/><circle cx='58' cy='2' r='2.5' fill='%23b8862b'/></svg>");
+            --motif-corner-br: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g transform='rotate(180 32 32)'><g fill='none' stroke='%23b8862b' stroke-width='2.2' stroke-linecap='round'><path d='M2 58 V2 H58'/><path d='M9 50 V9 H50'/></g><polygon points='14.0,3.0 15.7,9.8 21.8,6.2 18.2,12.3 25.0,14.0 18.2,15.7 21.8,21.8 15.7,18.2 14.0,25.0 12.3,18.2 6.2,21.8 9.8,15.7 3.0,14.0 9.8,12.3 6.2,6.2 12.3,9.8' fill='%23b8862b' stroke='%235a3e2b' stroke-width='1'/><circle cx='14' cy='14' r='2' fill='%235a3e2b'/><path d='M30 30 l6 -6 l6 6 l-6 6 z' fill='none' stroke='%23b8862b' stroke-width='1.8'/><circle cx='2' cy='58' r='2.5' fill='%23b8862b'/><circle cx='58' cy='2' r='2.5' fill='%23b8862b'/></g></svg>");
+            --motif-tamga: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g fill='none' stroke='%23b8862b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M16 3 V29'/><path d='M7 10 H25'/><path d='M7 10 V16'/><path d='M25 10 V16'/><path d='M11 29 H21'/></g></svg>");
+            --motif-divider: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'><polygon points='40.0,4.0 42.3,14.5 51.3,8.7 45.5,17.7 56.0,20.0 45.5,22.3 51.3,31.3 42.3,25.5 40.0,36.0 37.7,25.5 28.7,31.3 34.5,22.3 24.0,20.0 34.5,17.7 28.7,8.7 37.7,14.5' fill='none' stroke='%23b8862b' stroke-width='2'/><line x1='0' y1='20' x2='22' y2='20' stroke='%23b8862b' stroke-width='2'/><line x1='58' y1='20' x2='80' y2='20' stroke='%23b8862b' stroke-width='2'/><circle cx='40' cy='20' r='2.5' fill='%235a3e2b'/></svg>");
+        }
+
+        /* Framed boxes: star corners at top-left and bottom-right + kilim band on top */
+        .feature-box, .fee-card, .card, [class*="card"]:not(.home-card-poster),
+        .campusa-section > div, .modal-content {
+            background-image: var(--motif-corner-tl), var(--motif-corner-br) !important;
+            background-position: top left, bottom right !important;
+            background-size: 64px 64px, 64px 64px !important;
+            background-repeat: no-repeat !important;
+            overflow: hidden;
+        }
+        .feature-box::before, .fee-card::before {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; top: 0;
+            height: 24px;
+            background-image: var(--motif-band);
+            background-repeat: repeat-x;
+            background-size: 64px 24px;
+            opacity: .9;
+            pointer-events: none;
+            border-bottom: 1px solid #e3d6b4;
+        }
+        .feature-box, .fee-card { padding-top: 40px !important; }
+
+        /* Section headings: divider line with the star motif */
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .section-heading::after {
+            content: "";
+            flex: 1;
+            height: 40px;
+            min-width: 80px;
+            max-width: 220px;
+            background-image: var(--motif-divider);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80px 40px;
+            opacity: .95;
+        }
+
+        /* Age badges: tamga + bordered */
+        .age-badge {
+            padding-left: 34px !important;
+            background-image: var(--motif-tamga) !important;
+            background-repeat: no-repeat !important;
+            background-position: 8px center !important;
+            background-size: 22px 22px !important;
+            background-color: var(--forest) !important;
+            font-weight: 700;
+        }
+
+        /* Navbar: kilim band below the header */
+        .navbar::after {
+            height: 16px !important;
+            bottom: -16px !important;
+            background-image: var(--motif-band) !important;
+            background-size: 64px 16px !important;
+            background-repeat: repeat-x !important;
+            opacity: 1 !important;
+        }
+
+        /* Hero: band along the bottom edge */
+        .campusa-hero::after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 22px;
+            background-image: var(--motif-band);
+            background-repeat: repeat-x;
+            background-size: 64px 22px;
+            background-color: rgba(31,51,32,.6);
+            pointer-events: none;
+        }
+
+        /* Footer: band along the top */
+        .site-footer::before {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; top: -22px;
+            height: 22px;
+            background-image: var(--motif-band);
+            background-repeat: repeat-x;
+            background-size: 64px 22px;
+            pointer-events: none;
+        }
+        .site-footer { border-top: none !important; }
+
+        /* Application buttons: small tamga before text */
+        .apply-btn {
+            padding-left: 52px !important;
+            background-image: var(--primary-gradient), var(--motif-tamga) !important;
+            background-blend-mode: normal;
+        }
+        .apply-btn {
+            background-repeat: no-repeat, no-repeat !important;
+            background-position: 0 0, 14px center !important;
+            background-size: auto, 22px 22px !important;
+        }
+    </style>
 </head>
 <body>
 
