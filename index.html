@@ -1062,6 +1062,89 @@
             border-color: #5fae3f !important;
         }
     </style>
+    <!-- v4: remove ALL blue, invert dark text, lighter airy layout -->
+    <style>
+        :root {
+            --text-dark: #f5ead0;
+            --text-muted: #d9c9a2;
+            --bg-light: #15100b;
+            --card-bg: #241b13;
+            --border-color: #6b4f20;
+            --primary: #f5d27a;
+            --primary-accent: #7fd36a;
+        }
+
+        /* 1) Browser default blue focus rings / autofill / selection */
+        *:focus, *:focus-visible { outline: none !important; }
+        input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px #1d160f inset !important;
+            -webkit-text-fill-color: #f5ead0 !important;
+            caret-color: #f5ead0;
+        }
+        ::selection { background: #3f7a2a; color: #fff1c2; }
+
+        /* 2) Kill blue inline colors, backgrounds and borders everywhere */
+        [style*="2563eb" i], [style*="3b82f6" i], [style*="1d4ed8" i],
+        [style*="eff6ff" i], [style*="dbeafe" i], [style*="bfdbfe" i],
+        [style*="60a5fa" i], [style*="93c5fd" i], [style*="1e40af" i], [style*="1e3a8a" i] {
+            background: linear-gradient(180deg, #3f7a2a 0%, #1d3f14 100%) !important;
+            background-color: #1d3f14 !important;
+            border-color: #5fae3f !important;
+            border-top-color: #5fae3f !important;
+            color: #f5d27a !important;
+            box-shadow: 0 10px 24px rgba(0,0,0,.6) !important;
+        }
+        [style*="color: #2563eb" i], [style*="color:#2563eb" i] { color: #7fd36a !important; }
+        .home-card-poster, .home-card-poster[style] {
+            background: linear-gradient(180deg, #1d3f14 0%, #0b1a0f 100%) !important;
+        }
+        .home-card-poster i { color: #f5d27a !important; }
+        .feature-box, .feature-box:hover { border-top-color: #5fae3f !important; }
+
+        /* 3) Light backgrounds -> dark stone (inline + class based) */
+        [style*="background: #fff" i], [style*="background:#fff" i],
+        [style*="background-color: #fff" i], [style*="background-color:#fff" i],
+        [style*="#f8fafc" i], [style*="#f1f5f9" i], [style*="#e2e8f0" i],
+        [style*="#fffbeb" i], [style*="#fafafa" i], [style*="white" i][style*="background"],
+        .cv-table, .cv-table tbody tr, .cv-table tbody tr:nth-child(even),
+        .dino-fig, .dino-price-card, .dino-price-table tfoot td,
+        .cv-table thead th, .cv-table td, .cv-table th {
+            background: #1e170f !important;
+            background-color: #1e170f !important;
+            color: #f5ead0 !important;
+            border-color: #6b4f20 !important;
+        }
+
+        /* 4) Dark text -> light parchment */
+        [style*="#334155" i], [style*="#475569" i], [style*="#64748b" i],
+        [style*="#0f172a" i], [style*="#1e293b" i], [style*="#0f4c3a" i],
+        [style*="#111" i], [style*="#222" i], [style*="#333" i], [style*="#000" i],
+        [style*="color: var(--text-dark)"], [style*="color:var(--text-dark)"] {
+            color: #f5ead0 !important;
+        }
+        .cv-table, .cv-table td, .cv-table th, .cv-desc, .cv-contact { color: #f5ead0 !important; }
+        .cv-subtitle, .cv-desc { color: #d9c9a2 !important; }
+        p, li, td, span, label { color: inherit; }
+        body, p, li { color: #f5ead0; }
+        strong, b { color: #fff1c2; }
+
+        /* Keep headings gold, never dark */
+        h1, h2, h3, h4, h5, h6, .section-heading, .sub-heading, .cv-heading {
+            color: #f5d27a !important;
+        }
+
+        /* 5) Airy layout: more breathing room, lighter spacing */
+        body { line-height: 1.8; font-size: 16.5px; }
+        .campusa-section { padding: 3rem 0; margin-bottom: 1.5rem; }
+        .campusa-section + .campusa-section { margin-top: 1rem; }
+        .fee-grid, [class*="grid"] { gap: 28px !important; }
+        .feature-box, .fee-card { padding: 30px !important; }
+        .section-heading { margin-bottom: 1.75rem; letter-spacing: 0.02em; }
+        .sub-heading { margin: 2rem 0 1rem 0; }
+        p { margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        .navbar { background: linear-gradient(180deg, #1f170f 0%, #120d08 100%) !important; }
+    </style>
 </head>
 <body>
 
