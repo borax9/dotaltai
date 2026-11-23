@@ -813,6 +813,19 @@
             .section-heading { font-size: 1.35rem; }
         }
     </style>
+
+    <!-- Heading icons: flags, bridge, tent -->
+    <style>
+        .section-heading .hicon {
+            display: inline-flex; align-items: center; justify-content: center;
+            flex: 0 0 auto;
+            width: 40px; height: 40px; border-radius: 50%;
+            background: #fdfaf1;
+            border: 2px solid var(--ochre);
+            box-shadow: 0 3px 10px rgba(47,74,44,.15);
+        }
+        .section-heading .hicon svg { display: block; }
+    </style>
     <!-- Turkic Heritage Theme: forest, bark, parchment, tamga & kilim motifs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -879,16 +892,6 @@
             border-bottom: 3px solid var(--bark) !important;
             box-shadow: 0 6px 22px -12px rgba(47,74,44,.45) !important;
         }
-        .navbar::after {
-            content: "";
-            position: absolute;
-            left: 0; right: 0; bottom: -10px;
-            height: 10px;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='10'><path d='M0 9 L6 1 L12 9 L18 1 L24 9' fill='none' stroke='%23b8862b' stroke-width='1.6'/></svg>");
-            background-repeat: repeat-x;
-            opacity: .75;
-            pointer-events: none;
-        }
         .nav-link-item {
             font-family: 'Marcellus SC', serif;
             font-size: .95rem !important;
@@ -939,12 +942,6 @@
         .campusa-section > div, .modal-content {
             position: relative;
             background-color: var(--card-bg) !important;
-            background-image:
-                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><g fill='none' stroke='%23b8862b' stroke-width='2'><path d='M2 46 V2 H46'/><path d='M9 39 V9 H39'/><path d='M14 34 L20 28 L26 34 L20 40 Z'/><path d='M30 14 l6 6 l-6 6 l-6 -6 z'/></g></svg>"),
-                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><g fill='none' stroke='%23b8862b' stroke-width='2'><path d='M2 46 V2 H46'/><path d='M9 39 V9 H39'/><path d='M14 34 L20 28 L26 34 L20 40 Z'/><path d='M30 14 l6 6 l-6 6 l-6 -6 z'/></g></svg>") !important;
-            background-repeat: no-repeat !important;
-            background-position: top left, bottom right !important;
-            background-size: 52px 52px, 52px 52px !important;
             border: 2px solid var(--bark) !important;
             outline: 1px solid #e3d6b4;
             outline-offset: -8px;
@@ -1065,118 +1062,6 @@
 
         @media (max-width: 768px) {
             .dino-media-row { grid-template-columns: 1fr; }
-        }
-    </style>
-
-    <!-- Turkic motifs (star of Türkmen aynası, elibelinde, koç boynuzu, tamga) -->
-    <style>
-        :root {
-            --motif-band: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='24' viewBox='0 0 64 24'><g fill='none' stroke='%23b8862b' stroke-width='2' stroke-linecap='round'><path d='M14 4 L22 12 L14 20 L6 12 Z'/><path d='M14 1 v3 M14 20 v3'/><path d='M34 12 C28 12 28 4 35 4 C41 4 41 10 36 10 C34 10 34 8 35 8'/><path d='M38 12 C44 12 44 20 37 20 C31 20 31 14 36 14 C38 14 38 16 37 16'/></g><circle cx='54' cy='12' r='2.2' fill='%235a3e2b'/></svg>");
-            --motif-corner-tl: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23b8862b' stroke-width='2.2' stroke-linecap='round'><path d='M2 58 V2 H58'/><path d='M9 50 V9 H50'/></g><polygon points='14.0,3.0 15.7,9.8 21.8,6.2 18.2,12.3 25.0,14.0 18.2,15.7 21.8,21.8 15.7,18.2 14.0,25.0 12.3,18.2 6.2,21.8 9.8,15.7 3.0,14.0 9.8,12.3 6.2,6.2 12.3,9.8' fill='%23b8862b' stroke='%235a3e2b' stroke-width='1'/><circle cx='14' cy='14' r='2' fill='%235a3e2b'/><path d='M30 30 l6 -6 l6 6 l-6 6 z' fill='none' stroke='%23b8862b' stroke-width='1.8'/><circle cx='2' cy='58' r='2.5' fill='%23b8862b'/><circle cx='58' cy='2' r='2.5' fill='%23b8862b'/></svg>");
-            --motif-corner-br: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g transform='rotate(180 32 32)'><g fill='none' stroke='%23b8862b' stroke-width='2.2' stroke-linecap='round'><path d='M2 58 V2 H58'/><path d='M9 50 V9 H50'/></g><polygon points='14.0,3.0 15.7,9.8 21.8,6.2 18.2,12.3 25.0,14.0 18.2,15.7 21.8,21.8 15.7,18.2 14.0,25.0 12.3,18.2 6.2,21.8 9.8,15.7 3.0,14.0 9.8,12.3 6.2,6.2 12.3,9.8' fill='%23b8862b' stroke='%235a3e2b' stroke-width='1'/><circle cx='14' cy='14' r='2' fill='%235a3e2b'/><path d='M30 30 l6 -6 l6 6 l-6 6 z' fill='none' stroke='%23b8862b' stroke-width='1.8'/><circle cx='2' cy='58' r='2.5' fill='%23b8862b'/><circle cx='58' cy='2' r='2.5' fill='%23b8862b'/></g></svg>");
-            --motif-tamga: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g fill='none' stroke='%23b8862b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M16 3 V29'/><path d='M7 10 H25'/><path d='M7 10 V16'/><path d='M25 10 V16'/><path d='M11 29 H21'/></g></svg>");
-            --motif-divider: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'><polygon points='40.0,4.0 42.3,14.5 51.3,8.7 45.5,17.7 56.0,20.0 45.5,22.3 51.3,31.3 42.3,25.5 40.0,36.0 37.7,25.5 28.7,31.3 34.5,22.3 24.0,20.0 34.5,17.7 28.7,8.7 37.7,14.5' fill='none' stroke='%23b8862b' stroke-width='2'/><line x1='0' y1='20' x2='22' y2='20' stroke='%23b8862b' stroke-width='2'/><line x1='58' y1='20' x2='80' y2='20' stroke='%23b8862b' stroke-width='2'/><circle cx='40' cy='20' r='2.5' fill='%235a3e2b'/></svg>");
-        }
-
-        /* Framed boxes: star corners at top-left and bottom-right + kilim band on top */
-        .feature-box, .fee-card, .card, [class*="card"]:not(.home-card-poster),
-        .campusa-section > div, .modal-content {
-            background-image: var(--motif-corner-tl), var(--motif-corner-br) !important;
-            background-position: top left, bottom right !important;
-            background-size: 64px 64px, 64px 64px !important;
-            background-repeat: no-repeat !important;
-            overflow: hidden;
-        }
-        .feature-box::before, .fee-card::before {
-            content: "";
-            position: absolute;
-            left: 0; right: 0; top: 0;
-            height: 24px;
-            background-image: var(--motif-band);
-            background-repeat: repeat-x;
-            background-size: 64px 24px;
-            opacity: .9;
-            pointer-events: none;
-            border-bottom: 1px solid #e3d6b4;
-        }
-        .feature-box, .fee-card { padding-top: 40px !important; }
-
-        /* Section headings: divider line with the star motif */
-        .section-heading {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .section-heading::after {
-            content: "";
-            flex: 1;
-            height: 40px;
-            min-width: 80px;
-            max-width: 220px;
-            background-image: var(--motif-divider);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 80px 40px;
-            opacity: .95;
-        }
-
-        /* Age badges: tamga + bordered */
-        .age-badge {
-            padding-left: 34px !important;
-            background-image: var(--motif-tamga) !important;
-            background-repeat: no-repeat !important;
-            background-position: 8px center !important;
-            background-size: 22px 22px !important;
-            background-color: var(--forest) !important;
-            font-weight: 700;
-        }
-
-        /* Navbar: kilim band below the header */
-        .navbar::after {
-            height: 16px !important;
-            bottom: -16px !important;
-            background-image: var(--motif-band) !important;
-            background-size: 64px 16px !important;
-            background-repeat: repeat-x !important;
-            opacity: 1 !important;
-        }
-
-        /* Hero: band along the bottom edge */
-        .campusa-hero::after {
-            content: "";
-            position: absolute;
-            left: 0; right: 0; bottom: 0;
-            height: 22px;
-            background-image: var(--motif-band);
-            background-repeat: repeat-x;
-            background-size: 64px 22px;
-            background-color: rgba(31,51,32,.6);
-            pointer-events: none;
-        }
-
-        /* Footer: band along the top */
-        .site-footer::before {
-            content: "";
-            position: absolute;
-            left: 0; right: 0; top: -22px;
-            height: 22px;
-            background-image: var(--motif-band);
-            background-repeat: repeat-x;
-            background-size: 64px 22px;
-            pointer-events: none;
-        }
-        .site-footer { border-top: none !important; }
-
-        /* Application buttons: small tamga before text */
-        .apply-btn {
-            padding-left: 52px !important;
-            background-image: var(--primary-gradient), var(--motif-tamga) !important;
-            background-blend-mode: normal;
-        }
-        .apply-btn {
-            background-repeat: no-repeat, no-repeat !important;
-            background-position: 0 0, 14px center !important;
-            background-size: auto, 22px 22px !important;
         }
     </style>
 </head>
@@ -1319,7 +1204,7 @@
 
                 <!-- THE ROLE -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2f4a2c" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M2 20 L12 4 L22 20 Z"/><path d="M12 4 V20"/><path d="M9 20 L12 13 L15 20"/></svg></span>
                         <i class="fa-solid fa-user-ninja"></i>
                         <span data-i18n="role_title">Your Role as a Camp Counselor</span>
                     </h3>
@@ -1339,7 +1224,7 @@
 
                 <!-- EARNINGS & BENEFITS -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="0.00" width="30" height="1.54" fill="#b22234"/><rect y="2.86" width="30" height="1.54" fill="#b22234"/><rect y="5.71" width="30" height="1.54" fill="#b22234"/><rect y="8.57" width="30" height="1.54" fill="#b22234"/><rect y="11.43" width="30" height="1.54" fill="#b22234"/><rect y="14.29" width="30" height="1.54" fill="#b22234"/><rect y="17.14" width="30" height="1.54" fill="#b22234"/><rect width="13" height="10.8" fill="#3c3b6e"/><circle cx="1.5" cy="1.4" r=".55" fill="#fff"/><circle cx="3.7" cy="1.4" r=".55" fill="#fff"/><circle cx="5.9" cy="1.4" r=".55" fill="#fff"/><circle cx="8.1" cy="1.4" r=".55" fill="#fff"/><circle cx="10.3" cy="1.4" r=".55" fill="#fff"/><circle cx="1.5" cy="3.4" r=".55" fill="#fff"/><circle cx="3.7" cy="3.4" r=".55" fill="#fff"/><circle cx="5.9" cy="3.4" r=".55" fill="#fff"/><circle cx="8.1" cy="3.4" r=".55" fill="#fff"/><circle cx="10.3" cy="3.4" r=".55" fill="#fff"/><circle cx="1.5" cy="5.4" r=".55" fill="#fff"/><circle cx="3.7" cy="5.4" r=".55" fill="#fff"/><circle cx="5.9" cy="5.4" r=".55" fill="#fff"/><circle cx="8.1" cy="5.4" r=".55" fill="#fff"/><circle cx="10.3" cy="5.4" r=".55" fill="#fff"/><circle cx="1.5" cy="7.4" r=".55" fill="#fff"/><circle cx="3.7" cy="7.4" r=".55" fill="#fff"/><circle cx="5.9" cy="7.4" r=".55" fill="#fff"/><circle cx="8.1" cy="7.4" r=".55" fill="#fff"/><circle cx="10.3" cy="7.4" r=".55" fill="#fff"/></svg></span>
                         <i class="fa-solid fa-gift"></i>
                         <span data-i18n="benefits_title">Earnings & Program Benefits</span>
                     </h3>
@@ -1353,7 +1238,7 @@
 
                 <!-- ELIGIBILITY & RECRUITMENT -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2f4a2c" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M2 20 L12 4 L22 20 Z"/><path d="M12 4 V20"/><path d="M9 20 L12 13 L15 20"/></svg></span>
                         <i class="fa-solid fa-circle-check"></i>
                         <span data-i18n="elig_title">Eligibility & Who We Recruit</span>
                     </h3>
@@ -1378,7 +1263,7 @@
 
                 <!-- PROGRAM STEPS -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="0.00" width="30" height="1.54" fill="#b22234"/><rect y="2.86" width="30" height="1.54" fill="#b22234"/><rect y="5.71" width="30" height="1.54" fill="#b22234"/><rect y="8.57" width="30" height="1.54" fill="#b22234"/><rect y="11.43" width="30" height="1.54" fill="#b22234"/><rect y="14.29" width="30" height="1.54" fill="#b22234"/><rect y="17.14" width="30" height="1.54" fill="#b22234"/><rect width="13" height="10.8" fill="#3c3b6e"/><circle cx="1.5" cy="1.4" r=".55" fill="#fff"/><circle cx="3.7" cy="1.4" r=".55" fill="#fff"/><circle cx="5.9" cy="1.4" r=".55" fill="#fff"/><circle cx="8.1" cy="1.4" r=".55" fill="#fff"/><circle cx="10.3" cy="1.4" r=".55" fill="#fff"/><circle cx="1.5" cy="3.4" r=".55" fill="#fff"/><circle cx="3.7" cy="3.4" r=".55" fill="#fff"/><circle cx="5.9" cy="3.4" r=".55" fill="#fff"/><circle cx="8.1" cy="3.4" r=".55" fill="#fff"/><circle cx="10.3" cy="3.4" r=".55" fill="#fff"/><circle cx="1.5" cy="5.4" r=".55" fill="#fff"/><circle cx="3.7" cy="5.4" r=".55" fill="#fff"/><circle cx="5.9" cy="5.4" r=".55" fill="#fff"/><circle cx="8.1" cy="5.4" r=".55" fill="#fff"/><circle cx="10.3" cy="5.4" r=".55" fill="#fff"/><circle cx="1.5" cy="7.4" r=".55" fill="#fff"/><circle cx="3.7" cy="7.4" r=".55" fill="#fff"/><circle cx="5.9" cy="7.4" r=".55" fill="#fff"/><circle cx="8.1" cy="7.4" r=".55" fill="#fff"/><circle cx="10.3" cy="7.4" r=".55" fill="#fff"/></svg></span>
                         <i class="fa-solid fa-route"></i>
                         <span data-i18n="steps_section_title">Program Steps</span>
                     </h3>
@@ -1407,7 +1292,7 @@
 
                 <!-- PROGRAM FEES -->
                 <div class="campusa-section" style="border-bottom: none;">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2f4a2c" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M2 20 L12 4 L22 20 Z"/><path d="M12 4 V20"/><path d="M9 20 L12 13 L15 20"/></svg></span>
                         <i class="fa-solid fa-euro-sign"></i>
                         <span data-i18n="fees_title">Transparent Program Fees (€500 Total)</span>
                     </h3>
@@ -1460,7 +1345,7 @@
 
                 <!-- ELIGIBILITY -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="0.00" width="30" height="1.54" fill="#b22234"/><rect y="2.86" width="30" height="1.54" fill="#b22234"/><rect y="5.71" width="30" height="1.54" fill="#b22234"/><rect y="8.57" width="30" height="1.54" fill="#b22234"/><rect y="11.43" width="30" height="1.54" fill="#b22234"/><rect y="14.29" width="30" height="1.54" fill="#b22234"/><rect y="17.14" width="30" height="1.54" fill="#b22234"/><rect width="13" height="10.8" fill="#3c3b6e"/><circle cx="1.5" cy="1.4" r=".55" fill="#fff"/><circle cx="3.7" cy="1.4" r=".55" fill="#fff"/><circle cx="5.9" cy="1.4" r=".55" fill="#fff"/><circle cx="8.1" cy="1.4" r=".55" fill="#fff"/><circle cx="10.3" cy="1.4" r=".55" fill="#fff"/><circle cx="1.5" cy="3.4" r=".55" fill="#fff"/><circle cx="3.7" cy="3.4" r=".55" fill="#fff"/><circle cx="5.9" cy="3.4" r=".55" fill="#fff"/><circle cx="8.1" cy="3.4" r=".55" fill="#fff"/><circle cx="10.3" cy="3.4" r=".55" fill="#fff"/><circle cx="1.5" cy="5.4" r=".55" fill="#fff"/><circle cx="3.7" cy="5.4" r=".55" fill="#fff"/><circle cx="5.9" cy="5.4" r=".55" fill="#fff"/><circle cx="8.1" cy="5.4" r=".55" fill="#fff"/><circle cx="10.3" cy="5.4" r=".55" fill="#fff"/><circle cx="1.5" cy="7.4" r=".55" fill="#fff"/><circle cx="3.7" cy="7.4" r=".55" fill="#fff"/><circle cx="5.9" cy="7.4" r=".55" fill="#fff"/><circle cx="8.1" cy="7.4" r=".55" fill="#fff"/><circle cx="10.3" cy="7.4" r=".55" fill="#fff"/></svg></span>
                         <i class="fa-solid fa-user-graduate"></i>
                         <span data-i18n="intern_elig_heading">Who Can Apply</span>
                     </h3>
@@ -1472,7 +1357,7 @@
 
                 <!-- OCCUPATIONAL FIELDS -->
                 <div class="campusa-section" style="border-bottom: none;">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2f4a2c" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 17 H22"/><path d="M4 17 V11 Q12 1 20 11 V17"/><path d="M8 17 V9.5"/><path d="M12 17 V6"/><path d="M16 17 V9.5"/></svg></span>
                         <i class="fa-solid fa-layer-group"></i>
                         <span data-i18n="intern_cat_heading">Occupational Fields</span>
                     </h3>
@@ -1513,7 +1398,7 @@
 
                 <!-- HOST -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-building-columns dino-accent"></i>
                         <span data-i18n="dino_host_title">Host Organisation</span>
                     </h3>
@@ -1529,7 +1414,7 @@
 
                 <!-- AGE GROUPS -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-children dino-accent"></i>
                         <span data-i18n="dino_who_title">Designed for Every Age Group (7-70)</span>
                     </h3>
@@ -1561,7 +1446,7 @@
 
                 <!-- PHOTO GALLERY -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-camera dino-accent"></i>
                         <span data-i18n="dino_gallery_heading">DinoCamp Photos</span>
                     </h3>
@@ -1570,16 +1455,16 @@
 
                 <!-- MEDIA ROW: videos side by side -->
                 <div class="dino-media-row">
-                <div class="campusa-section media-col"><h3 class="section-heading"><i class="fa-solid fa-circle-play dino-accent"></i> <span data-i18n="esc_video_heading">DinoCamp Program for the participants 18-65 age groups</span></h3><p style="color:var(--text-muted);" data-i18n="esc_video_desc">Selected moments from the programme we run for participants aged 18 to 65.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;"><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfviVjdNQXO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+                <div class="campusa-section media-col"><h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span><i class="fa-solid fa-circle-play dino-accent"></i> <span data-i18n="esc_video_heading">DinoCamp Program for the participants 18-65 age groups</span></h3><p style="color:var(--text-muted);" data-i18n="esc_video_desc">Selected moments from the programme we run for participants aged 18 to 65.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;"><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfviVjdNQXO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
 <script async src="https://www.instagram.com/embed.js"></script></div><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfvheXlsWZf/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
 <script async src="https://www.instagram.com/embed.js"></script></div></div></div>
-<div class="campusa-section media-col"><h3 class="section-heading"><i class="fa-solid fa-microphone dino-accent"></i> <span data-i18n="esc_interview_heading">Host organisation interview in local media</span></h3><div style="max-width:540px;"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DbGhRrGMImO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+<div class="campusa-section media-col"><h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span><i class="fa-solid fa-microphone dino-accent"></i> <span data-i18n="esc_interview_heading">Host organisation interview in local media</span></h3><div style="max-width:540px;"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DbGhRrGMImO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
 <script async src="https://www.instagram.com/embed.js"></script></div></div>
                 </div>
 
                 <!-- ACTIVITIES -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-hammer dino-accent"></i>
                         <span data-i18n="dino_act_heading">What Students Will Do</span>
                     </h3>
@@ -1594,7 +1479,7 @@
 
                 <!-- SAMPLE 5-DAY ITINERARY -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-route dino-accent"></i>
                         <span data-i18n="dino_sample_heading">Sample 5-Day Itinerary</span>
                     </h3>
@@ -1604,7 +1489,7 @@
 
                 <!-- PROGRAM FORMAT -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-calendar-days dino-accent"></i>
                         <span data-i18n="dino_prog_heading">Program Format (1-2 Weeks)</span>
                     </h3>
@@ -1633,7 +1518,7 @@
 
                 <!-- DETAILS -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-circle-info dino-accent"></i>
                         <span data-i18n="dino_info_heading">Program Details</span>
                     </h3>
@@ -1648,7 +1533,7 @@
 
                 <!-- INCLUDED IN FEE -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-ticket dino-accent"></i>
                         <span data-i18n="dino_inc_heading">What's Included in the Fee</span>
                     </h3>
@@ -1665,7 +1550,7 @@
 
                 <!-- TRANSPARENT PRICE SUMMARY -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-euro-sign dino-accent"></i>
                         <span data-i18n="dino_price_heading">Transparent Price Summary 2026-2027</span>
                     </h3>
@@ -1678,7 +1563,7 @@
 
                 <!-- ACCOMMODATION -->
                 <div class="campusa-section">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-hotel dino-accent"></i>
                         <span data-i18n="dino_stay_heading">Accommodation</span>
                     </h3>
@@ -1689,7 +1574,7 @@
 
                 <!-- CONTACT US -->
                 <div class="campusa-section" style="border-bottom: none;">
-                    <h3 class="section-heading">
+                    <h3 class="section-heading"><span class="hicon" aria-hidden="true"><svg viewBox="0 0 30 20" width="22" height="15" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.2" fill="#ffcc00" stroke="#1f3320" stroke-width=".8"/><circle cx="12" cy="10" r="2.2" fill="#fff" stroke="#1f3320" stroke-width=".5"/></svg></span>
                         <i class="fa-solid fa-envelope dino-accent"></i>
                         <span data-i18n="dino_contact_title">Contact Us</span>
                     </h3>
