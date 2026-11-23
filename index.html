@@ -813,9 +813,9 @@
             .section-heading { font-size: 1.35rem; }
         }
     </style>
-    <!-- Celtic Nature Theme: forest, bark, parchment -->
+    <!-- Turkic Heritage Theme: forest, bark, parchment, tamga & kilim motifs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@500;600;700&family=Uncial+Antiqua&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --forest: #2f4a2c;
@@ -837,17 +837,16 @@
             --text-dark: #2e2a20;
             --text-muted: #5c5443;
             --border-color: #d9cba8;
-            --radius-xl: 20px;
             --radius-lg: 14px;
-            --radius-md: 10px;
             --shadow-subtle: 0 3px 14px rgba(47, 74, 44, 0.10);
             --shadow-elevated: 0 18px 36px -16px rgba(47, 74, 44, 0.35);
         }
 
+        /* Body: Lora for easy, elegant reading */
         body {
-            font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
-            font-size: 18px;
-            line-height: 1.75;
+            font-family: 'Lora', Georgia, 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.8;
             color: var(--ink);
             background-color: var(--bg-light);
             background-image:
@@ -855,50 +854,47 @@
                 radial-gradient(circle at 90% 80%, rgba(184,134,43,.08), transparent 40%);
             background-attachment: fixed;
         }
-
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif !important;
-            color: var(--forest) !important;
-            letter-spacing: .02em;
-            line-height: 1.25;
-        }
-        .section-heading, .cv-heading, .sub-heading {
-            font-family: 'Cinzel', 'Cinzel Decorative', Georgia, serif !important;
-            color: var(--forest) !important;
-            font-weight: 700 !important;
-        }
-        .section-heading { font-size: 1.9rem !important; margin-bottom: 1.5rem; }
-        .section-heading i, .cv-heading i { color: var(--ochre) !important; }
-        .logo { font-family: 'Uncial Antiqua', 'Cinzel', serif !important; color: var(--forest) !important; font-size: 1.35rem !important; }
-
         p { margin-bottom: 1rem; }
         li { margin-bottom: .5rem; }
-        strong { color: var(--forest-deep); }
+        strong { color: var(--forest-deep); font-weight: 700; }
 
-        /* Header: parchment with a Celtic knot-line border */
+        /* Headings: Marcellus SC (classical, Turkic-inscription feel) */
+        h1, h2, h3, h4,
+        .section-heading, .sub-heading, .cv-heading, .news-title, .logo,
+        .campusa-hero h1, .fee-card h4, .footer-col h4 {
+            font-family: 'Marcellus SC', Georgia, serif !important;
+            color: var(--forest) !important;
+            letter-spacing: .03em;
+            font-weight: 400 !important;
+            line-height: 1.25;
+        }
+        .section-heading { font-size: 1.85rem !important; margin-bottom: 1.5rem; }
+        .section-heading i, .cv-heading i { color: var(--ochre) !important; }
+        .sub-heading { font-size: 1.35rem !important; }
+        .logo { font-size: 1.3rem !important; }
+
+        /* Header: parchment with a kilim zig-zag band */
         .navbar {
             background: linear-gradient(180deg, #faf5e7 0%, #f1e8d0 100%) !important;
-            border-bottom: 3px double var(--bark) !important;
+            border-bottom: 3px solid var(--bark) !important;
             box-shadow: 0 6px 22px -12px rgba(47,74,44,.45) !important;
         }
         .navbar::after {
             content: "";
             position: absolute;
-            left: 0; right: 0; bottom: -9px;
-            height: 6px;
-            background: repeating-linear-gradient(90deg, var(--ochre) 0 10px, transparent 10px 22px);
-            opacity: .55;
+            left: 0; right: 0; bottom: -10px;
+            height: 10px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='10'><path d='M0 9 L6 1 L12 9 L18 1 L24 9' fill='none' stroke='%23b8862b' stroke-width='1.6'/></svg>");
+            background-repeat: repeat-x;
+            opacity: .75;
             pointer-events: none;
         }
         .nav-link-item {
-            font-family: 'Cinzel', serif;
-            font-size: .82rem !important;
-            font-weight: 600 !important;
-            letter-spacing: .08em;
-            text-transform: uppercase;
+            font-family: 'Marcellus SC', serif;
+            font-size: .95rem !important;
+            letter-spacing: .05em;
             color: var(--bark) !important;
-            border-radius: 4px !important;
+            border-radius: 6px !important;
             padding: 8px 12px !important;
         }
         .nav-link-item:hover, .nav-link-item.active-link {
@@ -906,14 +902,8 @@
             background: #ebe2c8 !important;
             box-shadow: inset 0 -2px 0 var(--ochre);
         }
-        .nav-cta, .apply-btn {
-            font-family: 'Cinzel', serif !important;
-            text-transform: uppercase;
-            letter-spacing: .08em;
-            font-weight: 700 !important;
-        }
 
-        /* Hero */
+        /* Hero: forest gradient, tamga-framed inner border */
         .campusa-hero {
             background: var(--hero-gradient) !important;
             color: #f8f3e3 !important;
@@ -924,43 +914,40 @@
             content: "";
             position: absolute; inset: 14px;
             border: 2px solid rgba(232,211,164,.45);
-            border-radius: 14px;
+            border-radius: 6px;
             pointer-events: none;
         }
         .campusa-hero h1 {
-            font-family: 'Uncial Antiqua', 'Cinzel Decorative', serif !important;
             background: none !important;
             -webkit-text-fill-color: #fbf3d9 !important;
             color: #fbf3d9 !important;
-            font-weight: 400 !important;
-            font-size: clamp(2.3rem, 5vw, 3.6rem) !important;
+            font-size: clamp(2.2rem, 5vw, 3.5rem) !important;
             text-shadow: 0 2px 14px rgba(0,0,0,.25);
         }
-        .campusa-hero p { color: #e6ead8 !important; font-size: 1.2rem; }
+        .campusa-hero p { color: #e6ead8 !important; font-size: 1.15rem; }
         .hero-badge {
             background: rgba(184,134,43,.18) !important;
             border: 1px solid rgba(232,211,164,.6) !important;
             color: #f1e1b3 !important;
-            font-family: 'Cinzel', serif;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            font-size: .75rem !important;
+            font-family: 'Marcellus SC', serif;
+            letter-spacing: .08em;
+            font-size: .85rem !important;
         }
 
-        /* Celtic-knot framed boxes (cards, programs, fees, forms) */
+        /* Turkic framed boxes: tamga corners + kilim border */
         .feature-box, .fee-card, .card, [class*="card"]:not(.home-card-poster),
         .campusa-section > div, .modal-content {
             position: relative;
             background-color: var(--card-bg) !important;
             background-image:
-                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><g fill='none' stroke='%23b8862b' stroke-width='2'><path d='M4 56 C4 20 20 4 56 4'/><path d='M12 56 C12 26 26 12 56 12'/><circle cx='20' cy='20' r='5'/><path d='M4 40 q8 -4 12 4 t12 -4'/></g></svg>"),
-                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><g fill='none' stroke='%23b8862b' stroke-width='2'><path d='M4 56 C4 20 20 4 56 4'/><path d='M12 56 C12 26 26 12 56 12'/><circle cx='20' cy='20' r='5'/><path d='M4 40 q8 -4 12 4 t12 -4'/></g></svg>") !important;
+                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><g fill='none' stroke='%23b8862b' stroke-width='2'><path d='M2 46 V2 H46'/><path d='M9 39 V9 H39'/><path d='M14 34 L20 28 L26 34 L20 40 Z'/><path d='M30 14 l6 6 l-6 6 l-6 -6 z'/></g></svg>"),
+                url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><g fill='none' stroke='%23b8862b' stroke-width='2'><path d='M2 46 V2 H46'/><path d='M9 39 V9 H39'/><path d='M14 34 L20 28 L26 34 L20 40 Z'/><path d='M30 14 l6 6 l-6 6 l-6 -6 z'/></g></svg>") !important;
             background-repeat: no-repeat !important;
             background-position: top left, bottom right !important;
-            background-size: 46px 46px, 46px 46px !important;
+            background-size: 52px 52px, 52px 52px !important;
             border: 2px solid var(--bark) !important;
             outline: 1px solid #e3d6b4;
-            outline-offset: -7px;
+            outline-offset: -8px;
             border-radius: var(--radius-lg) !important;
             box-shadow: var(--shadow-subtle) !important;
             color: var(--ink) !important;
@@ -968,37 +955,66 @@
             transition: transform .3s ease, box-shadow .3s ease;
         }
         .feature-box:hover { transform: translateY(-3px); box-shadow: var(--shadow-elevated) !important; }
-        .home-card-poster {
-            background: #ebe3c9 !important;
-            border-radius: 10px;
-        }
+        .home-card-poster { background: #ebe3c9 !important; border-radius: 10px; }
         .home-card-poster i { color: var(--forest) !important; }
+
+        /* Age group cards (DinoCamp) */
+        .dino-grid { gap: 26px !important; }
+        .age-badge {
+            display: inline-block;
+            font-family: 'Marcellus SC', serif;
+            font-size: 1rem;
+            color: #fbf3d9;
+            background: var(--forest);
+            border: 2px solid var(--ochre);
+            padding: 4px 14px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            letter-spacing: .06em;
+        }
+        .age-title {
+            display: block;
+            font-family: 'Marcellus SC', serif;
+            font-size: 1.15rem;
+            color: var(--forest);
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .age-desc { font-size: 1rem; color: var(--ink-soft); margin: 0; }
+
+        /* Videos side by side, placed after photos */
+        .dino-media-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-top: 1rem;
+        }
+        .dino-media-row .media-col { margin-top: 0 !important; padding: 26px !important; }
+        .dino-media-row .campusa-section { padding: 0 !important; }
+
+        /* Fee cards */
         .fee-grid { gap: 26px !important; }
-        .fee-card h4 { color: var(--ochre) !important; font-family: 'Cinzel Decorative', serif !important; font-size: 2.2rem !important; }
+        .fee-card h4 { color: var(--ochre) !important; font-size: 2.1rem !important; }
         .fee-card strong { color: var(--forest) !important; }
         .fee-card p { color: var(--ink-soft) !important; }
 
-        /* Sections: airy rhythm */
+        /* Sections */
         .campusa-section { padding: 5rem 0 !important; margin-bottom: 0 !important; }
         .campusa-section:nth-of-type(even) { background: rgba(255,255,255,.35); }
 
-        /* Application buttons: forest-green, Celtic double frame */
+        /* Application buttons: notched Turkic shape with tamga-like inner frame */
         .apply-btn, .nav-cta {
             position: relative;
             background: var(--primary-gradient) !important;
             color: #fbf3d9 !important;
             border: 2px solid var(--ochre) !important;
-            border-radius: 6px !important;
-            box-shadow: 0 0 0 3px var(--forest-deep), 0 12px 22px -10px rgba(31,51,32,.6) !important;
-            text-shadow: 0 1px 0 rgba(0,0,0,.3);
-            transition: transform .25s ease, box-shadow .25s ease;
-        }
-        .apply-btn::before, .nav-cta::before {
-            content: "";
-            position: absolute; inset: 3px;
-            border: 1px dotted rgba(232,211,164,.7);
-            border-radius: 3px;
-            pointer-events: none;
+            border-radius: 4px !important;
+            clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px);
+            font-family: 'Marcellus SC', serif !important;
+            letter-spacing: .06em;
+            font-weight: 400 !important;
+            box-shadow: 0 12px 22px -10px rgba(31,51,32,.6) !important;
+            transition: transform .25s ease, background .25s ease;
         }
         .apply-btn:hover, .nav-cta:hover {
             transform: translateY(-2px);
@@ -1012,10 +1028,10 @@
             background: #fffdf6 !important;
             color: var(--ink) !important;
             border: 1.5px solid var(--border-color) !important;
-            border-radius: 8px !important;
+            border-radius: 6px !important;
             padding: 12px 14px;
-            font-family: 'Crimson Text', serif;
-            font-size: 1.05rem;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1rem;
         }
         input:focus, select:focus, textarea:focus {
             border-color: var(--ochre) !important;
@@ -1024,17 +1040,17 @@
         }
         *:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
 
-        /* Links */
         a { color: var(--moss); }
         a:hover { color: var(--forest); }
 
-        /* Footer: deep forest, cream text */
+        /* Footer: deep forest, cream text, kilim top band */
         .site-footer {
             background: var(--forest-deep) !important;
             color: #f3eee0 !important;
-            border-top: 4px double var(--ochre);
+            border-top: 6px solid var(--ochre);
+            position: relative;
         }
-        .site-footer h4 { color: #fbf3d9 !important; font-family: 'Cinzel', serif !important; }
+        .site-footer h4 { color: #fbf3d9 !important; font-family: 'Marcellus SC', serif !important; }
         .site-footer p, .site-footer span, .site-footer div { color: #f3eee0 !important; }
         .site-footer strong { color: #ffffff !important; }
         .site-footer a { color: #e8d3a4 !important; }
@@ -1046,6 +1062,10 @@
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: var(--parchment); }
         ::-webkit-scrollbar-thumb { background: var(--moss); border-radius: 10px; }
+
+        @media (max-width: 768px) {
+            .dino-media-row { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -1399,29 +1419,33 @@
                 <div class="campusa-section">
                     <h3 class="section-heading">
                         <i class="fa-solid fa-children dino-accent"></i>
-                        <span data-i18n="dino_who_title">Designed for Every Age Group (7-18)</span>
+                        <span data-i18n="dino_who_title">Designed for Every Age Group (7-70)</span>
                     </h3>
                     <div class="dino-grid">
                         <div class="feature-box">
-                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_1_title">Junior Explorers (7-11)</strong>
-                            <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_1_desc">Playful, hands-on learning: meet the dinosaurs of Portugal, practise gentle fossil cleaning, build a field notebook and go on guided discovery walks.</p>
+                            <span class="age-badge">6-13</span>
+                            <strong class="age-title" data-i18n="dino_age_1_title">Junior Explorers</strong>
+                            <p class="age-desc" data-i18n="dino_age_1_desc">Playful hands-on discovery: meet the dinosaurs of Portugal, gentle fossil cleaning, a field notebook and guided walks.</p>
                         </div>
                         <div class="feature-box">
-                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_2_title">Young Paleontologists (12-14)</strong>
-                            <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_2_desc">Learn how to document a fossil site, identify bones and footprints, and work with lab tools under the guidance of specialists.</p>
+                            <span class="age-badge">14-18</span>
+                            <strong class="age-title" data-i18n="dino_age_2_title">College Paleontologists</strong>
+                            <p class="age-desc" data-i18n="dino_age_2_desc">Document a fossil site, identify bones and footprints, use laboratory tools and map sites with GIS and GPS.</p>
                         </div>
                         <div class="feature-box">
-                            <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_3_title">Research Assistants (15-18)</strong>
-                            <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_3_desc">A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.</p>
+                            <span class="age-badge">18-30</span>
+                            <strong class="age-title" data-i18n="dino_age_3_title">Youthworkers Team Camp</strong>
+                            <p class="age-desc" data-i18n="dino_age_3_desc">A team-building programme for young professionals: fieldwork, leadership, joint research projects and camp life together.</p>
+                        </div>
+                        <div class="feature-box">
+                            <span class="age-badge">30-70</span>
+                            <strong class="age-title" data-i18n="dino_age_4_title">Professional Tours &amp; Experience</strong>
+                            <p class="age-desc" data-i18n="dino_age_4_desc">Guided professional tours and hands-on fossil experiences, from geoheritage walks to laboratory visits, for adults of every background.</p>
                         </div>
                     </div>
                 </div>
 
-<div class="campusa-section" style="margin-top:2.5rem;"><h3 class="section-heading"><i class="fa-solid fa-circle-play dino-accent"></i> <span data-i18n="esc_video_heading">DinoCamp Program for the participants 18-65 age groups</span></h3><p style="color:var(--text-muted);" data-i18n="esc_video_desc">Selected moments from the programme we run for participants aged 18 to 65.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;"><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfviVjdNQXO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
-<script async src="https://www.instagram.com/embed.js"></script></div><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfvheXlsWZf/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
-<script async src="https://www.instagram.com/embed.js"></script></div></div></div>
-<div class="campusa-section" style="margin-top:2.5rem;"><h3 class="section-heading"><i class="fa-solid fa-microphone dino-accent"></i> <span data-i18n="esc_interview_heading">Host organisation interview in local media</span></h3><div style="max-width:540px;"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DbGhRrGMImO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
-<script async src="https://www.instagram.com/embed.js"></script></div></div>
+                
 
                 <!-- PHOTO GALLERY -->
                 <div class="campusa-section">
@@ -1431,6 +1455,15 @@
                     </h3>
                     <div class="dino-gallery"><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc1.JPEG" alt="DinoCamp photo 1" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc2.JPEG" alt="DinoCamp photo 2" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc3.JPEG" alt="DinoCamp photo 3" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc4.JPEG" alt="DinoCamp photo 4" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc5.JPEG" alt="DinoCamp photo 5" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc6.JPEG" alt="DinoCamp photo 6" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc8.png" alt="DinoCamp photo 7" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc9.jfif" alt="DinoCamp photo 8" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc10.jfif" alt="DinoCamp photo 9" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc11.jpg" alt="DinoCamp photo 10" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc12.jpeg" alt="DinoCamp photo 11" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc14.png" alt="DinoCamp photo 12" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc15.jpg" alt="DinoCamp photo 13" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc16.jpg" alt="DinoCamp photo 14" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc17.jpg" alt="DinoCamp photo 15" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc20.JPG" alt="DinoCamp photo 16" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc21.JPG" alt="DinoCamp photo 17" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc22.JPG" alt="DinoCamp photo 18" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc23.jpeg" alt="DinoCamp photo 19" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc24.jpg" alt="DinoCamp photo 20" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc13.png" alt="DinoCamp photo 21" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc18.jpg" alt="DinoCamp photo 22" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/dc19.jpg" alt="DinoCamp photo 23" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter1.png" alt="ESC Poster 1" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter2.png" alt="ESC Poster 2" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter3.png" alt="ESC Poster 3" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter4.png" alt="ESC Poster 4" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter5.png" alt="ESC Poster 5" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter6.png" alt="ESC Poster 6" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure><figure class="dino-fig"><img src="https://raw.githubusercontent.com/borax9/dotaltai/main/images/escposter7.jpg" alt="ESC Poster 7" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure></div>
                                     </div>
+
+                <!-- MEDIA ROW: videos side by side -->
+                <div class="dino-media-row">
+                <div class="campusa-section media-col"><h3 class="section-heading"><i class="fa-solid fa-circle-play dino-accent"></i> <span data-i18n="esc_video_heading">DinoCamp Program for the participants 18-65 age groups</span></h3><p style="color:var(--text-muted);" data-i18n="esc_video_desc">Selected moments from the programme we run for participants aged 18 to 65.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;"><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfviVjdNQXO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+<script async src="https://www.instagram.com/embed.js"></script></div><div><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DfvheXlsWZf/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+<script async src="https://www.instagram.com/embed.js"></script></div></div></div>
+<div class="campusa-section media-col"><h3 class="section-heading"><i class="fa-solid fa-microphone dino-accent"></i> <span data-i18n="esc_interview_heading">Host organisation interview in local media</span></h3><div style="max-width:540px;"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DbGhRrGMImO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:12px; box-shadow:0 4px 20px -2px rgba(15,23,42,0.08); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+<script async src="https://www.instagram.com/embed.js"></script></div></div>
+                </div>
 
                 <!-- ACTIVITIES -->
                 <div class="campusa-section">
@@ -2090,13 +2123,15 @@
                 dino_stat_2: "Recognised species",
                 dino_stat_3: "Identified fossil sites",
                 dino_stat_4: "Fossils collected",
-                dino_who_title: "Designed for Every Age Group (7-18)",
-                dino_age_1_title: "Junior Explorers (7-11)",
-                dino_age_1_desc: "Playful, hands-on learning: meet the dinosaurs of Portugal, practise gentle fossil cleaning, build a field notebook and go on guided discovery walks.",
-                dino_age_2_title: "Young Paleontologists (12-14)",
-                dino_age_2_desc: "Learn how to document a fossil site, identify bones and footprints, and work with lab tools under the guidance of specialists.",
-                dino_age_3_title: "Research Assistants (15-18)",
-                dino_age_3_desc: "A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.",
+                dino_who_title: "Designed for Every Age Group (7-70)",
+                dino_age_1_title: "Junior Explorers (6-13)",
+                dino_age_1_desc: "Playful hands-on discovery: meet the dinosaurs of Portugal, gentle fossil cleaning, a field notebook and guided walks.",
+                dino_age_2_title: "College Paleontologists (14-18)",
+                dino_age_2_desc: "Document a fossil site, identify bones and footprints, use laboratory tools and map sites with GIS and GPS.",
+                dino_age_3_title: "Youthworkers Team Camp (18-30)",
+                dino_age_3_desc: "A team-building programme for young professionals: fieldwork, leadership, joint research projects and camp life together.",
+                dino_age_4_title: "Professional Tours & Experience (30-70)",
+                dino_age_4_desc: "Guided professional tours and hands-on fossil experiences, from geoheritage walks to laboratory visits, for adults of every background.",
                 dino_gallery_heading: "DinoCamp Photos",
                 dino_act_heading: "What Students Will Do",
                 dino_act_1: "<strong>Guided fossil excavation:</strong> supervised dig days in Late Jurassic rocks (about 150 million years old), learning to find, record and protect fossils.",
@@ -2276,13 +2311,15 @@
                 dino_stat_2: "Espécies reconhecidas",
                 dino_stat_3: "Jazidas identificadas",
                 dino_stat_4: "Fósseis recolhidos",
-                dino_who_title: "Pensado para Todas as Idades (7-18)",
-                dino_age_1_title: "Pequenos Exploradores (7-11)",
-                dino_age_1_desc: "Aprendizagem lúdica e prática: conhecer os dinossauros de Portugal, limpar fósseis com cuidado, criar um caderno de campo e fazer passeios de descoberta orientados.",
-                dino_age_2_title: "Jovens Paleontólogos (12-14)",
-                dino_age_2_desc: "Aprender a documentar uma jazida, identificar ossos e pegadas e trabalhar com ferramentas de laboratório sob orientação de especialistas.",
-                dino_age_3_title: "Assistentes de Investigação (15-18)",
-                dino_age_3_desc: "Uma visão mais aprofundada da ciência: cartografia de jazidas com SIG e GPS, preparação de fósseis, gestão de coleções e introdução a carreiras científicas.",
+                dino_who_title: "Pensado para Todas as Idades (7-70)",
+                dino_age_1_title: "Pequenos Exploradores (6-13)",
+                dino_age_1_desc: "Descoberta prática e lúdica: conhecer os dinossauros de Portugal, limpar fósseis com cuidado, caderno de campo e passeios guiados.",
+                dino_age_2_title: "Paleontólogos Universitários (14-18)",
+                dino_age_2_desc: "Documentar uma jazida, identificar ossos e pegadas, usar ferramentas de laboratório e mapear locais com SIG e GPS.",
+                dino_age_3_title: "Campo de Equipa para Jovens Trabalhadores (18-30)",
+                dino_age_3_desc: "Programa de trabalho de equipa para jovens profissionais: trabalho de campo, liderança, projetos de investigação e vida de campo em conjunto.",
+                dino_age_4_title: "Visitas Profissionais e Experiência (30-70)",
+                dino_age_4_desc: "Visitas profissionais guiadas e experiências práticas com fósseis, de passeios de geopatrimónio a visitas a laboratórios, para adultos de todos os percursos.",
                 dino_gallery_heading: "Fotografias do DinoCamp",
                 dino_act_heading: "O Que os Estudantes Vão Fazer",
                 dino_act_1: "<strong>Escavação orientada de fósseis:</strong> dias de escavação supervisionada em rochas do Jurássico Superior (cerca de 150 milhões de anos), aprendendo a encontrar, registar e proteger fósseis.",
@@ -2461,13 +2498,15 @@
                 dino_stat_2: "Uznané druhy",
                 dino_stat_3: "Identifikované náleziská",
                 dino_stat_4: "Zozbierané fosílie",
-                dino_who_title: "Navrhnuté pre všetky vekové skupiny (7-18)",
-                dino_age_1_title: "Malí objavitelia (7-11)",
-                dino_age_1_desc: "Hravé učenie v praxi: spoznajte dinosaurov Portugalska, nacvičte jemné čistenie fosílií, vytvorte si terénny zápisník a vyrazte na vedené objaviteľské prechádzky.",
-                dino_age_2_title: "Mladí paleontológovia (12-14)",
-                dino_age_2_desc: "Naučte sa dokumentovať nálezisko, určovať kosti a stopy a pracovať s laboratórnymi nástrojmi pod vedením odborníkov.",
-                dino_age_3_title: "Výskumní asistenti (15-18)",
-                dino_age_3_desc: "Hlbší pohľad na vedu: mapovanie nálezísk pomocou GIS a GPS, príprava fosílií, správa zbierok a úvod do vedeckých kariér.",
+                dino_who_title: "Navrhnuté pre každú vekovú skupinu (7–70)",
+                dino_age_1_title: "Malí objavitelia (6–13)",
+                dino_age_1_desc: "Hravé objavovanie na vlastnej koži: stretnutie s dinosaurmi Portugalska, jemné čistenie fosílií, terénny zošit a sprievodcované prechádzky.",
+                dino_age_2_title: "Vysokoškolskí paleontológovia (14–18)",
+                dino_age_2_desc: "Dokumentovanie nálezísk, určovanie kostí a stôp, práca s laboratórnym náradím a mapovanie lokalít pomocou GIS a GPS.",
+                dino_age_3_title: "Mladý tímový tábor (18–30)",
+                dino_age_3_desc: "Tímový program pre mladých profesionálov: terénna práca, vedenie tímu, spoločné výskumné projekty a život v tábore.",
+                dino_age_4_title: "Profesionálne exkurzie a zážitky (30–70)",
+                dino_age_4_desc: "Sprievodcované odborné exkurzie a praktické zážitky s fosíliami, od prechádzok geodedičstvom po návštevy laboratórií, pre dospelých bez ohľadu na pozadie.",
                 dino_gallery_heading: "Fotografie z DinoCampu",
                 dino_act_heading: "Čo budú študenti robiť",
                 dino_act_1: "<strong>Vedené vykopávky fosílií:</strong> dni vykopávok pod dohľadom v horninách vrchnej jury (asi 150 miliónov rokov), kde sa naučíte fosílie nájsť, zaznamenať a chrániť.",
@@ -2646,13 +2685,15 @@
                 dino_stat_2: "Anerkannte Arten",
                 dino_stat_3: "Identifizierte Fundstellen",
                 dino_stat_4: "Gesammelte Fossilien",
-                dino_who_title: "Für alle Altersgruppen konzipiert (7-18)",
-                dino_age_1_title: "Junior-Entdecker (7-11)",
-                dino_age_1_desc: "Spielerisches, praktisches Lernen: Die Dinosaurier Portugals kennenlernen, Fossilien vorsichtig reinigen, ein Feldbuch anlegen und begleitete Entdeckungstouren unternehmen.",
-                dino_age_2_title: "Junge Paläontologen (12-14)",
-                dino_age_2_desc: "Lerne, eine Fundstelle zu dokumentieren, Knochen und Fußspuren zu bestimmen und unter Anleitung von Fachleuten mit Laborwerkzeugen zu arbeiten.",
-                dino_age_3_title: "Forschungsassistenten (15-18)",
-                dino_age_3_desc: "Ein tieferer Einblick in die Wissenschaft: Fundstellenkartierung mit GIS und GPS, Fossilienpräparation, Sammlungsmanagement und Einführung in wissenschaftliche Berufe.",
+                dino_who_title: "Für jede Altersgruppe konzipiert (7–70)",
+                dino_age_1_title: "Junior-Entdecker (6–13)",
+                dino_age_1_desc: "Spielerisch entdecken: Dinosaurier Portugals kennenlernen, Fossilien vorsichtig reinigen, ein Feldtagebuch führen und geführte Erkundungen machen.",
+                dino_age_2_title: "Junge Paläontologen (14–18)",
+                dino_age_2_desc: "Eine Fundstelle dokumentieren, Knochen und Fußspuren bestimmen, Laborwerkzeuge nutzen und Fundstellen mit GIS und GPS kartieren.",
+                dino_age_3_title: "Youthworkers-Teamcamp (18–30)",
+                dino_age_3_desc: "Teambuilding für junge Fachkräfte: Feldarbeit, Führung, gemeinsame Forschungsprojekte und das Leben im Camp.",
+                dino_age_4_title: "Professionelle Touren & Erlebnisse (30–70)",
+                dino_age_4_desc: "Geführte Fachtouren und praktische Fossilien-Erlebnisse, von Geoerbe-Wanderungen bis zu Laborbesuchen, für Erwachsene jeden Hintergrunds.",
                 dino_gallery_heading: "DinoCamp-Fotos",
                 dino_act_heading: "Was die Teilnehmer tun",
                 dino_act_1: "<strong>Begleitete Fossiliengrabung:</strong> beaufsichtigte Grabungstage in Gesteinen des Oberjura (ca. 150 Millionen Jahre alt) mit Anleitung zum Finden, Dokumentieren und Schützen von Fossilien.",
