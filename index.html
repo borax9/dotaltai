@@ -925,6 +925,143 @@
             color: var(--text-muted) !important;
         }
     </style>
+    <!-- Heading fix: all titles use the same gold style as the fee cards -->
+    <style>
+        .section-heading, .sub-heading, .cv-heading, .news-title,
+        h1, h2, h3, h4, h5, h6,
+        h2[style], h3[style], h4[style],
+        .section-heading span, .section-heading i,
+        .cv-heading i {
+            color: #f5d27a !important;
+            text-shadow: 0 1px 0 #000, 0 0 10px rgba(232, 184, 74, 0.35);
+        }
+
+        /* Keep the gradient hero title readable: no black shadow under transparent fill */
+        .campusa-hero h1,
+        .dino-hero h1 {
+            text-shadow: none !important;
+        }
+
+        /* Fee-card style text inside all cards */
+        .fee-card strong, .fee-card h4 {
+            color: #f5d27a !important;
+            text-shadow: 0 1px 0 #000;
+        }
+        .fee-card p, .fee-card span {
+            color: #cbb98f !important;
+        }
+        .fee-card {
+            background: linear-gradient(180deg, #2a2118 0%, #161109 100%) !important;
+            border: 2px solid #8b6a2f !important;
+            box-shadow: inset 0 0 0 1px #0d0a07, inset 0 0 24px rgba(0, 0, 0, 0.6), 0 10px 30px rgba(0, 0, 0, 0.7) !important;
+        }
+    </style>
+    <!-- Warcraft III framed boxes (replaces blue boxes) -->
+    <style>
+        /* Generic ornate frame: double border + gold corner brackets */
+        .wc3-box {
+            position: relative;
+            background: linear-gradient(180deg, #2a2118 0%, #161109 100%) !important;
+            border: 2px solid #8b6a2f !important;
+            border-radius: 4px !important;
+            box-shadow:
+                inset 0 0 0 2px #0d0a07,
+                inset 0 0 0 3px #3a2a14,
+                inset 0 0 28px rgba(0, 0, 0, 0.7),
+                0 12px 28px rgba(0, 0, 0, 0.75) !important;
+        }
+        .wc3-box::before,
+        .wc3-box::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 3px solid #f5d27a;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .wc3-box::before { top: -3px; left: -3px; border-right: none; border-bottom: none; }
+        .wc3-box::after { bottom: -3px; right: -3px; border-left: none; border-top: none; }
+
+        /* Feature cards (program cards) */
+        .feature-box {
+            border-top-color: #3f7a2a !important;
+            border: 2px solid #8b6a2f !important;
+            border-top: 4px solid #3f7a2a !important;
+        }
+        .feature-box:hover {
+            border-color: #f5d27a !important;
+            border-top-color: #5fae3f !important;
+        }
+        .feature-box.wc3-box::before,
+        .feature-box.wc3-box::after { display: block; }
+
+        /* Poster area: blue -> dark green stone */
+        .home-card-poster {
+            background: linear-gradient(180deg, #14291a 0%, #0b1a0f 100%) !important;
+            border-bottom: 2px solid #5a4628;
+        }
+        [style*="color: #2563eb"], [style*="color:#2563eb"] {
+            color: #7fd36a !important;
+        }
+
+        /* Blue inline gradients -> green Night Elf gradient */
+        [style*="#3b82f6"], [style*="#1d4ed8"], [style*="#2563eb"] {
+            background: linear-gradient(180deg, #3f7a2a 0%, #1d3f14 100%) !important;
+        }
+
+        /* Application / CTA buttons: framed stone boxes, not blue pills */
+        .apply-btn, .nav-cta {
+            position: relative;
+            background: linear-gradient(180deg, #2f6b22 0%, #163a10 100%) !important;
+            color: #f5d27a !important;
+            border: 2px solid #c9a54a !important;
+            border-radius: 4px !important;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-family: 'Cinzel', Georgia, serif !important;
+            box-shadow:
+                inset 0 0 0 2px #0d0a07,
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 6px 0 #07140a,
+                0 12px 24px rgba(0, 0, 0, 0.6) !important;
+            text-shadow: 0 1px 0 #000;
+        }
+        .apply-btn::before, .apply-btn::after,
+        .nav-cta::before, .nav-cta::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #f5d27a;
+            pointer-events: none;
+        }
+        .apply-btn::before, .nav-cta::before { top: -4px; left: -4px; border-right: none; border-bottom: none; }
+        .apply-btn::after, .nav-cta::after { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+        .apply-btn:hover, .nav-cta:hover {
+            background: linear-gradient(180deg, #3f8a2e 0%, #1d4a14 100%) !important;
+            color: #fff1c2 !important;
+            transform: translateY(-2px);
+        }
+        .apply-btn span, .apply-btn i { color: #f5d27a !important; }
+
+        /* Fee cards and other content cards */
+        .fee-card {
+            background: linear-gradient(180deg, #2a2118 0%, #161109 100%) !important;
+            border: 2px solid #8b6a2f !important;
+            border-radius: 4px !important;
+            box-shadow: inset 0 0 0 2px #0d0a07, inset 0 0 24px rgba(0,0,0,.6), 0 10px 28px rgba(0,0,0,.7) !important;
+        }
+        .fee-card { position: relative; }
+        .fee-card strong, .fee-card h4 { color: #f5d27a !important; }
+        .fee-card p, .fee-card span { color: #cbb98f !important; }
+
+        /* Green variant for the ornate frames in the rest of the page */
+        .wc3-green {
+            background: linear-gradient(180deg, #1d3f14 0%, #0b1a0f 100%) !important;
+            border-color: #5fae3f !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -983,7 +1120,7 @@
                 <div class="campusa-features" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
                     
                     <!-- USA SUMMER CAMP CARD -->
-                    <div class="feature-box" onclick="switchPage('usa');" style="border-top-color: #117a56; padding: 24px; text-align: center;">
+                    <div class="feature-box wc3-box" onclick="switchPage('usa');" style="border-top-color: #117a56; padding: 24px; text-align: center;">
                         <div class="home-card-poster">
                             <img src="https://raw.githubusercontent.com/borax9/campusa/main/images/campposter.jpg" onerror="this.onerror=null; this.src='images/campposter.jpg';" alt="USA Summer Camp Counselor Program Poster">
                         </div>
@@ -995,7 +1132,7 @@
                     </div>
 
                     <!-- INTERN PROFESSIONAL TRAINING CARD -->
-                    <div class="feature-box" onclick="switchPage('intern');" style="border-top-color: #2563eb; padding: 24px; text-align: center;">
+                    <div class="feature-box wc3-box" onclick="switchPage('intern');" style="border-top-color: #2563eb; padding: 24px; text-align: center;">
                         <div class="home-card-poster" style="display: flex; align-items: center; justify-content: center; background: #eff6ff;">
                             <i class="fa-solid fa-briefcase" style="font-size: 4rem; color: #2563eb; padding: 40px 0;"></i>
                         </div>
@@ -1007,7 +1144,7 @@
                     </div>
 
                     <!-- DINOCAMP CARD -->
-                    <div class="feature-box" onclick="switchPage('dino');" style="border-top-color: #b45309; padding: 24px; text-align: center;">
+                    <div class="feature-box wc3-box" onclick="switchPage('dino');" style="border-top-color: #b45309; padding: 24px; text-align: center;">
                         <div class="home-card-poster dino-card-poster">
                             <i class="fa-solid fa-bone" style="font-size: 4rem; color: #b45309; padding: 40px 0;"></i>
                         </div>
@@ -1072,11 +1209,11 @@
                     <p data-i18n="role_desc">Camp counselors are the heart of American summer camps. You guide, support, and inspire campers while enjoying an unforgettable cultural exchange experience. Duties include daily supervision, activity leadership, and ensuring health and safety.</p>
                     
                     <div class="campusa-features">
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="role_spec_title">🎨 Activity Specialists</strong>
                             <p style="font-size: 0.9rem; margin-top:8px; color: var(--text-muted);" data-i18n="role_spec_desc">Lead sports, arts, outdoor adventures, STEM, or waterfront activities using your specific talents and skills.</p>
                         </div>
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="role_gen_title">🎒 General Counselor</strong>
                             <p style="font-size: 0.9rem; margin-top:8px; color: var(--text-muted);" data-i18n="role_gen_desc">Supervise cabin groups, support daily routines, assist with camper inclusion, and participate in special camp events.</p>
                         </div>
@@ -1158,17 +1295,17 @@
                         <span data-i18n="fees_title">Transparent Program Fees (€500 Total)</span>
                     </h3>
                     <div class="fee-grid">
-                        <div class="fee-card">
+                        <div class="fee-card wc3-box">
                             <h4>€100</h4>
                             <strong style="font-size: 0.95rem;" data-i18n="fee_1_title">Application & Interview</strong>
                             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:6px;" data-i18n="fee_1_desc">Paid at initial registration stage.</p>
                         </div>
-                        <div class="fee-card">
+                        <div class="fee-card wc3-box">
                             <h4>€150</h4>
                             <strong style="font-size: 0.95rem;" data-i18n="fee_2_title">Program Processing</strong>
                             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:6px;" data-i18n="fee_2_desc">Paid after profile approval.</p>
                         </div>
-                        <div class="fee-card">
+                        <div class="fee-card wc3-box">
                             <h4>€250</h4>
                             <strong style="font-size: 0.95rem;" data-i18n="fee_3_title">Placement & Support</strong>
                             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:6px;" data-i18n="fee_3_desc">Paid upon formal job offer confirmation.</p>
@@ -1266,10 +1403,10 @@
                     <p style="line-height: 1.7; color: #334155;" data-i18n="dino_host_1">Our host organisation, based in <strong>Torres Vedras</strong>, was founded on 18 March 1998. It is a non-profit scientific organisation dedicated to promoting paleontological and geological heritage, with a focus on vertebrate fossils and educational activities in GeoPaleontology. It manages one of the largest paleontological collections in Portugal and is working towards a Paleontological Museum for public science communication.</p>
                     <p style="line-height: 1.7; margin-top: 1rem; color: #334155;" data-i18n="dino_host_2">Researchers from our host organisation have contributed to the description of new dinosaur species from the Torres Vedras and Lourinhã region, and the organisation has reported finds such as a Jurassic dinosaur nest with eggs at Santa Cruz beach and an armoured (ankylosaur-group) dinosaur about 146 million years old.</p>
                     <div class="fee-grid">
-                        <div class="fee-card"><h4 class="dino-accent">1998</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_1">Founded</strong></div>
-                        <div class="fee-card"><h4 class="dino-accent">&gt;30</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_2">Recognised species</strong></div>
-                        <div class="fee-card"><h4 class="dino-accent">&gt;328</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_3">Identified fossil sites</strong></div>
-                        <div class="fee-card"><h4 class="dino-accent">&gt;1500</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_4">Fossils collected</strong></div>
+                        <div class="fee-card wc3-box"><h4 class="dino-accent">1998</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_1">Founded</strong></div>
+                        <div class="fee-card wc3-box"><h4 class="dino-accent">&gt;30</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_2">Recognised species</strong></div>
+                        <div class="fee-card wc3-box"><h4 class="dino-accent">&gt;328</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_3">Identified fossil sites</strong></div>
+                        <div class="fee-card wc3-box"><h4 class="dino-accent">&gt;1500</h4><strong style="font-size: 0.95rem;" data-i18n="dino_stat_4">Fossils collected</strong></div>
                     </div>
                 </div>
 
@@ -1280,15 +1417,15 @@
                         <span data-i18n="dino_who_title">Designed for Every Age Group (7-18)</span>
                     </h3>
                     <div class="dino-grid">
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_1_title">Junior Explorers (7-11)</strong>
                             <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_1_desc">Playful, hands-on learning: meet the dinosaurs of Portugal, practise gentle fossil cleaning, build a field notebook and go on guided discovery walks.</p>
                         </div>
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_2_title">Young Paleontologists (12-14)</strong>
                             <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_2_desc">Learn how to document a fossil site, identify bones and footprints, and work with lab tools under the guidance of specialists.</p>
                         </div>
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_age_3_title">Research Assistants (15-18)</strong>
                             <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);" data-i18n="dino_age_3_desc">A deeper look at the science: site mapping with GIS and GPS, fossil preparation, collection management and an introduction to scientific research careers.</p>
                         </div>
@@ -1332,7 +1469,7 @@
                         <span data-i18n="dino_sample_heading">Sample 5-Day Itinerary</span>
                     </h3>
                     <p style="color: var(--text-muted);" data-i18n="dino_sample_desc">Example programme for students aged 8–15. Final schedule is confirmed in your written offer.</p>
-                    <div class="dino-grid"><div class="feature-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 1</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;"><strong>Arrival times (Lisbon):</strong> Poland 21:30 (8 persons: 2 teachers, 4 students, 2 private kids); Romania 19:40 (7 persons: 2 teachers, 4 students, 1 teacher's husband); Turkey 21:00 (8 persons: 4 teachers, 4 students).</li><li style="margin-bottom:6px;">22:00: Welcome dinner at a local restaurant in Praia de Santa Cruz (location to be confirmed). Late arrivals may move dinner to a later time.</li></ul></div><div class="feature-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 2</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">08:30: Departure from Pousada de Juventude de Santa Cruz.</li><li style="margin-bottom:6px;">09:00–10:30: Reception of participants at Henriques Nogueira School with special guests: the Mayor of Torres Vedras and local educational officials.</li><li style="margin-bottom:6px;">10:30–12:30: Project introduction by international teams, presentation of the Sciences Club at Henriques Nogueira School, and presentation of the paleontological project "There are fossils in my school".</li><li style="margin-bottom:6px;">13:00–14:00: Lunch (self-arranged, approx. €10–20 per person, or the municipal workers' canteen).</li><li style="margin-bottom:6px;">13:30–17:00: Cultural activities: visit to the Environmental Interpretation Center and the "I wanna be a Scientist" science education service, including a small dinosaur exhibition; exploration of Torres Vedras historical sites (Castelo de Torres Vedras and Monument to the Lines of Torres Vedras).</li><li style="margin-bottom:6px;">17:00–19:00: Free time in Torres Vedras.</li><li style="margin-bottom:6px;">19:30: Dinner (self-arranged, approx. €10–20 per person).</li></ul></div><div class="feature-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 3</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">09:00: Departure for geological fieldwork.</li><li style="margin-bottom:6px;">09:30–12:30: Fossil prospection and conservation field trip with a class from Henriques Nogueira School, at Cambelas, Assenta and the Upper Jurassic Praia Azul to Assenta section. Guided by local paleontologists, participants learn to identify and document fossil finds and discuss how to protect fossil sites.</li><li style="margin-bottom:6px;">13:00: Picnic lunch at Praia Azul.</li><li style="margin-bottom:6px;">14:00–16:00: Continuation of fieldwork and discussions.</li><li style="margin-bottom:6px;">17:00: Return to Pousada de Juventude de Santa Cruz.</li><li style="margin-bottom:6px;">19:00: Dinner (self-arranged, approx. €10–20 per person).</li></ul></div><div class="feature-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 4</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">09:00: Departure for cultural and geological fieldtrip.</li><li style="margin-bottom:6px;">09:30–12:30: Visit to the Peniche Golden Spike and the Geopark Interpretation Center. The Golden Spike is a site of international geological significance; participants learn how stratigraphy explains Earth's history. A session with local schools follows, focusing on coastal conservation.</li><li style="margin-bottom:6px;">13:00: Lunch in Peniche (self-arranged, approx. €10–20 per person).</li><li style="margin-bottom:6px;">14:30–17:00: Guided tour of Peniche's and Praia da Consolação's geological highlights.</li><li style="margin-bottom:6px;">17:30: Return to Pousada de Juventude de Santa Cruz.</li><li style="margin-bottom:6px;">19:00: Farewell dinner (self-arranged, approx. €10–20 per person).</li></ul></div><div class="feature-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 5</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">Departure times arranged according to flight schedules.</li><li style="margin-bottom:6px;">Airport transfers by Uber or Bolt taxi services will be provided.</li></ul></div></div>
+                    <div class="dino-grid"><div class="feature-box wc3-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 1</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;"><strong>Arrival times (Lisbon):</strong> Poland 21:30 (8 persons: 2 teachers, 4 students, 2 private kids); Romania 19:40 (7 persons: 2 teachers, 4 students, 1 teacher's husband); Turkey 21:00 (8 persons: 4 teachers, 4 students).</li><li style="margin-bottom:6px;">22:00: Welcome dinner at a local restaurant in Praia de Santa Cruz (location to be confirmed). Late arrivals may move dinner to a later time.</li></ul></div><div class="feature-box wc3-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 2</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">08:30: Departure from Pousada de Juventude de Santa Cruz.</li><li style="margin-bottom:6px;">09:00–10:30: Reception of participants at Henriques Nogueira School with special guests: the Mayor of Torres Vedras and local educational officials.</li><li style="margin-bottom:6px;">10:30–12:30: Project introduction by international teams, presentation of the Sciences Club at Henriques Nogueira School, and presentation of the paleontological project "There are fossils in my school".</li><li style="margin-bottom:6px;">13:00–14:00: Lunch (self-arranged, approx. €10–20 per person, or the municipal workers' canteen).</li><li style="margin-bottom:6px;">13:30–17:00: Cultural activities: visit to the Environmental Interpretation Center and the "I wanna be a Scientist" science education service, including a small dinosaur exhibition; exploration of Torres Vedras historical sites (Castelo de Torres Vedras and Monument to the Lines of Torres Vedras).</li><li style="margin-bottom:6px;">17:00–19:00: Free time in Torres Vedras.</li><li style="margin-bottom:6px;">19:30: Dinner (self-arranged, approx. €10–20 per person).</li></ul></div><div class="feature-box wc3-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 3</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">09:00: Departure for geological fieldwork.</li><li style="margin-bottom:6px;">09:30–12:30: Fossil prospection and conservation field trip with a class from Henriques Nogueira School, at Cambelas, Assenta and the Upper Jurassic Praia Azul to Assenta section. Guided by local paleontologists, participants learn to identify and document fossil finds and discuss how to protect fossil sites.</li><li style="margin-bottom:6px;">13:00: Picnic lunch at Praia Azul.</li><li style="margin-bottom:6px;">14:00–16:00: Continuation of fieldwork and discussions.</li><li style="margin-bottom:6px;">17:00: Return to Pousada de Juventude de Santa Cruz.</li><li style="margin-bottom:6px;">19:00: Dinner (self-arranged, approx. €10–20 per person).</li></ul></div><div class="feature-box wc3-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 4</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">09:00: Departure for cultural and geological fieldtrip.</li><li style="margin-bottom:6px;">09:30–12:30: Visit to the Peniche Golden Spike and the Geopark Interpretation Center. The Golden Spike is a site of international geological significance; participants learn how stratigraphy explains Earth's history. A session with local schools follows, focusing on coastal conservation.</li><li style="margin-bottom:6px;">13:00: Lunch in Peniche (self-arranged, approx. €10–20 per person).</li><li style="margin-bottom:6px;">14:30–17:00: Guided tour of Peniche's and Praia da Consolação's geological highlights.</li><li style="margin-bottom:6px;">17:30: Return to Pousada de Juventude de Santa Cruz.</li><li style="margin-bottom:6px;">19:00: Farewell dinner (self-arranged, approx. €10–20 per person).</li></ul></div><div class="feature-box wc3-box" style="cursor: default;"><strong style="color: var(--primary); font-size: 1.05rem;">Day 5</strong><ul style="padding-left: 18px; margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"><li style="margin-bottom:6px;">Departure times arranged according to flight schedules.</li><li style="margin-bottom:6px;">Airport transfers by Uber or Bolt taxi services will be provided.</li></ul></div></div>
                 </div>
 
                 <!-- PROGRAM FORMAT -->
@@ -1343,7 +1480,7 @@
                     </h3>
                     <p style="color: var(--text-muted);" data-i18n="dino_prog_desc">Families and schools can choose a 1-week or a 2-week stay. The 1-week option covers Week 1; the 2-week option adds Week 2.</p>
                     <div class="dino-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_w1_title">Week 1 - Discover</strong>
                             <ul class="custom-list dino-list">
                         <li data-i18n="dino_w1_1">Welcome, safety briefing and introduction to the Jurassic world of Portugal</li>
@@ -1352,7 +1489,7 @@
                         <li data-i18n="dino_w1_4">Laboratory introduction: cleaning and preparing fossils</li>
                     </ul>
                         </div>
-                        <div class="feature-box">
+                        <div class="feature-box wc3-box">
                             <strong style="color: var(--primary); font-size: 1.05rem;" data-i18n="dino_w2_title">Week 2 - Investigate</strong>
                             <ul class="custom-list dino-list">
                         <li data-i18n="dino_w2_1">Excavation days with recording and documentation</li>
